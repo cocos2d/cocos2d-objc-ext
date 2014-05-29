@@ -1,27 +1,41 @@
-//
-//  AppDelegate.m
-//  cocos2d-iphone-ext
-//
-//  Created by Lars Birkemose on 29/05/14.
-//  Copyright Cocos2D-iphone 2014. All rights reserved.
-//
-// -----------------------------------------------------------------------
+/*
+ * cocos2d for iPhone: http://www.cocos2d-iphone.org
+ *
+ * Copyright (c) 2008-2010 Ricardo Quesada
+ * Copyright (c) 2011 Zynga Inc.
+ * Copyright (c) 2013-2014 Cocos2D Authors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 #import "AppDelegate.h"
-#import "IntroScene.h"
-#import "HelloWorldScene.h"
+#import "MainMenu.h"
+
+// -----------------------------------------------------------------------------
 
 @implementation AppDelegate
 
-// 
--(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+// -----------------------------------------------------------------------------
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	// This is the only app delegate method you need to implement when inheriting from CCAppDelegate.
-	// This method is a good place to add one time setup code that only runs when your app is first launched.
-	
-	// Setup Cocos2D with reasonable defaults for everything.
-	// There are a number of simple options you can change.
-	// If you want more flexibility, you can configure Cocos2D yourself instead of calling setupCocos2dWithOptions:.
+
 	[self setupCocos2dWithOptions:@{
 		// Show the FPS and draw call label.
 		CCSetupShowDebugStats: @(YES),
@@ -43,13 +57,16 @@
 //		CCSetupTabletScale2X: @(YES),
 	}];
 	
-	return YES;
+	return(YES);
 }
 
--(CCScene *)startScene
+// -----------------------------------------------------------------------------
+
+- (CCScene *)startScene
 {
-	// This method should return the very first scene to be run when your app starts.
-	return [IntroScene scene];
+	return([MainMenu scene]);
 }
+
+// -----------------------------------------------------------------------------
 
 @end
