@@ -8,7 +8,7 @@ cocos2d-iphone-ext, will include various classes and libraries, not suitet for r
 Cocos2D Version
 ===============
 V3.1 beta. 
-This repo is currently in beta stage. Please be adviced, that thjere will be changes before first release.
+This repo is currently in beta stage. Please be adviced, that there will be changes before first release.
 
 How To
 ======
