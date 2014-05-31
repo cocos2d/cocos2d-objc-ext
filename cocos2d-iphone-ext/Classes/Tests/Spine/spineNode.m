@@ -73,15 +73,15 @@ typedef NS_ENUM(NSInteger, animationMode)
     [_skeleton logAnimations];
     [_skeleton logSkins];
     
-    // assign a skin
+    // add the skeleton to the node
+    [self addChild:_skeleton];
+
+    // reset skin
     _skinNumber = 0;
-    [_skeleton assignSkinByName:[[_skeleton.skinList allKeys] objectAtIndex:_skinNumber]];
+    [_skeleton assignSkinByName:@"BASEBALL"];
     
     // set base animation
     [_skeleton setBaseAnimation:@"IDLE_CATCH_BREATH"];
-
-    // add the skeleton to the node
-    [self addChild:_skeleton];
 
     // set mode
     _animationMode = animationModeIdle;
