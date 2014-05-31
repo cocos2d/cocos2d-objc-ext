@@ -234,22 +234,23 @@
 		A62712B1193769A900196BD3 /* TilesAtlassed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = A6271290193769A900196BD3 /* TilesAtlassed-ipadhd.png */; };
 		A62712B2193769A900196BD3 /* TilesAtlassed.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6271291193769A900196BD3 /* TilesAtlassed.plist */; };
 		A62712B3193769A900196BD3 /* TilesAtlassed.png in Resources */ = {isa = PBXBuildFile; fileRef = A6271292193769A900196BD3 /* TilesAtlassed.png */; };
-		A62712B619376A9E00196BD3 /* spineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A62712B519376A9E00196BD3 /* spineTest.m */; };
-		A6AD2D3219377C0C00FF72DA /* CCDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3119377C0C00FF72DA /* CCDictionary.m */; };
-		A6AD2D4819377C1800FF72DA /* CCSpineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3519377C1800FF72DA /* CCSpineAnimation.m */; };
-		A6AD2D4919377C1800FF72DA /* CCSpineAnimationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3719377C1800FF72DA /* CCSpineAnimationControl.m */; };
-		A6AD2D4A19377C1800FF72DA /* CCSpineBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3919377C1800FF72DA /* CCSpineBezierCurve.m */; };
-		A6AD2D4B19377C1800FF72DA /* CCSpineBone.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3B19377C1800FF72DA /* CCSpineBone.m */; };
-		A6AD2D4C19377C1800FF72DA /* CCSpineSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3D19377C1800FF72DA /* CCSpineSample.m */; };
-		A6AD2D4D19377C1800FF72DA /* CCSpineSkeleton.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D3F19377C1800FF72DA /* CCSpineSkeleton.m */; };
-		A6AD2D4E19377C1800FF72DA /* CCSpineSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D4119377C1800FF72DA /* CCSpineSkin.m */; };
-		A6AD2D4F19377C1800FF72DA /* CCSpineSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D4319377C1800FF72DA /* CCSpineSprite.m */; };
-		A6AD2D5019377C1800FF72DA /* CCSpineTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D4519377C1800FF72DA /* CCSpineTexture.m */; };
-		A6AD2D5119377C1800FF72DA /* CCSpineTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D4719377C1800FF72DA /* CCSpineTimeline.m */; };
-		A6AD2D5419377D3600FF72DA /* spineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6AD2D5319377D3600FF72DA /* spineNode.m */; };
-		A6AD2D5919377E4C00FF72DA /* chase_johnson.json in Resources */ = {isa = PBXBuildFile; fileRef = A6AD2D5619377E4C00FF72DA /* chase_johnson.json */; };
-		A6AD2D5A19377E4C00FF72DA /* chase_johnson.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6AD2D5719377E4C00FF72DA /* chase_johnson.plist */; };
-		A6AD2D5B19377E4C00FF72DA /* chase_johnson.png in Resources */ = {isa = PBXBuildFile; fileRef = A6AD2D5819377E4C00FF72DA /* chase_johnson.png */; };
+		A66C5806193A0C17009D2BD4 /* spineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5804193A0C17009D2BD4 /* spineNode.m */; };
+		A66C5807193A0C17009D2BD4 /* spineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5805193A0C17009D2BD4 /* spineTest.m */; };
+		A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C580D193A0C69009D2BD4 /* CCNodeTag.m */; };
+		A66C5811193A0C77009D2BD4 /* CCDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5810193A0C77009D2BD4 /* CCDictionary.m */; };
+		A66C582C193A0C87009D2BD4 /* chase_johnson.json in Resources */ = {isa = PBXBuildFile; fileRef = A66C5813193A0C87009D2BD4 /* chase_johnson.json */; };
+		A66C582D193A0C87009D2BD4 /* chase_johnson.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66C5814193A0C87009D2BD4 /* chase_johnson.plist */; };
+		A66C582E193A0C87009D2BD4 /* chase_johnson.png in Resources */ = {isa = PBXBuildFile; fileRef = A66C5815193A0C87009D2BD4 /* chase_johnson.png */; };
+		A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5819193A0C87009D2BD4 /* CCSpineAnimation.m */; };
+		A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C581B193A0C87009D2BD4 /* CCSpineAnimationControl.m */; };
+		A66C5832193A0C87009D2BD4 /* CCSpineBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C581D193A0C87009D2BD4 /* CCSpineBezierCurve.m */; };
+		A66C5833193A0C87009D2BD4 /* CCSpineBone.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C581F193A0C87009D2BD4 /* CCSpineBone.m */; };
+		A66C5834193A0C87009D2BD4 /* CCSpineSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5821193A0C87009D2BD4 /* CCSpineSample.m */; };
+		A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5823193A0C87009D2BD4 /* CCSpineSkeleton.m */; };
+		A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5825193A0C87009D2BD4 /* CCSpineSkin.m */; };
+		A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5827193A0C87009D2BD4 /* CCSpineSprite.m */; };
+		A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */; };
+		A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -689,34 +690,36 @@
 		A6271290193769A900196BD3 /* TilesAtlassed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TilesAtlassed-ipadhd.png"; path = "Resources/Testbed/TilesAtlassed-ipadhd.png"; sourceTree = "<group>"; };
 		A6271291193769A900196BD3 /* TilesAtlassed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TilesAtlassed.plist; path = Resources/Testbed/TilesAtlassed.plist; sourceTree = "<group>"; };
 		A6271292193769A900196BD3 /* TilesAtlassed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TilesAtlassed.png; path = Resources/Testbed/TilesAtlassed.png; sourceTree = "<group>"; };
-		A62712B519376A9E00196BD3 /* spineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineTest.m; path = Classes/Spine/spineTest.m; sourceTree = "<group>"; };
-		A6AD2D3019377C0C00FF72DA /* CCDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDictionary.h; path = Classes/Support/CCDictionary.h; sourceTree = "<group>"; };
-		A6AD2D3119377C0C00FF72DA /* CCDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDictionary.m; path = Classes/Support/CCDictionary.m; sourceTree = "<group>"; };
-		A6AD2D3419377C1800FF72DA /* CCSpineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineAnimation.h; sourceTree = "<group>"; };
-		A6AD2D3519377C1800FF72DA /* CCSpineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineAnimation.m; sourceTree = "<group>"; };
-		A6AD2D3619377C1800FF72DA /* CCSpineAnimationControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineAnimationControl.h; sourceTree = "<group>"; };
-		A6AD2D3719377C1800FF72DA /* CCSpineAnimationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineAnimationControl.m; sourceTree = "<group>"; };
-		A6AD2D3819377C1800FF72DA /* CCSpineBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineBezierCurve.h; sourceTree = "<group>"; };
-		A6AD2D3919377C1800FF72DA /* CCSpineBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineBezierCurve.m; sourceTree = "<group>"; };
-		A6AD2D3A19377C1800FF72DA /* CCSpineBone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineBone.h; sourceTree = "<group>"; };
-		A6AD2D3B19377C1800FF72DA /* CCSpineBone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineBone.m; sourceTree = "<group>"; };
-		A6AD2D3C19377C1800FF72DA /* CCSpineSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineSample.h; sourceTree = "<group>"; };
-		A6AD2D3D19377C1800FF72DA /* CCSpineSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineSample.m; sourceTree = "<group>"; };
-		A6AD2D3E19377C1800FF72DA /* CCSpineSkeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineSkeleton.h; sourceTree = "<group>"; };
-		A6AD2D3F19377C1800FF72DA /* CCSpineSkeleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineSkeleton.m; sourceTree = "<group>"; };
-		A6AD2D4019377C1800FF72DA /* CCSpineSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineSkin.h; sourceTree = "<group>"; };
-		A6AD2D4119377C1800FF72DA /* CCSpineSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineSkin.m; sourceTree = "<group>"; };
-		A6AD2D4219377C1800FF72DA /* CCSpineSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineSprite.h; sourceTree = "<group>"; };
-		A6AD2D4319377C1800FF72DA /* CCSpineSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineSprite.m; sourceTree = "<group>"; };
-		A6AD2D4419377C1800FF72DA /* CCSpineTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineTexture.h; sourceTree = "<group>"; };
-		A6AD2D4519377C1800FF72DA /* CCSpineTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineTexture.m; sourceTree = "<group>"; };
-		A6AD2D4619377C1800FF72DA /* CCSpineTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpineTimeline.h; sourceTree = "<group>"; };
-		A6AD2D4719377C1800FF72DA /* CCSpineTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpineTimeline.m; sourceTree = "<group>"; };
-		A6AD2D5219377D3600FF72DA /* spineNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spineNode.h; path = Classes/Spine/spineNode.h; sourceTree = "<group>"; };
-		A6AD2D5319377D3600FF72DA /* spineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineNode.m; path = Classes/Spine/spineNode.m; sourceTree = "<group>"; };
-		A6AD2D5619377E4C00FF72DA /* chase_johnson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chase_johnson.json; path = Resources/Spine/chase_johnson.json; sourceTree = "<group>"; };
-		A6AD2D5719377E4C00FF72DA /* chase_johnson.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = chase_johnson.plist; path = Resources/Spine/chase_johnson.plist; sourceTree = "<group>"; };
-		A6AD2D5819377E4C00FF72DA /* chase_johnson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chase_johnson.png; path = Resources/Spine/chase_johnson.png; sourceTree = "<group>"; };
+		A66C5803193A0C17009D2BD4 /* spineNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spineNode.h; path = Classes/Tests/Spine/spineNode.h; sourceTree = "<group>"; };
+		A66C5804193A0C17009D2BD4 /* spineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineNode.m; path = Classes/Tests/Spine/spineNode.m; sourceTree = "<group>"; };
+		A66C5805193A0C17009D2BD4 /* spineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineTest.m; path = Classes/Tests/Spine/spineTest.m; sourceTree = "<group>"; };
+		A66C580C193A0C69009D2BD4 /* CCNodeTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeTag.h; path = Extensions/CCNodeTag/CCNodeTag.h; sourceTree = SOURCE_ROOT; };
+		A66C580D193A0C69009D2BD4 /* CCNodeTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeTag.m; path = Extensions/CCNodeTag/CCNodeTag.m; sourceTree = SOURCE_ROOT; };
+		A66C580F193A0C77009D2BD4 /* CCDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDictionary.h; path = Extensions/CCDictionary/CCDictionary.h; sourceTree = SOURCE_ROOT; };
+		A66C5810193A0C77009D2BD4 /* CCDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDictionary.m; path = Extensions/CCDictionary/CCDictionary.m; sourceTree = SOURCE_ROOT; };
+		A66C5813193A0C87009D2BD4 /* chase_johnson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chase_johnson.json; sourceTree = "<group>"; };
+		A66C5814193A0C87009D2BD4 /* chase_johnson.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chase_johnson.plist; sourceTree = "<group>"; };
+		A66C5815193A0C87009D2BD4 /* chase_johnson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chase_johnson.png; sourceTree = "<group>"; };
+		A66C5818193A0C87009D2BD4 /* CCSpineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineAnimation.h; path = Extensions/CCSpine/CCSpineAnimation.h; sourceTree = SOURCE_ROOT; };
+		A66C5819193A0C87009D2BD4 /* CCSpineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineAnimation.m; path = Extensions/CCSpine/CCSpineAnimation.m; sourceTree = SOURCE_ROOT; };
+		A66C581A193A0C87009D2BD4 /* CCSpineAnimationControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineAnimationControl.h; path = Extensions/CCSpine/CCSpineAnimationControl.h; sourceTree = SOURCE_ROOT; };
+		A66C581B193A0C87009D2BD4 /* CCSpineAnimationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineAnimationControl.m; path = Extensions/CCSpine/CCSpineAnimationControl.m; sourceTree = SOURCE_ROOT; };
+		A66C581C193A0C87009D2BD4 /* CCSpineBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineBezierCurve.h; path = Extensions/CCSpine/CCSpineBezierCurve.h; sourceTree = SOURCE_ROOT; };
+		A66C581D193A0C87009D2BD4 /* CCSpineBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineBezierCurve.m; path = Extensions/CCSpine/CCSpineBezierCurve.m; sourceTree = SOURCE_ROOT; };
+		A66C581E193A0C87009D2BD4 /* CCSpineBone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineBone.h; path = Extensions/CCSpine/CCSpineBone.h; sourceTree = SOURCE_ROOT; };
+		A66C581F193A0C87009D2BD4 /* CCSpineBone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineBone.m; path = Extensions/CCSpine/CCSpineBone.m; sourceTree = SOURCE_ROOT; };
+		A66C5820193A0C87009D2BD4 /* CCSpineSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineSample.h; path = Extensions/CCSpine/CCSpineSample.h; sourceTree = SOURCE_ROOT; };
+		A66C5821193A0C87009D2BD4 /* CCSpineSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineSample.m; path = Extensions/CCSpine/CCSpineSample.m; sourceTree = SOURCE_ROOT; };
+		A66C5822193A0C87009D2BD4 /* CCSpineSkeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineSkeleton.h; path = Extensions/CCSpine/CCSpineSkeleton.h; sourceTree = SOURCE_ROOT; };
+		A66C5823193A0C87009D2BD4 /* CCSpineSkeleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineSkeleton.m; path = Extensions/CCSpine/CCSpineSkeleton.m; sourceTree = SOURCE_ROOT; };
+		A66C5824193A0C87009D2BD4 /* CCSpineSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineSkin.h; path = Extensions/CCSpine/CCSpineSkin.h; sourceTree = SOURCE_ROOT; };
+		A66C5825193A0C87009D2BD4 /* CCSpineSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineSkin.m; path = Extensions/CCSpine/CCSpineSkin.m; sourceTree = SOURCE_ROOT; };
+		A66C5826193A0C87009D2BD4 /* CCSpineSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineSprite.h; path = Extensions/CCSpine/CCSpineSprite.h; sourceTree = SOURCE_ROOT; };
+		A66C5827193A0C87009D2BD4 /* CCSpineSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineSprite.m; path = Extensions/CCSpine/CCSpineSprite.m; sourceTree = SOURCE_ROOT; };
+		A66C5828193A0C87009D2BD4 /* CCSpineTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineTexture.h; path = Extensions/CCSpine/CCSpineTexture.h; sourceTree = SOURCE_ROOT; };
+		A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTexture.m; path = Extensions/CCSpine/CCSpineTexture.m; sourceTree = SOURCE_ROOT; };
+		A66C582A193A0C87009D2BD4 /* CCSpineTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineTimeline.h; path = Extensions/CCSpine/CCSpineTimeline.h; sourceTree = SOURCE_ROOT; };
+		A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTimeline.m; path = Extensions/CCSpine/CCSpineTimeline.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -785,7 +788,6 @@
 				A627111A193759B300196BD3 /* Stock */,
 				A6270E83193757E400196BD3 /* Icons */,
 				A62712711937698C00196BD3 /* TestBed */,
-				A6AD2D5519377E0300FF72DA /* Spine */,
 			);
 			name = Resources;
 			path = "cocos2d-iphone-ext";
@@ -1088,8 +1090,8 @@
 				A6271109193757E600196BD3 /* AppDelegate.h */,
 				A627110A193757E600196BD3 /* AppDelegate.m */,
 				A627126819375F2700196BD3 /* TestBed */,
-				A6AD2D2F19377B9200FF72DA /* Support */,
-				A62712B419376A8B00196BD3 /* Spine */,
+				A66C5801193A0BF0009D2BD4 /* Tests */,
+				A66C5808193A0C24009D2BD4 /* Extensions */,
 			);
 			name = Classes;
 			path = "cocos2d-iphone-ext";
@@ -1437,63 +1439,90 @@
 			name = TestBed;
 			sourceTree = "<group>";
 		};
-		A62712B419376A8B00196BD3 /* Spine */ = {
+		A66C5801193A0BF0009D2BD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A62712B519376A9E00196BD3 /* spineTest.m */,
-				A6AD2D5219377D3600FF72DA /* spineNode.h */,
-				A6AD2D5319377D3600FF72DA /* spineNode.m */,
-				A6AD2D3319377C1800FF72DA /* Spine Library */,
+				A66C5802193A0BF9009D2BD4 /* Spine */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		A66C5802193A0BF9009D2BD4 /* Spine */ = {
+			isa = PBXGroup;
+			children = (
+				A66C5803193A0C17009D2BD4 /* spineNode.h */,
+				A66C5804193A0C17009D2BD4 /* spineNode.m */,
+				A66C5805193A0C17009D2BD4 /* spineTest.m */,
 			);
 			name = Spine;
 			sourceTree = "<group>";
 		};
-		A6AD2D2F19377B9200FF72DA /* Support */ = {
+		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A6AD2D3019377C0C00FF72DA /* CCDictionary.h */,
-				A6AD2D3119377C0C00FF72DA /* CCDictionary.m */,
+				A66C5809193A0C3C009D2BD4 /* CCNodeTag */,
+				A66C580A193A0C44009D2BD4 /* CCDictionary */,
+				A66C580B193A0C4E009D2BD4 /* CCSpine */,
 			);
-			name = Support;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
-		A6AD2D3319377C1800FF72DA /* Spine Library */ = {
+		A66C5809193A0C3C009D2BD4 /* CCNodeTag */ = {
 			isa = PBXGroup;
 			children = (
-				A6AD2D3419377C1800FF72DA /* CCSpineAnimation.h */,
-				A6AD2D3519377C1800FF72DA /* CCSpineAnimation.m */,
-				A6AD2D3619377C1800FF72DA /* CCSpineAnimationControl.h */,
-				A6AD2D3719377C1800FF72DA /* CCSpineAnimationControl.m */,
-				A6AD2D3819377C1800FF72DA /* CCSpineBezierCurve.h */,
-				A6AD2D3919377C1800FF72DA /* CCSpineBezierCurve.m */,
-				A6AD2D3A19377C1800FF72DA /* CCSpineBone.h */,
-				A6AD2D3B19377C1800FF72DA /* CCSpineBone.m */,
-				A6AD2D3C19377C1800FF72DA /* CCSpineSample.h */,
-				A6AD2D3D19377C1800FF72DA /* CCSpineSample.m */,
-				A6AD2D3E19377C1800FF72DA /* CCSpineSkeleton.h */,
-				A6AD2D3F19377C1800FF72DA /* CCSpineSkeleton.m */,
-				A6AD2D4019377C1800FF72DA /* CCSpineSkin.h */,
-				A6AD2D4119377C1800FF72DA /* CCSpineSkin.m */,
-				A6AD2D4219377C1800FF72DA /* CCSpineSprite.h */,
-				A6AD2D4319377C1800FF72DA /* CCSpineSprite.m */,
-				A6AD2D4419377C1800FF72DA /* CCSpineTexture.h */,
-				A6AD2D4519377C1800FF72DA /* CCSpineTexture.m */,
-				A6AD2D4619377C1800FF72DA /* CCSpineTimeline.h */,
-				A6AD2D4719377C1800FF72DA /* CCSpineTimeline.m */,
+				A66C580C193A0C69009D2BD4 /* CCNodeTag.h */,
+				A66C580D193A0C69009D2BD4 /* CCNodeTag.m */,
 			);
-			name = "Spine Library";
-			path = "Classes/Spine/Spine Library";
+			name = CCNodeTag;
 			sourceTree = "<group>";
 		};
-		A6AD2D5519377E0300FF72DA /* Spine */ = {
+		A66C580A193A0C44009D2BD4 /* CCDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				A6AD2D5619377E4C00FF72DA /* chase_johnson.json */,
-				A6AD2D5719377E4C00FF72DA /* chase_johnson.plist */,
-				A6AD2D5819377E4C00FF72DA /* chase_johnson.png */,
+				A66C580F193A0C77009D2BD4 /* CCDictionary.h */,
+				A66C5810193A0C77009D2BD4 /* CCDictionary.m */,
 			);
-			name = Spine;
+			name = CCDictionary;
 			sourceTree = "<group>";
+		};
+		A66C580B193A0C4E009D2BD4 /* CCSpine */ = {
+			isa = PBXGroup;
+			children = (
+				A66C5818193A0C87009D2BD4 /* CCSpineAnimation.h */,
+				A66C5819193A0C87009D2BD4 /* CCSpineAnimation.m */,
+				A66C581A193A0C87009D2BD4 /* CCSpineAnimationControl.h */,
+				A66C581B193A0C87009D2BD4 /* CCSpineAnimationControl.m */,
+				A66C581C193A0C87009D2BD4 /* CCSpineBezierCurve.h */,
+				A66C581D193A0C87009D2BD4 /* CCSpineBezierCurve.m */,
+				A66C581E193A0C87009D2BD4 /* CCSpineBone.h */,
+				A66C581F193A0C87009D2BD4 /* CCSpineBone.m */,
+				A66C5820193A0C87009D2BD4 /* CCSpineSample.h */,
+				A66C5821193A0C87009D2BD4 /* CCSpineSample.m */,
+				A66C5822193A0C87009D2BD4 /* CCSpineSkeleton.h */,
+				A66C5823193A0C87009D2BD4 /* CCSpineSkeleton.m */,
+				A66C5824193A0C87009D2BD4 /* CCSpineSkin.h */,
+				A66C5825193A0C87009D2BD4 /* CCSpineSkin.m */,
+				A66C5826193A0C87009D2BD4 /* CCSpineSprite.h */,
+				A66C5827193A0C87009D2BD4 /* CCSpineSprite.m */,
+				A66C5828193A0C87009D2BD4 /* CCSpineTexture.h */,
+				A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */,
+				A66C582A193A0C87009D2BD4 /* CCSpineTimeline.h */,
+				A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */,
+				A66C5812193A0C87009D2BD4 /* Animation */,
+			);
+			name = CCSpine;
+			sourceTree = "<group>";
+		};
+		A66C5812193A0C87009D2BD4 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A66C5813193A0C87009D2BD4 /* chase_johnson.json */,
+				A66C5814193A0C87009D2BD4 /* chase_johnson.plist */,
+				A66C5815193A0C87009D2BD4 /* chase_johnson.png */,
+			);
+			name = Animation;
+			path = Extensions/CCSpine/Animation;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -1597,13 +1626,13 @@
 				A627107E193757E600196BD3 /* LICENSE_Kazmath.txt in Resources */,
 				A627129F193769A900196BD3 /* Interface-ipadhd.plist in Resources */,
 				A6270E89193757E400196BD3 /* Icon-72.png in Resources */,
-				A6AD2D5B19377E4C00FF72DA /* chase_johnson.png in Resources */,
+				A66C582E193A0C87009D2BD4 /* chase_johnson.png in Resources */,
 				A62712AC193769A900196BD3 /* TilesAtlassed-hd.plist in Resources */,
 				A6271299193769A900196BD3 /* din.fnt in Resources */,
 				A62712B1193769A900196BD3 /* TilesAtlassed-ipadhd.png in Resources */,
 				A6270FD7193757E500196BD3 /* LICENSE_cocos2d.txt in Resources */,
 				A62712B3193769A900196BD3 /* TilesAtlassed.png in Resources */,
-				A6AD2D5919377E4C00FF72DA /* chase_johnson.json in Resources */,
+				A66C582C193A0C87009D2BD4 /* chase_johnson.json in Resources */,
 				A62712AD193769A900196BD3 /* TilesAtlassed-hd.png in Resources */,
 				A6270E80193757E400196BD3 /* Default-568h@2x.png in Resources */,
 				A627129B193769A900196BD3 /* Interface-hd.plist in Resources */,
@@ -1621,7 +1650,7 @@
 				A6270E8D193757E400196BD3 /* Icon-76.png in Resources */,
 				A6271296193769A900196BD3 /* din-ipad.png in Resources */,
 				A6270EA2193757E400196BD3 /* iTunesArtwork@2x in Resources */,
-				A6AD2D5A19377E4C00FF72DA /* chase_johnson.plist in Resources */,
+				A66C582D193A0C87009D2BD4 /* chase_johnson.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1636,7 +1665,6 @@
 				A62711EC193759F300196BD3 /* CCDrawNode.m in Sources */,
 				A62711E9193759F300196BD3 /* CCClippingNode.m in Sources */,
 				A627126019375A0700196BD3 /* CCTextField.m in Sources */,
-				A62712B619376A9E00196BD3 /* spineTest.m in Sources */,
 				A6271028193757E600196BD3 /* NSMutableArray+WeakReferences.m in Sources */,
 				A627126E19375F2700196BD3 /* TestBase.m in Sources */,
 				A6271016193757E600196BD3 /* OpenALManager.m in Sources */,
@@ -1645,31 +1673,33 @@
 				A62711EB193759F300196BD3 /* CCDirector.m in Sources */,
 				A6271213193759F300196BD3 /* CCSpriteFrameCache.m in Sources */,
 				A6271200193759F300196BD3 /* CCParticleExamples.m in Sources */,
+				A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */,
+				A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */,
 				A627125619375A0700196BD3 /* CCBLocalizationManager.m in Sources */,
 				A6271225193759F300196BD3 /* NSEvent+CC.m in Sources */,
+				A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */,
 				A627121C193759F300196BD3 /* cocos2d.m in Sources */,
 				A627125719375A0700196BD3 /* CCBReader.m in Sources */,
 				A6271202193759F300196BD3 /* CCParticleSystemBase.m in Sources */,
+				A66C5807193A0C17009D2BD4 /* spineTest.m in Sources */,
 				A627125E19375A0700196BD3 /* CCSlider.m in Sources */,
-				A6AD2D5419377D3600FF72DA /* spineNode.m in Sources */,
 				A627120D193759F300196BD3 /* CCScheduler.m in Sources */,
 				A62711F3193759F300196BD3 /* CCEffectStack.m in Sources */,
 				A6271022193757E600196BD3 /* IOSVersion.m in Sources */,
 				A627125519375A0700196BD3 /* CCBKeyframe.m in Sources */,
 				A6271002193757E500196BD3 /* ALContext.m in Sources */,
 				A62711E8193759F300196BD3 /* CCCache.m in Sources */,
-				A6AD2D4919377C1800FF72DA /* CCSpineAnimationControl.m in Sources */,
 				A6271203193759F300196BD3 /* CCPhysicsBody.m in Sources */,
-				A6AD2D5019377C1800FF72DA /* CCSpineTexture.m in Sources */,
 				A62711F5193759F300196BD3 /* ccFPSImages.m in Sources */,
 				A6271032193757E600196BD3 /* OALTools.m in Sources */,
 				A6270FE0193757E500196BD3 /* OALActionManager.m in Sources */,
 				A62711E5193759F300196BD3 /* CCActionTween.m in Sources */,
 				A62711F4193759F300196BD3 /* CCEffectTexture.m in Sources */,
 				A62711F8193759F300196BD3 /* CCLayout.m in Sources */,
+				A66C5833193A0C87009D2BD4 /* CCSpineBone.m in Sources */,
+				A66C5811193A0C77009D2BD4 /* CCDictionary.m in Sources */,
 				A6270FDD193757E500196BD3 /* OALAction.m in Sources */,
 				A627120E193759F300196BD3 /* CCShader.m in Sources */,
-				A6AD2D4C19377C1800FF72DA /* CCSpineSample.m in Sources */,
 				A62711FF193759F300196BD3 /* CCParticleBatchNode.m in Sources */,
 				A62711F0193759F300196BD3 /* CCEffectColorPulse.m in Sources */,
 				A627102B193757E600196BD3 /* NSMutableDictionary+WeakReferences.m in Sources */,
@@ -1682,25 +1712,26 @@
 				A6271216193759F300196BD3 /* CCTexturePVR.m in Sources */,
 				A627125C19375A0700196BD3 /* CCControlTextureFactory.m in Sources */,
 				A6270FF9193757E500196BD3 /* ALBuffer.m in Sources */,
+				A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */,
+				A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */,
 				A6271207193759F300196BD3 /* CCProgressNode.m in Sources */,
 				A627122F193759F300196BD3 /* TGAlib.m in Sources */,
-				A6AD2D4E19377C1800FF72DA /* CCSpineSkin.m in Sources */,
 				A627125819375A0700196BD3 /* CCBsequence.m in Sources */,
 				A62711E1193759F300196BD3 /* CCActionInstant.m in Sources */,
 				A6270FEA193757E500196BD3 /* OALAudioTrack.m in Sources */,
 				A62711F9193759F300196BD3 /* CCLayoutBox.m in Sources */,
+				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
 				A6270FF3193757E500196BD3 /* OALSimpleAudio.m in Sources */,
-				A6AD2D5119377C1800FF72DA /* CCSpineTimeline.m in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
 				A627101A193757E600196BD3 /* OALAudioSession.m in Sources */,
 				A6271211193759F300196BD3 /* CCSpriteBatchNode.m in Sources */,
 				A62711E6193759F300196BD3 /* CCAnimation.m in Sources */,
 				A627122D193759F300196BD3 /* NSAttributedString+CCAdditions.m in Sources */,
 				A627101D193757E600196BD3 /* OALSuspendHandler.m in Sources */,
+				A66C5806193A0C17009D2BD4 /* spineNode.m in Sources */,
 				A6271024193757E600196BD3 /* mach_timing.c in Sources */,
 				A6271008193757E500196BD3 /* ALListener.m in Sources */,
 				A627102E193757E600196BD3 /* OALAudioFile.m in Sources */,
-				A6AD2D4F19377C1800FF72DA /* CCSpineSprite.m in Sources */,
 				A62711DF193759F300196BD3 /* CCActionCatmullRom.m in Sources */,
 				A627121F193759F300196BD3 /* CCES2Renderer.m in Sources */,
 				A627120A193759F300196BD3 /* CCResponder.m in Sources */,
@@ -1710,10 +1741,10 @@
 				A6271226193759F300196BD3 /* base64.c in Sources */,
 				A6271219193759F300196BD3 /* CCTiledMapObjectGroup.m in Sources */,
 				A62711E0193759F300196BD3 /* CCActionEase.m in Sources */,
+				A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */,
 				A6271005193757E500196BD3 /* ALDevice.m in Sources */,
 				A6270FF0193757E500196BD3 /* OALAudioTracks.m in Sources */,
 				A62711ED193759F300196BD3 /* CCEffect.m in Sources */,
-				A6AD2D4819377C1800FF72DA /* CCSpineAnimation.m in Sources */,
 				A627120F193759F300196BD3 /* CCSprite.m in Sources */,
 				A6270FED193757E500196BD3 /* OALAudioTrackNotifications.m in Sources */,
 				A627125D19375A0700196BD3 /* CCScrollView.m in Sources */,
@@ -1726,11 +1757,12 @@
 				A6271223193759F300196BD3 /* CCGLView.m in Sources */,
 				A62711E3193759F300196BD3 /* CCActionManager.m in Sources */,
 				A6271208193759F300196BD3 /* CCRenderer.m in Sources */,
-				A6AD2D4B19377C1800FF72DA /* CCSpineBone.m in Sources */,
 				A6271220193759F300196BD3 /* CCGLView.m in Sources */,
+				A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */,
 				A6271205193759F300196BD3 /* CCPhysicsNode.m in Sources */,
 				A6271204193759F300196BD3 /* CCPhysicsJoint.m in Sources */,
 				A6270FFF193757E500196BD3 /* ALChannelSource.m in Sources */,
+				A66C5832193A0C87009D2BD4 /* CCSpineBezierCurve.m in Sources */,
 				A627125A19375A0700196BD3 /* CCButton.m in Sources */,
 				A627110B193757E600196BD3 /* AppDelegate.m in Sources */,
 				A6270FE6193757E500196BD3 /* OALUtilityActions.m in Sources */,
@@ -1741,7 +1773,6 @@
 				A627121B193759F300196BD3 /* CCTransition.m in Sources */,
 				A6271206193759F300196BD3 /* CCPhysicsShape.m in Sources */,
 				A6271217193759F300196BD3 /* CCTiledMap.m in Sources */,
-				A6AD2D4A19377C1800FF72DA /* CCSpineBezierCurve.m in Sources */,
 				A62711EE193759F300196BD3 /* CCEffectBrightnessAndContrast.m in Sources */,
 				A62711DE193759F300196BD3 /* CCAction.m in Sources */,
 				A627122B193759F300196BD3 /* CCVertex.m in Sources */,
@@ -1752,7 +1783,6 @@
 				A62711FD193759F300196BD3 /* CCNodeColor.m in Sources */,
 				A62711FE193759F300196BD3 /* CCParallaxNode.m in Sources */,
 				A627100F193757E500196BD3 /* ALSource.m in Sources */,
-				A6AD2D3219377C0C00FF72DA /* CCDictionary.m in Sources */,
 				A627121E193759F300196BD3 /* CCDirectorIOS.m in Sources */,
 				A62711FA193759F300196BD3 /* CCMotionStreak.m in Sources */,
 				A62711F6193759F300196BD3 /* CCLabelBMFont.m in Sources */,
@@ -1763,12 +1793,12 @@
 				A627125F19375A0700196BD3 /* CCTableView.m in Sources */,
 				A6271215193759F300196BD3 /* CCTextureCache.m in Sources */,
 				A6270FFC193757E500196BD3 /* ALCaptureDevice.m in Sources */,
+				A66C5834193A0C87009D2BD4 /* CCSpineSample.m in Sources */,
 				A6271224193759F300196BD3 /* CCWindow.m in Sources */,
 				A627121D193759F300196BD3 /* CCAppDelegate.m in Sources */,
 				A6271013193757E600196BD3 /* ALWrapper.m in Sources */,
 				A6271218193759F300196BD3 /* CCTiledMapLayer.m in Sources */,
 				A62711F2193759F300196BD3 /* CCEffectNode.m in Sources */,
-				A6AD2D4D19377C1800FF72DA /* CCSpineSkeleton.m in Sources */,
 				A6271201193759F300196BD3 /* CCParticleSystem.m in Sources */,
 				A62711E7193759F300196BD3 /* CCAnimationCache.m in Sources */,
 				A627122A193759F300196BD3 /* ccUtils.c in Sources */,
