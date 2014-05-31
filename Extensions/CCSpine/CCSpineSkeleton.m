@@ -309,12 +309,12 @@ const NSInteger CCSpineSkeletonBoneZInterval = 10;
 
 - (void)assignSkinByName:(NSString *)skinName
 {
-    CCSpineSkin* skin                     = nil;
-    if (skinName != nil) skin         = [_skinList objectForKey:skinName];
+    CCSpineSkin* skin = nil;
+    if (skinName != nil) skin = [_skinList objectForKey:skinName];
     if (skin == nil)
     {
-        skin                            = [_skinList objectForKey:CCSpineSkeletonDefaultSkin];
-        if (skin == nil) skin         = [_skinList objectForKey:[_skinList.allKeys objectAtIndex:0]];
+        skin = [_skinList objectForKey:CCSpineSkeletonDefaultSkin];
+        if (skin == nil) skin = [_skinList objectForKey:[_skinList.allKeys objectAtIndex:0]];
         CCLOG(@"Warning ! skin %@ not found, using %@", skinName, skin.name);
     }
     [self assignSkin:skin];
