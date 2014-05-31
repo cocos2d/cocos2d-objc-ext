@@ -30,9 +30,9 @@
 
 @implementation CCSpineBezierCurve
 {
-    CCSpineInterpolation                    _interpolation;
-    NSInteger                               _count;
-    CGPoint*                                _bezier;
+    CCSpineInterpolation _interpolation;
+    NSInteger _count;
+    CGPoint *_bezier;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -46,15 +46,15 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict
 {
-    self                        = [super init];
+    self = [super init];
     // load curve from dictionary
     
     // default type is linear
-    _interpolation              = CCSpineInterpolationLinear;
-    _count                      = 0;
-    _bezier                     = NULL;
+    _interpolation = CCSpineInterpolationLinear;
+    _count = 0;
+    _bezier = NULL;
     // load values from dictionary
-    id object                   = [dict objectForKey:@"curve"];
+    id object = [dict objectForKey:@"curve"];
     if ([object isKindOfClass:[NSString class]])
     {
         // curve defined as a string
@@ -62,7 +62,7 @@
         NSString* curve = object;
         if ([curve isEqualToString:@"stepped"])
         {
-            _interpolation      = CCSpineInterpolationStepped;
+            _interpolation = CCSpineInterpolationStepped;
         }
         else
         {
@@ -74,13 +74,13 @@
         // curve defined as an array
         // this must be an array of floats
         // add 0 at the begining and 1 at the end, to make later interpolation easier
-        NSArray* array          = object;
+        NSArray* array = object;
         if (array.count > 0)
         {
-            _interpolation      = CCSpineInterpolationBezier;
-            _count              = array.count;
-            _bezier             = malloc(sizeof(CGPoint) * _count / 2);
-            int index           = 0;
+            _interpolation = CCSpineInterpolationBezier;
+            _count = array.count;
+            _bezier = malloc(sizeof(CGPoint) * _count / 2);
+            int index = 0;
             for (NSNumber* value in array)
             {
                 // read alternating values as x, y
@@ -110,8 +110,10 @@
     // translate a normalized value
     switch (_interpolation)
     {
-        case CCSpineInterpolationLinear:            return(value);
-        case CCSpineInterpolationStepped:           return(0);
+        case CCSpineInterpolationLinear:
+            return(value);
+        case CCSpineInterpolationStepped:
+            return(0);
         case CCSpineInterpolationBezier:
             
             // TODO

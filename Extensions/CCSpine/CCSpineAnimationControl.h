@@ -37,8 +37,8 @@ extern const int CCSpineAnimationNotRunning;
 
 // ----------------------------------------------------------------------------------------------
 
-@property (nonatomic, readonly) CCSpineAnimation* currentAnimation;
-@property (nonatomic, readonly) NSArray* animationList;
+@property (nonatomic, readonly) CCSpineAnimation *currentAnimation;
+@property (nonatomic, readonly) NSArray *animationList;
 
 // ----------------------------------------------------------------------------------------------
 

@@ -31,10 +31,10 @@
 
 @implementation CCSpineTimeline
 {
-    NSString*                           _boneName;
-    NSMutableArray*                     _rotateList;
-    NSMutableArray*                     _translateList;
-    NSMutableArray*                     _scaleList;
+    NSString *_boneName;
+    NSMutableArray *_rotateList;
+    NSMutableArray *_translateList;
+    NSMutableArray *_scaleList;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -48,49 +48,49 @@
 
 - (instancetype)initDictionary:(NSDictionary *)dict boneName:(NSString *)name
 {
-    self                        = [super init];
+    self = [super init];
     
     // load bone timeline from dictionary
     // if a sprite timeline exists, it will be added later
     // create animation lists
     
-    _rotateList                         = [NSMutableArray array];
-    _translateList                      = [NSMutableArray array];
-    _scaleList                          = [NSMutableArray array];
+    _rotateList = [NSMutableArray array];
+    _translateList = [NSMutableArray array];
+    _scaleList = [NSMutableArray array];
     
-    _boneName                           = [NSString stringWithString:name];
-    _bone                               = nil;
+    _boneName = [NSString stringWithString:name];
+    _bone = nil;
     
     // load animations from dictionary
     
     // rotations
-    NSArray* rotateArray                = [dict objectForKey:@"rotate"];
+    NSArray* rotateArray = [dict objectForKey:@"rotate"];
     for (NSDictionary* dict in rotateArray)
     {
         // create rotation animation
-        CCSpineSample* data               = [CCSpineSample sampleWithDictionary:dict andType:CCSpineSampleTypeRotate];
+        CCSpineSample* data = [CCSpineSample sampleWithDictionary:dict andType:CCSpineSampleTypeRotate];
         if (data.time > _cycleTime) _cycleTime = data.time;
         // save to list
         [_rotateList addObject:data];
     }
     
     // translations
-    NSArray* translateArray             = [dict objectForKey:@"translate"];
+    NSArray* translateArray = [dict objectForKey:@"translate"];
     for (NSDictionary* dict in translateArray)
     {
         // create translate animation
-        CCSpineSample* data               = [CCSpineSample sampleWithDictionary:dict andType:CCSpineSampleTypeTranslate];
+        CCSpineSample* data = [CCSpineSample sampleWithDictionary:dict andType:CCSpineSampleTypeTranslate];
         if (data.time > _cycleTime) _cycleTime = data.time;
         // save to list
         [_translateList addObject:data];
     }
     
     // scale
-    NSArray* scaleArray                 = [dict objectForKey:@"scale"];
+    NSArray* scaleArray = [dict objectForKey:@"scale"];
     for (NSDictionary* dict in scaleArray)
     {
         // create scale animation
-        CCSpineSample* data               = [CCSpineSample sampleWithDictionary:dict andType:CCSpineSampleTypeScale];
+        CCSpineSample* data = [CCSpineSample sampleWithDictionary:dict andType:CCSpineSampleTypeScale];
         if (data.time > _cycleTime) _cycleTime = data.time;
         // save to list
         [_scaleList addObject:data];
@@ -126,17 +126,27 @@
             switch (current.type)
             {
                 case CCSpineSampleTypeRotate:
-                    rotate                      = next.data.rotation - current.data.rotation;
-                    while (rotate > 180)      rotate -= 360;
-                    while (rotate < -180)     rotate += 360;
-                    result.rotation             = current.data.rotation + (rotate * progress);
+                    rotate = next.data.rotation - current.data.rotation;
+                    while (rotate > 180) rotate -= 360;
+                    while (rotate < -180) rotate += 360;
+                    result.rotation = current.data.rotation + (rotate * progress);
                     break;
+                    
                 case CCSpineSampleTypeTranslate:
-                    result.position             = ccpLerp(current.data.position, next.data.position, progress);
+                    result.position = ccpLerp(current.data.position, next.data.position, progress);
                     break;
+                    
                 case CCSpineSampleTypeScale:
-                    result.scale                = ccpLerp(current.data.scale, next.data.scale, progress);
+                    result.scale = ccpLerp(current.data.scale, next.data.scale, progress);
                     break;
+                    
+                case CCSpineSampleTypeColor:
+                    result.color.r = (current.data.color.r * (1.0f - progress)) + (next.data.color.r * progress);
+                    result.color.g = (current.data.color.g * (1.0f - progress)) + (next.data.color.g * progress);
+                    result.color.b = (current.data.color.b * (1.0f - progress)) + (next.data.color.b * progress);
+                    result.color.a = (current.data.color.a * (1.0f - progress)) + (next.data.color.a * progress);
+                    break;
+
                 default:
                     break;
             }

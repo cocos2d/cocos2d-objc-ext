@@ -35,8 +35,8 @@
 
 @implementation CCSpineSprite
 {
-    NSString*                       _boneName;
-    NSString*                       _attachment;
+    NSString *_boneName;
+    NSString *_attachment;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -50,16 +50,16 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict
 {
-    self                        = [super init];
+    self = [super init];
 
     // initialize sprite by reading dictionary
     
-    _name                       = [dict readString:@"name" def:@"noname"];
-    _boneName                   = [dict readString:@"bone" def:@""];
-    _attachment                 = [[dict readString:@"attachment" def:nil] lastPathComponent];
+    _name = [dict readString:@"name" def:@"noname"];
+    _boneName = [dict readString:@"bone" def:@""];
+    _attachment = [[dict readString:@"attachment" def:nil] lastPathComponent];
     if (_attachment == nil) _attachment = _name;
-    _bone                       = nil;
-    _texture                    = nil;
+    _bone = nil;
+    _texture = nil;
     
     // done
     return(self);
@@ -69,10 +69,10 @@
 
 - (void)updateWorldTransform
 {
-    self.position           = _bone.position;
-    self.rotation           = -_bone.rotation;
-    self.scaleX             = _bone.scale.x;
-    self.scaleY             = _bone.scale.y;
+    self.position = _bone.position;
+    self.rotation = -_bone.rotation;
+    self.scaleX = _bone.scale.x;
+    self.scaleY = _bone.scale.y;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -95,6 +95,25 @@
 
 // ----------------------------------------------------------------------------------------------
 
+-( void )showTextureWithColor:(CCSpineTexture *)texture color:(CCColor *)color
+{
+    int tag = (texture != nil) ? texture.tag : CCSpineTextureInvalidTag;
+    [self showTextureForTagWithColor:tag color:color];
+}
+
+// ----------------------------------------------------------------------------------------------
+
+- (void)showTextureForTagWithColor:(int)tag color:(CCColor *)color
+{
+    for (CCSprite* sprite in self.children)
+    {
+        sprite.visible = (sprite.tag == tag);
+        if (sprite.visible) sprite.colorRGBA = color;
+    }
+}
+
+// ----------------------------------------------------------------------------------------------
+
 - (void)addTexture:(CCSpineTexture *)texture
 {
     // check if same sprite
@@ -104,19 +123,19 @@
         return;
     }
     // add the sprite
-    NSString* filename  = [texture.name stringByAppendingString:@".png"];
+    NSString* filename = [texture.name stringByAppendingString:@".png"];
     if ([[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:filename] != nil)
     {
         
         // create new sprite
-        CCSprite* image     = [CCSprite spriteWithImageNamed:filename];
+        CCSprite* image = [CCSprite spriteWithImageNamed:filename];
         // set up the sprite
-        image.position      = texture.position;
-        image.rotation      = -texture.rotation;
-        image.scaleX        = texture.scale.x * texture.size.width / image.contentSize.width;
-        image.scaleY        = texture.scale.y * texture.size.height / image.contentSize.height;
-        image.tag           = texture.tag;
-        image.visible       = NO;
+        image.position = texture.position;
+        image.rotation = -texture.rotation;
+        image.scaleX = texture.scale.x * texture.size.width / image.contentSize.width;
+        image.scaleY = texture.scale.y * texture.size.height / image.contentSize.height;
+        image.tag = texture.tag;
+        image.visible = NO;
         // check for scaling
         // if ((image.scaleX > 1.2) || (image.scaleY > 1.2)) CCLOG(@"Warning ! Sprite %@ was scaled up more than 20%%", filename);
         [self addChild:image];

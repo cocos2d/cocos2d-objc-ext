@@ -41,33 +41,39 @@
 
 - (instancetype)initDictionary:(NSDictionary *)dict andType:(CCSpineSampleType)type
 {
-    self                        = [super init];
+    self = [super init];
     
-    _time                       = [dict readFloat:@"time" def:0];
-    _type                       = type;
-    _data                       = (CCSpineBoneData){ { 0, 0 }, 0, { 1, 1 } };
+    _time = [dict readFloat:@"time" def:0];
+    _type = type;
+    _data = (CCSpineBoneData){ { 0, 0 }, 0, { 1, 1 } };
     switch (type)
     {
         case CCSpineSampleTypeRotate:
-            _data.rotation      = [dict readFloat:@"angle" def:0];
+            _data.rotation = [dict readFloat:@"angle" def:0];
             while (_data.rotation < -180) _data.rotation += 360;
             while (_data.rotation > 180) _data.rotation -= 360;
             break;
             
         case CCSpineSampleTypeTranslate:
-            _data.position.x    = [dict readFloat:@"x" def:0];
-            _data.position.y    = [dict readFloat:@"y" def:0];
+            _data.position.x = [dict readFloat:@"x" def:0];
+            _data.position.y = [dict readFloat:@"y" def:0];
             break;
             
         case CCSpineSampleTypeScale:
-            _data.scale.x       = [dict readFloat:@"x" def:1];
-            _data.scale.y       = [dict readFloat:@"y" def:1];
+            _data.scale.x = [dict readFloat:@"x" def:1];
+            _data.scale.y = [dict readFloat:@"y" def:1];
             break;
             
+        case CCSpineSampleTypeColor:
+        {
+            CCColor *color = [dict readColor:@"" def:[CCColor whiteColor]];
+            _data.color = (ccColor4F){color.red, color.green, color.blue, color.alpha};
+            break;
+        }
     }
     
     // load curve
-    _curve                      = [CCSpineBezierCurve bezierCurveWithDictionary:dict];
+    _curve = [CCSpineBezierCurve bezierCurveWithDictionary:dict];
     
     // done
     return(self);

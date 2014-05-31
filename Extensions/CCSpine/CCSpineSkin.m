@@ -30,8 +30,8 @@
 
 @implementation CCSpineSkin
 {
-    NSString*                           _name;
-    NSMutableDictionary*                _spriteList;
+    NSString *_name;
+    NSMutableDictionary *_spriteList;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -45,13 +45,13 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict andName:(NSString *)name
 {
-    self                        = [super init];
+    self = [super init];
     
     // create lists
-    _spriteList                   = [NSMutableDictionary dictionary];
+    _spriteList = [NSMutableDictionary dictionary];
     
     // initialize skin by reading dictionary
-    _name                       = [NSString stringWithString:name];
+    _name = [NSString stringWithString:name];
     
     for (NSString* spriteName in dict)
     {

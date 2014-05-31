@@ -29,16 +29,16 @@
 
 // ----------------------------------------------------------------------------------------------
 
-const int CCSpineTextureAutoTag          = 5000;
-const int CCSpineTextureInvalidTag       = -1;
+const int CCSpineTextureAutoTag = 5000;
+const int CCSpineTextureInvalidTag = -1;
 
 // ----------------------------------------------------------------------------------------------
 
 @implementation CCSpineTextureFrame
 {
-    float                   _time;
-    NSString*               _name;
-    int                     _tag;
+    float _time;
+    NSString *_name;
+    int _tag;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -50,11 +50,11 @@ const int CCSpineTextureInvalidTag       = -1;
 
 - (instancetype)initDictionary:(NSDictionary *)dict
 {
-    self                    = [super init];
+    self = [super init];
     // load from dict
-    _time                   = [dict readFloat:@"time" def:0];
-    _name                   = [[dict readString:@"name" def:nil] lastPathComponent];
-    _tag                    = CCSpineTextureInvalidTag;
+    _time = [dict readFloat:@"time" def:0];
+    _name = [[dict readString:@"name" def:nil] lastPathComponent];
+    _tag = CCSpineTextureInvalidTag;
     // done
     return(self);
 }
@@ -65,11 +65,11 @@ const int CCSpineTextureInvalidTag       = -1;
 
 @implementation CCSpineTexture
 {
-    NSString*                   _attachment;
-    NSString*                   _name;
-    CGPoint                     _position;
-    CGSize                      _size;
-    float                       _rotation;
+    NSString *_attachment;
+    NSString *_name;
+    CGPoint _position;
+    CGSize _size;
+    float _rotation;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -87,25 +87,25 @@ static int g_spriteTag = CCSpineTextureAutoTag;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict attachment:(NSString *)attachment
 {
-    self                        = [super init];
+    self = [super init];
     
     // load data from dictionary
     
-    _attachment                 = [[NSString stringWithString:attachment] lastPathComponent];
-    _name                       = [dict readString:@"name" def:nil];
+    _attachment = [[NSString stringWithString:attachment] lastPathComponent];
+    _name = [dict readString:@"name" def:nil];
     if (_name != nil)
-        _name                   = [_name lastPathComponent];
+        _name = [_name lastPathComponent];
     else
-        _name                   = [_attachment lastPathComponent];
-    _position.x                 = [dict readFloat:@"x" def:0];
-    _position.y                 = [dict readFloat:@"y" def:0];
-    _size.width                 = [dict readFloat:@"width" def:0];
-    _size.height                = [dict readFloat:@"height" def:0];
-    _scale.x                    = [dict readFloat:@"scaleX" def:1];
-    _scale.y                    = [dict readFloat:@"scaleY" def:1];
-    _rotation                   = [dict readFloat:@"rotation" def:0];
-    _tag                        = g_spriteTag ++;
-    _frame                      = nil;
+        _name = [_attachment lastPathComponent];
+    _position.x = [dict readFloat:@"x" def:0];
+    _position.y = [dict readFloat:@"y" def:0];
+    _size.width = [dict readFloat:@"width" def:0];
+    _size.height = [dict readFloat:@"height" def:0];
+    _scale.x = [dict readFloat:@"scaleX" def:1];
+    _scale.y = [dict readFloat:@"scaleY" def:1];
+    _rotation = [dict readFloat:@"rotation" def:0];
+    _tag = g_spriteTag ++;
+    _frame = nil;
     
     // done
     return (self);

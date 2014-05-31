@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6254BB0193A1438006BD09E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A6254BAF193A1438006BD09E /* README.md */; };
-		A6254BB2193A144A006BD09E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A6254BB1193A144A006BD09E /* README.md */; };
-		A6254BB4193A145D006BD09E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A6254BB3193A145D006BD09E /* README.md */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
 		A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E65193757E400196BD3 /* OpenAL.framework */; };
@@ -254,7 +251,6 @@
 		A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5827193A0C87009D2BD4 /* CCSpineSprite.m */; };
 		A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */; };
 		A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */; };
-		A6F460E1193A0FE200498203 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A6F460E0193A0FE200498203 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1608,7 +1604,6 @@
 				A6270E91193757E400196BD3 /* Icon-120.png in Resources */,
 				A62712A3193769A900196BD3 /* sound.caf in Resources */,
 				A627129C193769A900196BD3 /* Interface-hd.png in Resources */,
-				A6254BB2193A144A006BD09E /* README.md in Resources */,
 				A62712A7193769A900196BD3 /* Sprites-ipad.png in Resources */,
 				A62712AE193769A900196BD3 /* TilesAtlassed-ipad.plist in Resources */,
 				A62712A5193769A900196BD3 /* Sprites-hd.png in Resources */,
@@ -1627,8 +1622,6 @@
 				A6270E93193757E400196BD3 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				A62712A9193769A900196BD3 /* Sprites-ipadhd.png in Resources */,
 				A6271295193769A900196BD3 /* din-ipad.fnt in Resources */,
-				A6254BB0193A1438006BD09E /* README.md in Resources */,
-				A6254BB4193A145D006BD09E /* README.md in Resources */,
 				A6270E82193757E400196BD3 /* Default-Landscape~ipad.png in Resources */,
 				A6270E97193757E400196BD3 /* Icon-Small.png in Resources */,
 				A6270E95193757E400196BD3 /* Icon-Small-50.png in Resources */,
@@ -1649,7 +1642,6 @@
 				A62712B3193769A900196BD3 /* TilesAtlassed.png in Resources */,
 				A66C582C193A0C87009D2BD4 /* chase_johnson.json in Resources */,
 				A62712AD193769A900196BD3 /* TilesAtlassed-hd.png in Resources */,
-				A6F460E1193A0FE200498203 /* README.md in Resources */,
 				A6270E80193757E400196BD3 /* Default-568h@2x.png in Resources */,
 				A627129B193769A900196BD3 /* Interface-hd.plist in Resources */,
 				A6270EA0193757E400196BD3 /* iTunesArtwork in Resources */,

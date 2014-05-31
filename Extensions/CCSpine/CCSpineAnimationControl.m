@@ -34,9 +34,9 @@ const int CCSpineAnimationNotRunning = -1;
 
 @implementation CCSpineAnimationControl
 {
-    CCSpineAnimation            *_baseAnimation;
-    NSMutableArray              *_animationList;
-    NSMutableArray              *_pendingList;
+    CCSpineAnimation *_baseAnimation;
+    NSMutableArray *_animationList;
+    NSMutableArray *_pendingList;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -50,13 +50,13 @@ const int CCSpineAnimationNotRunning = -1;
 
 - (instancetype)init
 {
-    self                            = [super init];
+    self = [super init];
     // initialize
     
-    _animationList                  = [NSMutableArray array];
-    _pendingList                    = [NSMutableArray array];
+    _animationList = [NSMutableArray array];
+    _pendingList = [NSMutableArray array];
     
-    _currentAnimation               = nil;
+    _currentAnimation = nil;
 
     // done
     return(self);
@@ -64,19 +64,23 @@ const int CCSpineAnimationNotRunning = -1;
 
 // ----------------------------------------------------------------------------------------------
 
-- (void)tick:(CCTime)dt {
+- (void)tick:(CCTime)dt
+{
     BOOL restartAnimation = NO;
     CCSpineAnimation* oldAnimation = nil;
     
     // go through animation in list, and see if any expired
-    for (NSInteger index = _animationList.count - 1; index > 0; index --) {
-        CCSpineAnimation* animation           = [_animationList objectAtIndex:index];
+    for (NSInteger index = _animationList.count - 1; index > 0; index --)
+    {
+        CCSpineAnimation* animation = [_animationList objectAtIndex:index];
         if (animation.state == CCSpineAnimationStateExpired) [_animationList removeObjectAtIndex:index];
     }
     // run though insert animation, and see if runtime expired
-    for (NSInteger index = _pendingList.count - 1; index >= 0; index --) {
-        CCSpineAnimation* animation           = [_pendingList objectAtIndex:index];
-        if (animation.state == CCSpineAnimationStateExpired) {
+    for (NSInteger index = _pendingList.count - 1; index >= 0; index --)
+    {
+        CCSpineAnimation* animation = [_pendingList objectAtIndex:index];
+        if (animation.state == CCSpineAnimationStateExpired)
+        {
             oldAnimation = animation;
             [animation remove];
             [_pendingList removeObjectAtIndex:index];
@@ -84,15 +88,19 @@ const int CCSpineAnimationNotRunning = -1;
         }
     }
     // check if new animation should be started
-    if (restartAnimation == YES) {
-        if (_pendingList.count == 0) {
+    if (restartAnimation == YES)
+    {
+        if (_pendingList.count == 0)
+        {
             [_baseAnimation blend:oldAnimation];
-            _currentAnimation               = _baseAnimation;
-        } else {
-            CCSpineAnimation* animation       = [_pendingList objectAtIndex:0];
+            _currentAnimation = _baseAnimation;
+        }
+        else
+        {
+            CCSpineAnimation* animation = [_pendingList objectAtIndex:0];
             [_animationList addObject:animation];
             [animation blend:oldAnimation];
-            _currentAnimation               = animation;
+            _currentAnimation = animation;
         }
     }
     
@@ -130,7 +138,7 @@ const int CCSpineAnimationNotRunning = -1;
     if (_animationList.count == 0) {
         [_animationList addObject:animation];
         [_baseAnimation start];
-        _currentAnimation               = _baseAnimation;
+        _currentAnimation = _baseAnimation;
         return;
     }
     
@@ -151,7 +159,7 @@ const int CCSpineAnimationNotRunning = -1;
     [_animationList insertObject:animation atIndex:0];
     if (oldBaseAnimation.state != CCSpineAnimationStateIdle) {
         [animation blend:oldBaseAnimation];
-        _currentAnimation               = animation;
+        _currentAnimation = animation;
     } else {
         [animation idle];
     }
@@ -173,7 +181,7 @@ const int CCSpineAnimationNotRunning = -1;
         [_baseAnimation idle];
         [_animationList addObject:animation];
         [animation blend:_baseAnimation];
-        _currentAnimation               = animation;
+        _currentAnimation = animation;
     }
     // add animation to insert list
     [_pendingList addObject:animation];

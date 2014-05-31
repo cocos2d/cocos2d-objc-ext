@@ -37,9 +37,9 @@
 // ----------------------------------------------------------------------------------------------
 
 @property (nonatomic, readonly) NSString *boneName;
-@property (nonatomic, readonly) NSString *attachment;               // constant sprite attachment (if no sprite animations)
-@property (nonatomic, weak) CCSpineBone* bone;                      // bone which sprite is tied to
-@property (nonatomic, weak) CCSpineTexture* texture;                // default texture tied to sprite
+@property (nonatomic, readonly) NSString *attachment;                                           // constant sprite attachment (if no sprite animations)
+@property (nonatomic, weak) CCSpineBone *bone;                                                  // bone which sprite is tied to
+@property (nonatomic, weak) CCSpineTexture *texture;                                            // default texture tied to sprite
 
 // ----------------------------------------------------------------------------------------------
 
@@ -51,6 +51,9 @@
 - (void)addTexture:(CCSpineTexture *)texture;
 - (void)showTexture:(CCSpineTexture *)texture;
 - (void)showTextureForTag:(int)tag;
+
+-( void )showTextureWithColor:(CCSpineSprite *)sprite color:(CCColor *)color;
+-( void )showTextureForTagWithColor:(int)tag color:(CCColor *)color;
 
 // ----------------------------------------------------------------------------------------------
 

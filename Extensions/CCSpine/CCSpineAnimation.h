@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, CCSpineAnimationState)
 @interface spineAnimationCallback : NSObject
 
 @property (nonatomic, readonly) float time;
-@property (nonatomic, readonly) id delegate;
+@property (nonatomic, weak, readonly) id delegate;
 @property (nonatomic, readonly) SEL selector;
 
 + (instancetype)animationCallbackWithTime:(float)time delegate:(id)delegate selector:(SEL)selector;
@@ -63,22 +63,23 @@ typedef NS_ENUM(NSInteger, CCSpineAnimationState)
 
 // ----------------------------------------------------------------------------------------------
 
-@property (nonatomic) float blendTime;                                                        // blend in and out time
-@property (nonatomic) float strength;                                                         // animation strength
-@property (nonatomic) BOOL isLooped;                                                          // loop
+@property (nonatomic) float blendTime;                                                          // blend in and out time
+@property (nonatomic) float strength;                                                           // animation strength
+@property (nonatomic) BOOL isLooped;                                                            // loop
 
 @property (nonatomic, readonly) NSString *name;                                                 // animation name
-@property (nonatomic, readonly) float runTime;                                                // current animation runtime
-@property (nonatomic, readonly) float cycleTime;                                              // cycle time of the animation
-@property (nonatomic, readonly) float progress;                                               // animation progress
-@property (nonatomic, readonly) float speed;                                                  // speed applied to starting and stopping animations
-@property (nonatomic, readonly) CCSpineAnimationState state;                                        // current state of animation
-@property (nonatomic, readonly) id delegate;                                                  // callback delegate
-@property (nonatomic, readonly) SEL selector;                                                 // callback selector
-@property (nonatomic, readonly) BOOL runTimeExpired;                                          // runtime expired at least once
+@property (nonatomic, readonly) float runTime;                                                  // current animation runtime
+@property (nonatomic, readonly) float cycleTime;                                                // cycle time of the animation
+@property (nonatomic, readonly) float progress;                                                 // animation progress
+@property (nonatomic, readonly) float speed;                                                    // speed applied to starting and stopping animations
+@property (nonatomic, readonly) CCSpineAnimationState state;                                    // current state of animation
+@property (nonatomic, weak, readonly) id delegate;                                              // callback delegate
+@property (nonatomic, readonly) SEL selector;                                                   // callback selector
+@property (nonatomic, readonly) BOOL runTimeExpired;                                            // runtime expired at least once
 
-@property (nonatomic, readonly) NSArray *timelineList;                                        // array of CCSpineTimeline*
-@property (nonatomic, readonly) NSDictionary *spriteFrameList;                                // NSDictionary* of NSArray*[spriteName] of CCSpineTextureFrame*
+@property (nonatomic, readonly) NSArray *timelineList;                                          // array of CCSpineTimeline*
+@property (nonatomic, readonly) NSDictionary *spriteFrameList;                                  // NSDictionary* of NSArray*[spriteName] of CCSpineTextureFrame*
+@property (nonatomic, readonly) NSDictionary *colorSampleList;                                  // NSDictionary* of NSArray*[spriteName] of CCSpineSample*
 
 // ----------------------------------------------------------------------------------------------
 
@@ -86,7 +87,9 @@ typedef NS_ENUM(NSInteger, CCSpineAnimationState)
 - (instancetype)initWithDictionary:(NSDictionary *)dict andName:(NSString *)name;
 
 - (BOOL)hasTextureAnimation:(NSString *)spriteName;                                             // checks if a sprite has texture animations
-- (CCSpineTextureFrame *)getTextureFrameAt:(float)time forName:(NSString *)spriteName;            // return sprite sprite for any given time. returning nil means no sprite should be shown
+- (CCSpineTextureFrame *)getTextureFrameAt:(float)time forName:(NSString *)spriteName;          // return sprite sprite for any given time. returning nil means no sprite should be shown
+- (BOOL )hasColorAnimation:(NSString *)spriteName;
+- (CCSpineSample *)getColorAt:(float)time forName:(NSString *)spriteName;
 
 - (void)setCallback:(id)delegate selector:(SEL)selector;
 - (void)addTimedCallback:(float)time delegate:(id)delegate selector:(SEL)selector;
@@ -98,6 +101,7 @@ typedef NS_ENUM(NSInteger, CCSpineAnimationState)
 - (void)idle;
 - (void)blend:(CCSpineAnimation *)from;
 - (void)remove;
+- (void)stop;
 
 // ----------------------------------------------------------------------------------------------
 

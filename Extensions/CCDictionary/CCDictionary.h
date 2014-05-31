@@ -53,8 +53,7 @@ extern const NSString *CCDictionaryNameKey;
 - (CGPoint)readPoint:(NSString *)key def:(CGPoint)def;
 - (CGSize)readSize:(NSString *)key def:(CGSize)def;
 - (NSString *)readString:(NSString *)key def:(NSString *)def;
-- (ccColor4F)readColor4F:(NSString *)key def:(ccColor4F)def;
-- (ccColor3B)readColor3B:(NSString *)key def:(ccColor3B)def;
+- (CCColor *)readColor:(NSString *)key def:(CCColor *)def;
 - (NSArray *)readArray:(NSString *)key def:(NSArray *)def;
 
 - (id)readObject:(NSString *)key index:(int)index def:(id)def;
@@ -63,8 +62,7 @@ extern const NSString *CCDictionaryNameKey;
 - (CGPoint)readPoint:(NSString *)key index:(int)index def:(CGPoint)def;
 - (CGSize)readSize:(NSString *)key index:(int)index def:(CGSize)def;
 - (NSString *)readString:(NSString *)key index:(int)index def:(NSString *)def;
-- (ccColor4F)readColor4F:(NSString *)key index:(int)index def:(ccColor4F)def;
-- (ccColor3B)readColor3B:(NSString *)key index:(int)index def:(ccColor3B)def;
+- (CCColor *)readColor:(NSString *)key index:(int)index def:(CCColor *)def;
 - (NSArray *)readArray:(NSString *)key index:(int)index def:(NSArray *)def;
 
 - (NSString *)readName;

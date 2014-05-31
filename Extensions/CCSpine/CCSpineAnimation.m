@@ -30,7 +30,7 @@
 
 // ----------------------------------------------------------------------------------------------
 
-const float CCSpineAnimationBlendTime       = 0.25;
+const float CCSpineAnimationBlendTime = 0.25;
 
 // ----------------------------------------------------------------------------------------------
 
@@ -47,11 +47,11 @@ typedef void (*animationCallback)(id, SEL, id);
 
 - (instancetype)initWithTime:(float)time delegate:(id)delegate selector:(SEL)selector
 {
-    self                = [super init];
+    self = [super init];
     // initialize
-    _time               = time;
-    _delegate           = delegate;
-    _selector           = selector;
+    _time = time;
+    _delegate = delegate;
+    _selector = selector;
     // done
     return(self);
 }
@@ -62,18 +62,19 @@ typedef void (*animationCallback)(id, SEL, id);
 
 @implementation CCSpineAnimation
 {
-    NSString*                               _name;
-    CCSpineAnimationState                   _state;
-    float                                   _runTime;
-    float                                   _cycleTime;
-    NSMutableArray*                         _timelineList;
-    NSMutableDictionary*                    _spriteFrameList;
-    float                                   _stateTime;                                     // timer used for state timing
-    float                                   _speed;                                         // animation speed controlled by blending
-    float                                   _blendTime;
-    CCSpineAnimation*                       _parent;                                        // if set, return to this one after completion
-    BOOL                                    _runTimeExpired;
-    NSMutableArray*                         _callbackList;                                  // list of times callbacks
+    NSString *_name;
+    CCSpineAnimationState _state;
+    float _runTime;
+    float _cycleTime;
+    NSMutableArray *_timelineList;
+    NSMutableDictionary *_spriteFrameList;
+    NSMutableDictionary *_colorSampleList;
+    float _stateTime;                                                                           // timer used for state timing
+    float _speed;                                                                               // animation speed controlled by blending
+    float _blendTime;
+    CCSpineAnimation *_parent;                                                                  // if set, return to this one after completion
+    BOOL _runTimeExpired;
+    NSMutableArray *_callbackList;                                                              // list of times callbacks
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -87,34 +88,36 @@ typedef void (*animationCallback)(id, SEL, id);
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict andName:(NSString *)name
 {
-    self                                    = [super init];
+    self = [super init];
     
     // create lists
     
-    _timelineList                           = [NSMutableArray array];
-    _spriteFrameList                        = [NSMutableDictionary dictionary];
-    _callbackList                           = [NSMutableArray array];
+    _timelineList = [NSMutableArray array];
+    _spriteFrameList = [NSMutableDictionary dictionary];
+    _colorSampleList = [NSMutableDictionary dictionary];
+    _callbackList = [NSMutableArray array];
     
     // reset
     
-    _name                          = [NSString stringWithString:name];
-    _cycleTime                              = 0.0;
-    _strength                               = 1.0;
-    _speed                                  = 1.0;
-    _state                                  = CCSpineAnimationStateIdle;
-    _runTimeExpired                         = NO;
-    _delegate                               = nil;
-    _selector                               = nil;
+    _name = [NSString stringWithString:name];
+    _cycleTime = 0.0;
+    _strength = 1.0;
+    _speed = 1.0;
+    _state = CCSpineAnimationStateIdle;
+    _runTimeExpired = NO;
+    _delegate = nil;
+    _selector = nil;
     
     // read animation from dictionary
 
     // read bone timelines
-    NSDictionary* boneDict                  = [dict objectForKey:@"bones"];
+    NSDictionary* boneDict = [dict objectForKey:@"bones"];
     for (NSString* boneName in boneDict)
     {
         // create timeline for bone
-        CCSpineTimeline* timeline             = [CCSpineTimeline timelineWithDictionary:[boneDict objectForKey:boneName] boneName:boneName];
-        if (timeline.cycleTime > _cycleTime) _cycleTime = timeline.cycleTime;
+        CCSpineTimeline* timeline = [CCSpineTimeline timelineWithDictionary:[boneDict objectForKey:boneName] boneName:boneName];
+        if (timeline.cycleTime > _cycleTime)
+            _cycleTime = timeline.cycleTime;
         // save entry
         [_timelineList addObject:timeline];
     }
@@ -124,26 +127,31 @@ typedef void (*animationCallback)(id, SEL, id);
     for (NSString* spriteName in spriteDict)
     {
         // find sprite and add animation
-        NSDictionary* spriteEntries           = [spriteDict objectForKey:spriteName];
+        NSDictionary* spriteEntries = [spriteDict objectForKey:spriteName];
         
-        // read entries for attachment
-        NSArray* attachmentList             = [spriteEntries objectForKey:@"attachment"];
-        NSMutableArray* frameList           = [NSMutableArray array];
+        // read entries for "attachment"
+        NSArray* attachmentList = [spriteEntries objectForKey:@"attachment"];
+        NSMutableArray* frameList = [NSMutableArray array];
         for (NSDictionary* textureFrameDict in attachmentList)
         {
-            CCSpineTextureFrame* frame         = [CCSpineTextureFrame textureFrameWithDictionary:textureFrameDict];
+            CCSpineTextureFrame* frame = [CCSpineTextureFrame textureFrameWithDictionary:textureFrameDict];
             [frameList addObject:frame];
         }
         [_spriteFrameList setObject:frameList forKey:spriteName];
         
         // read entries for "color"
-        
-        
-        
+        NSArray* colorList = [spriteEntries objectForKey:@"color"];
+        NSMutableArray* colorSampleList = [NSMutableArray array];
+        for (NSDictionary *colorDict in colorList)
+        {
+            CCSpineSample *colorSample = [CCSpineSample sampleWithDictionary:colorDict andType:CCSpineSampleTypeColor];
+            [colorSampleList addObject:colorSample];
+        }
+        [_colorSampleList setObject:colorSampleList forKey:spriteName];
     }
     
     // blend time
-    self.blendTime                          = CCSpineAnimationBlendTime;
+    self.blendTime = CCSpineAnimationBlendTime;
 
     // done
     return(self);
@@ -162,19 +170,55 @@ typedef void (*animationCallback)(id, SEL, id);
 
 - (CCSpineTextureFrame *)getTextureFrameAt:(float)time forName:(NSString *)spriteName
 {
-    CCSpineTextureFrame* current;
+    CCSpineTextureFrame* current = nil;
     CCSpineTextureFrame* next;
-    NSArray* textureList        = [_spriteFrameList objectForKey:spriteName];
+    NSArray* textureList = [_spriteFrameList objectForKey:spriteName];
     
     if ((textureList == nil) || (textureList.count == 0)) return(nil);
     //
-    current = [textureList objectAtIndex:0];
-    if (time < current.time) return(current);
-    if (textureList.count == 1) return(current);
+    if (textureList.count == 1)
+    {
+        current = [textureList objectAtIndex:0];
+        if (time < current.time) return(current);
+        return(nil);
+    }
     //
     for (int index = 0; index < textureList.count; index ++)
     {
         next = [textureList objectAtIndex:index];
+        if (time <= next.time) return(current);
+        current = next;
+    }
+    // done
+    return(current);
+}
+
+// ----------------------------------------------------------------------------------------------
+
+- (BOOL )hasColorAnimation:(NSString *)spriteName
+{
+    NSArray *colorList = [_colorSampleList objectForKey:spriteName];
+    if ((colorList == nil) || (colorList.count == 0)) return(NO);
+    return(YES);
+}
+
+// ----------------------------------------------------------------------------------------------
+
+- (CCSpineSample *)getColorAt:(float)time forName:(NSString *)spriteName
+{
+    CCSpineSample *current;
+    CCSpineSample *next;
+    NSArray *colorArray = [_colorSampleList objectForKey:spriteName];
+    
+    if ((colorArray == nil) || (colorArray.count == 0)) return(nil);
+    //
+    current = [colorArray objectAtIndex:0];
+    if (time < current.time) return(current);
+    if (colorArray.count == 1) return(current);
+    //
+    for (int index = 0; index < colorArray.count; index ++)
+    {
+        next = [colorArray objectAtIndex:index];
         if (time <= next.time) return(current);
         current = next;
     }
@@ -236,7 +280,6 @@ typedef void (*animationCallback)(id, SEL, id);
     {
         if ((preRunTime <= callback.time) && (_runTime >= callback.time) && (dt != 0))
         {
-            // [callback.delegate performSelector:callback.selector withObject:self];
             ((animationCallback)objc_msgSend)(callback.delegate, callback.selector, self);
         }
     }
@@ -256,7 +299,6 @@ typedef void (*animationCallback)(id, SEL, id);
         }
         if ((_delegate != nil) && (_selector != nil))
         {
-            // [_delegate performSelector:_selector withObject:self];
             ((animationCallback)objc_msgSend)(_delegate, _selector, self);
         }
     }
@@ -274,7 +316,6 @@ typedef void (*animationCallback)(id, SEL, id);
         }
         if ((_delegate != nil) && (_selector != nil))
         {
-            // [_delegate performSelector:_selector withObject:self];
             ((animationCallback)objc_msgSend)(_delegate, _selector, self);
         }
     };
@@ -293,8 +334,8 @@ typedef void (*animationCallback)(id, SEL, id);
 
 - (void)setCallback:(id)delegate selector:(SEL)selector
 {
-    _delegate   = delegate;
-    _selector   = selector;
+    _delegate = delegate;
+    _selector = selector;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -375,7 +416,7 @@ typedef void (*animationCallback)(id, SEL, id);
 
 - (void)setRunTime:(float)runTime
 {
-    NSAssert(_state == CCSpineAnimationStateIdle || _state == CCSpineAnimationStateStop, @"[CCSpineAnimation setRunTime] runTime can only be set for idle or expired animation");
+    NSAssert(_state == CCSpineAnimationStateIdle || _state == CCSpineAnimationStateStop, @"[CCSpineAnimation setRunTime] runTime can only be set for idle or expired animations");
     NSAssert(_runTime >= 0 && _runTime < _cycleTime, @"[CCSpineAnimation setRunTime] runTime must be within animation cycle time");
     _runTime = runTime;
 }

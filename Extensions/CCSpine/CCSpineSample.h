@@ -35,13 +35,15 @@ typedef NS_ENUM(NSInteger, CCSpineSampleType)
     CCSpineSampleTypeRotate,
     CCSpineSampleTypeTranslate,
     CCSpineSampleTypeScale,
+    CCSpineSampleTypeColor,
 };
 
 typedef struct
 {
-    CGPoint             position;
-    float               rotation;
-    CGPoint             scale;
+    CGPoint position;
+    float rotation;
+    CGPoint scale;
+    ccColor4F color;
 } CCSpineBoneData;
 
 // ----------------------------------------------------------------------------------------------
@@ -53,7 +55,7 @@ typedef struct
 @property (nonatomic, readonly) float time;
 @property (nonatomic, readonly) CCSpineSampleType type;
 @property (nonatomic, readonly) CCSpineBoneData data;
-@property (nonatomic, readonly) CCSpineBezierCurve* curve;
+@property (nonatomic, readonly) CCSpineBezierCurve *curve;
 
 // TODO add color
 

@@ -41,15 +41,19 @@
 @property (nonatomic, readonly) BOOL skeletonPaused;
 
 // list of bones, skins and animations
-@property (nonatomic, readonly) CCNode* spriteParent;
-@property (nonatomic, readonly) NSDictionary* skinList;                             // list of CCSpineSkin*
-@property (nonatomic, readonly) CCSpineAnimationControl* animationControl;          // animation control
+@property (nonatomic, readonly) CCNode *spriteParent;
+@property (nonatomic, readonly) NSDictionary *skinList;                             // list of CCSpineSkin*
+@property (nonatomic, readonly) CCSpineAnimationControl *animationControl;          // animation control
 
 // ----------------------------------------------------------------------------------------------
 
 // create a skeleton from Spine json and TexturePacker spritesheet
 + (instancetype)skeletonWithJsonFile:(NSString *)file andSpriteSheet:(NSString *)spriteSheet;
 - (instancetype)initWithJsonFile:(NSString *)file andSpriteSheet:(NSString *)spriteSheet;
+
+// create a skeleton from json data (sprites are expected to be loaded elsewhere)
++ (instancetype)skeletonWithJsonDict:(NSDictionary *)dict;
+- (instancetype)initWithJsonDict:(NSDictionary *)dict;
 
 // convenience methods
 - (CCSpineBone *)getBoneByName:(NSString *)name;

@@ -48,6 +48,7 @@
 - (instancetype)initDictionary:(NSDictionary *)dict boneName:(NSString *)name;
 
 - (CCSpineBoneData)getSpineDataAt:(float)time strength:(float)strength;
+- (CCSpineBoneData)interpolate:(NSArray *)array forTime:(float)time;
 
 // ----------------------------------------------------------------------------------------------
 

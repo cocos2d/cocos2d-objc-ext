@@ -276,51 +276,32 @@ const NSString *CCDictionaryNameKey             = @"_dictionary_name";
 
 // ----------------------------------------------------------
 
-- (ccColor4F)readColor4F:(NSString *)key def:(ccColor4F)def
+- (CCColor *)readColor:(NSString *)key def:(CCColor *)def
 {
-    return([self readColor4F:key index:CCDictionaryInvalidIndex def:def]);
+    return([self readColor:key index:CCDictionaryInvalidIndex def:def]);
 }
 
-- (ccColor4F)readColor4F:(NSString *)key index:(int)index def:(ccColor4F)def
+- (CCColor *)readColor:(NSString *)key index:(int)index def:(CCColor *)def
 {
     NSString* result = [self readObject:key index:index];
     if (result == nil) return(def);
 
     NSArray* array;
-    ccColor4F color = def;
+    GLfloat color[4] = {def.red, def.green, def.blue, def.alpha};
     
     result = [result stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"{ }"]];
     array = [result componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
-    //
-    if (array.count > 0) color.r = [[NSString stringWithString:[array objectAtIndex:0]] floatValue];
-    if (array.count > 1) color.g = [[NSString stringWithString:[array objectAtIndex:1]] floatValue];
-    if (array.count > 2) color.b = [[NSString stringWithString:[array objectAtIndex:2]] floatValue];
-    if (array.count > 3) color.a = [[NSString stringWithString:[array objectAtIndex:3]] floatValue];
-    return(color);
-}
-
-// ----------------------------------------------------------
-
-- (ccColor3B)readColor3B:(NSString *)key def:(ccColor3B)def
-{
-    return([self readColor3B:key index:CCDictionaryInvalidIndex def:def]);
-}
-
-- (ccColor3B)readColor3B:(NSString *)key index:(int)index def:(ccColor3B)def
-{
-    id result = [self readObject:key index:index];
-    if (result == nil) return(def);
     
-    NSArray* array;
-    ccColor3B color = def;
-    
-    result = [result stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"{ }"]];
-    array = [result componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
-    //
-    if (array.count > 0) color.r = [[NSString stringWithString:[array objectAtIndex:0]] integerValue];
-    if (array.count > 1) color.g = [[NSString stringWithString:[array objectAtIndex:1]] integerValue];
-    if (array.count > 2) color.b = [[NSString stringWithString:[array objectAtIndex:2]] integerValue];
-    return(color);
+    for (int index = 0; index < 4; index++)
+    {
+        if (array.count > index)
+        {
+            NSString *component = [NSString stringWithString:[array objectAtIndex:index]];
+            if (![component isEqualToString:@""]) color[index] = [component floatValue];
+        }
+    }
+    // done
+    return([CCColor colorWithRed:color[0] green:color[1] blue:color[2] alpha:color[3]]);
 }
 
 // ----------------------------------------------------------

@@ -34,24 +34,25 @@
 
 // ----------------------------------------------------------------------------------------------
 
-const NSString *CCSpineSkeletonDefaultSkin      = @"default";               // default skin loaded
+const NSString *CCSpineSkeletonDefaultSkin = @"default";                                        // default skin loaded
 const NSString *CCSpineSkeletonDefaultAnimation = @"idle";
-const NSInteger CCSpineSkeletonBoneZInterval    = 10;
+const NSInteger CCSpineSkeletonBoneZInterval = 10;
 
 // ----------------------------------------------------------------------------------------------
 
 @implementation CCSpineSkeleton
 {
-    NSString*                                   _json;
-    NSMutableArray*                             _boneList;
-    NSMutableDictionary*                        _spriteList;                // iterate sprites, by iterating spriteParent.children
-    NSMutableDictionary*                        _skinList;
-    NSMutableDictionary*                        _animationList;
-    CCSpineAnimationControl*                    _animationControl;
-    CCSpineSkin*                                _defaultSkin;               // default of skin section
-    CCSpineSkin*                                _currentSkin;
-    CCNode*                                     _spriteParent;              // CCSpineSprite nodes are added here
-    float                                       _animationSpeed;
+    NSString *_json;
+    NSDictionary *_jsonData;
+    NSMutableArray *_boneList;
+    NSMutableDictionary *_spriteList;                                                           // iterate sprites, by iterating spriteParent.children
+    NSMutableDictionary *_skinList;
+    NSMutableDictionary *_animationList;
+    CCSpineAnimationControl *_animationControl;
+    CCSpineSkin *_defaultSkin;                                                                  // default of skin section
+    CCSpineSkin *_currentSkin;
+    CCNode *_spriteParent;                                                                      // CCSpineSprite nodes are added here
+    float _animationSpeed;
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -65,50 +66,83 @@ const NSInteger CCSpineSkeletonBoneZInterval    = 10;
 
 - (instancetype)initWithJsonFile:(NSString *)file andSpriteSheet:(NSString *)spriteSheet
 {
-    self                            = [super init];
+    self = [super init];
     
-    _json                           = [NSString stringWithString:file];
+    _json = [NSString stringWithString:file];
     
     // initialize
-    _spriteParent                   = [CCNode node];
-    [self addChild:_spriteParent];
+    [ self setupMembers];
     
     // load the frames
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:spriteSheet];
 
-    _animationControl               = [CCSpineAnimationControl animationControl];
+    // load json file
+    NSString* jsonPath = [[NSBundle mainBundle] pathForResource:[file stringByDeletingPathExtension] ofType:@"json"];
+    NSData* jsonData = [NSData dataWithContentsOfFile:jsonPath];
+    NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
 
+    [self createFromDict:jsonDict];
+    [self resetInternals];
 
-    NSData* data;
-    NSString* path;
-   // NSTimeInterval time = UTIL.runtime;
+    // done
+    return(self);
+}
+
+// ----------------------------------------------------------------------------------------------
+
++ (instancetype)skeletonWithJsonDict:(NSDictionary *)dict
+{
+    return([[CCSpineSkeleton alloc] initWithJsonDict:dict]);
+}
+
+// ----------------------------------------------------------------------------------------------
+
+-(instancetype)initWithJsonDict:(NSDictionary *)dict
+{
+    self = [ super init ];
     
-    path      = [[NSBundle mainBundle] pathForResource:[file stringByDeletingPathExtension] ofType:@"json"];
-    data = [NSData dataWithContentsOfFile: path];
-
-    //time = UTIL.runtime - time;
-    //CCLOG(@"time :%.3f", time);
-
+    // initialize
+    [self setupMembers];
+    [self createFromDict:dict];
+    [self resetInternals];
     
-    NSDictionary* json              = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    // done
+    return self;
+}
 
+// ----------------------------------------------------------------------------------------------
+// setup helpers
+
+- (void)setupMembers
+{
+    _spriteParent = [CCNode node];
+    _spriteParent.cascadeOpacityEnabled = YES;
+    _spriteParent.cascadeColorEnabled = YES;
+    [self addChild:_spriteParent];
+    _animationControl = [CCSpineAnimationControl animationControl];
+}
+
+-(void)createFromDict:(NSDictionary *)dict
+{
     // create lists
-    _boneList                       = [NSMutableArray array];
-    _spriteList                       = [NSMutableDictionary dictionary];
-    _skinList                       = [NSMutableDictionary dictionary];
-    _animationList                  = [NSMutableDictionary dictionary];
+    _boneList = [NSMutableArray array];
+    _spriteList = [NSMutableDictionary dictionary];
+    _skinList = [NSMutableDictionary dictionary];
+    _animationList = [NSMutableDictionary dictionary];
+    // delay load support
+    _jsonData = dict;
     
     // load bones
-    NSArray* boneArray              = [json objectForKey:@"bones"];
+    NSArray* boneArray = [dict objectForKey:@"bones"];
     for (NSDictionary *boneDict in boneArray)
     {
         // create the bone and add it to list
-        CCSpineBone *bone             = [CCSpineBone boneWithDictionary:boneDict];
+        CCSpineBone *bone = [CCSpineBone boneWithDictionary:boneDict];
         [_boneList addObject:bone];
     }
-
+    
     // load sprites
-    NSArray *spriteArray = [json objectForKey:@"slots"];
+    NSArray *spriteArray = [dict objectForKey:@"slots"];
     for (NSDictionary *spriteDict in spriteArray)
     {
         // create the sprite
@@ -123,21 +157,21 @@ const NSInteger CCSpineSkeletonBoneZInterval    = 10;
     }
     
     // load skins
-    NSDictionary* skinDict          = [json objectForKey:@"skins"];
+    NSDictionary* skinDict = [dict objectForKey:@"skins"];
     for (NSString* skinName in skinDict)
     {
         // create the skin
-        CCSpineSkin* skin             = [CCSpineSkin skinWithDictionary:[skinDict objectForKey:skinName] andName:skinName];
+        CCSpineSkin* skin = [CCSpineSkin skinWithDictionary:[skinDict objectForKey:skinName] andName:skinName];
         // create entry for skin
         [_skinList setObject:skin forKey:skinName];
     }
     
     // load animations
-    NSDictionary* animationDict     = [json objectForKey:@"animations"];
+    NSDictionary* animationDict = [dict objectForKey:@"animations"];
     for (NSString* name in animationDict)
     {
         // create the animation
-        CCSpineAnimation* animation   = [CCSpineAnimation animationWithDictionary:[animationDict objectForKey:name] andName:name];
+        CCSpineAnimation* animation = [CCSpineAnimation animationWithDictionary:[animationDict objectForKey:name] andName:name];
         // create entry for animation
         [_animationList setObject:animation forKey:name];
     }
@@ -148,30 +182,27 @@ const NSInteger CCSpineSkeletonBoneZInterval    = 10;
     // set parent for CCSpineBone
     for (CCSpineBone* bone in _boneList)
     {
-        bone.parentBone             = [self getBoneByName:bone.parentName];
+        bone.parentBone = [self getBoneByName:bone.parentName];
     }
-
+    
     // set bones for CCSpineTimeline
     for (NSString* name in _animationList)
     {
-        CCSpineAnimation* animation   = [_animationList objectForKey:name];
+        CCSpineAnimation* animation = [_animationList objectForKey:name];
         for (CCSpineTimeline* timeline in animation.timelineList)
         {
-            timeline.bone           = [self getBoneByName:timeline.boneName];
+            timeline.bone = [self getBoneByName:timeline.boneName];
         }
     }
-    
-    // ------------------------------
-    
+}
+
+- (void)resetInternals
+{
     // reset internal
-    
-    _animationSpeed                 = 1.0;
-    _skeletonPaused                 = NO;
-    _currentSkin                    = nil;
-    _defaultSkin                    = [_skinList objectForKey:CCSpineSkeletonDefaultSkin];
-    
-    // done
-    return(self);
+    _animationSpeed = 1.0;
+    _skeletonPaused = NO;
+    _currentSkin = nil;
+    _defaultSkin = [_skinList objectForKey:CCSpineSkeletonDefaultSkin];
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -198,21 +229,39 @@ const NSInteger CCSpineSkeletonBoneZInterval    = 10;
             case CCSpineAnimationStateRun:
             case CCSpineAnimationStateExpired:
                 // add animations to bones
-                for (CCSpineTimeline* timeline in animation.timelineList) {
-                    
+                for (CCSpineTimeline* timeline in animation.timelineList)
+                {
                     CCSpineBoneData data = [timeline getSpineDataAt:animation.runTime strength:animation.strength];
                     [timeline.bone addAnimation:data];
                     
                 }
                 // apply texture animations to sprite
-                // TODO add color and opacity animation
-                for (CCSpineSprite* sprite in _spriteParent.children) {
-                    if ([animation hasTextureAnimation:sprite.name] == YES) {
-                        CCSpineTextureFrame* textureFrame           = [animation getTextureFrameAt:animation.runTime forName:sprite.name];
+                for (CCSpineSprite* sprite in _spriteParent.children)
+                {
+                    // check for texture animation
+                    if ([animation hasTextureAnimation:sprite.name] == YES)
+                    {
+                        CCSpineTextureFrame* textureFrame = [animation getTextureFrameAt:animation.runTime forName:sprite.name];
                         [sprite showTextureForTag:textureFrame.tag];
-                    } else {
+                    }
+                    else
+                    {
                         [sprite showTexture:sprite.texture];
                     }
+                    // check for color animation
+                    if ([animation hasColorAnimation:sprite.name] == YES)
+                    {
+                        CCSpineTextureFrame *textureFrame = [animation getTextureFrameAt:animation.runTime forName:sprite.name ];
+                        CCSpineSample *sample = [animation getColorAt:animation.runTime forName:sprite.name];
+                        if (sample != nil)
+                        {
+                            CCSpineTimeline *timeline = [animation.timelineList objectAtIndex:0];
+                            NSArray *colorsamples = [animation.colorSampleList objectForKey:sprite.name];
+                            CCSpineBoneData data = [timeline interpolate:colorsamples forTime:animation.runTime];
+                            [sprite showTextureForTagWithColor:textureFrame.tag color:[CCColor colorWithRed:data.color.r green:data.color.g blue:data.color.b alpha:data.color.a]];
+                        }
+                    }
+
                 }
                 animationUpdated = YES;
                 break;
