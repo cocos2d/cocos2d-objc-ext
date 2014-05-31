@@ -428,8 +428,8 @@
 		A6271102193757E600196BD3 /* LICENSE_Chipmunk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Chipmunk.txt; path = Libraries/LICENSE_Chipmunk.txt; sourceTree = "<group>"; };
 		A6271105193757E600196BD3 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Supporting Files/Prefix.pch"; sourceTree = "<group>"; };
 		A6271106193757E600196BD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
-		A6271109193757E600196BD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
-		A627110A193757E600196BD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		A6271109193757E600196BD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		A627110A193757E600196BD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		A627111C193759F300196BD3 /* CCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAction.h; sourceTree = "<group>"; };
 		A627111D193759F300196BD3 /* CCAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAction.m; sourceTree = "<group>"; };
 		A627111E193759F300196BD3 /* CCActionCatmullRom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionCatmullRom.h; sourceTree = "<group>"; };
@@ -1087,8 +1087,6 @@
 		A6271108193757E600196BD3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A6271109193757E600196BD3 /* AppDelegate.h */,
-				A627110A193757E600196BD3 /* AppDelegate.m */,
 				A627126819375F2700196BD3 /* TestBed */,
 				A66C5801193A0BF0009D2BD4 /* Tests */,
 				A66C5808193A0C24009D2BD4 /* Extensions */,
@@ -1390,6 +1388,8 @@
 		A627126819375F2700196BD3 /* TestBed */ = {
 			isa = PBXGroup;
 			children = (
+				A6271109193757E600196BD3 /* AppDelegate.h */,
+				A627110A193757E600196BD3 /* AppDelegate.m */,
 				A627126919375F2700196BD3 /* MainMenu.h */,
 				A627126A19375F2700196BD3 /* MainMenu.m */,
 				A627126B19375F2700196BD3 /* TestBase.h */,
