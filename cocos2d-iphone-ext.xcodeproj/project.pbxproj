@@ -251,6 +251,7 @@
 		A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5827193A0C87009D2BD4 /* CCSpineSprite.m */; };
 		A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */; };
 		A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */; };
+		A6F460E1193A0FE200498203 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A6F460E0193A0FE200498203 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -720,6 +721,7 @@
 		A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTexture.m; path = Extensions/CCSpine/CCSpineTexture.m; sourceTree = SOURCE_ROOT; };
 		A66C582A193A0C87009D2BD4 /* CCSpineTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineTimeline.h; path = Extensions/CCSpine/CCSpineTimeline.h; sourceTree = SOURCE_ROOT; };
 		A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTimeline.m; path = Extensions/CCSpine/CCSpineTimeline.m; sourceTree = SOURCE_ROOT; };
+		A6F460E0193A0FE200498203 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1087,6 +1089,7 @@
 		A6271108193757E600196BD3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A6F460E0193A0FE200498203 /* README.md */,
 				A627126819375F2700196BD3 /* TestBed */,
 				A66C5801193A0BF0009D2BD4 /* Tests */,
 				A66C5808193A0C24009D2BD4 /* Extensions */,
@@ -1634,6 +1637,7 @@
 				A62712B3193769A900196BD3 /* TilesAtlassed.png in Resources */,
 				A66C582C193A0C87009D2BD4 /* chase_johnson.json in Resources */,
 				A62712AD193769A900196BD3 /* TilesAtlassed-hd.png in Resources */,
+				A6F460E1193A0FE200498203 /* README.md in Resources */,
 				A6270E80193757E400196BD3 /* Default-568h@2x.png in Resources */,
 				A627129B193769A900196BD3 /* Interface-hd.plist in Resources */,
 				A6270EA0193757E400196BD3 /* iTunesArtwork in Resources */,
