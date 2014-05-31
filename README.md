@@ -1,17 +1,21 @@
-cocos2d-iphone-ext
+Cocos2D extensions
 ==================
 
-Extensions and utility classes for Cocos2D-iphone
+Extensions and utility classes for cocos2d-iphone.
 
 cocos2d-iphone-ext, will include various classes and libraries, not suitet for release with the official cocos2d-iphone. Some classes might initially be added to this repository, and then later be moved to cocos2d-iphone, when a new version is released.
-The repository will work Cocos2D-iphone V3.1, and will include test cases. 
 
-OBS
-===
+Cocos2D Version
+===============
+V3.1 beta. 
 This repo is currently in beta stage. Please be adviced, that thjere will be changes before first release.
 
-The repo contains the following extension
-=========================================
+How To
+------
+
+
+Extensions
+==========
 
 CCSpine
 =======
