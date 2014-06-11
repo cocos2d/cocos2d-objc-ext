@@ -16,7 +16,6 @@
 		A6270E6E193757E400196BD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E6D193757E400196BD3 /* Foundation.framework */; };
 		A6270E70193757E400196BD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E6F193757E400196BD3 /* CoreGraphics.framework */; };
 		A6270E72193757E400196BD3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E71193757E400196BD3 /* CoreText.framework */; };
-		A6270E78193757E400196BD3 /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E75193757E400196BD3 /* libObjectiveChipmunk.a */; };
 		A6270E7C193757E400196BD3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A6270E7B193757E400196BD3 /* Default.png */; };
 		A6270E7E193757E400196BD3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6270E7D193757E400196BD3 /* Default@2x.png */; };
 		A6270E80193757E400196BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6270E7F193757E400196BD3 /* Default-568h@2x.png */; };
@@ -91,17 +90,25 @@
 		A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5827193A0C87009D2BD4 /* CCSpineSprite.m */; };
 		A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */; };
 		A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */; };
+		A67317661948CB4D005D839D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A66A4D221948C51A005FF794 /* libcocos2d.a */; };
 		A6D883A8193C7BA500CE3922 /* cards.classic.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6D883A6193C7BA500CE3922 /* cards.classic.plist */; };
 		A6D883A9193C7BA500CE3922 /* cards.classic.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D883A7193C7BA500CE3922 /* cards.classic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A6270E76193757E400196BD3 /* PBXContainerItemProxy */ = {
+		A66A4D211948C51A005FF794 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A6270E56193757E300196BD3 /* Project object */;
+			containerPortal = A66A4D1B1948C51A005FF794 /* cocos2d-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5018F24D0DFDEAC400C013A5;
+			remoteInfo = cocos2d;
+		};
+		A6C97E5D1948C83700942713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A66A4D1B1948C51A005FF794 /* cocos2d-ios.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = A6270E74193757E400196BD3;
-			remoteInfo = ObjectiveChipmunk;
+			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
+			remoteInfo = cocos2d;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -119,7 +126,6 @@
 		A6270E6D193757E400196BD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A6270E6F193757E400196BD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A6270E71193757E400196BD3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		A6270E75193757E400196BD3 /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveChipmunk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6270E7B193757E400196BD3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		A6270E7D193757E400196BD3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		A6270E7F193757E400196BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 		A6271290193769A900196BD3 /* TilesAtlassed-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TilesAtlassed-ipadhd.png"; path = "Resources/Testbed/TilesAtlassed-ipadhd.png"; sourceTree = "<group>"; };
 		A6271291193769A900196BD3 /* TilesAtlassed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TilesAtlassed.plist; path = Resources/Testbed/TilesAtlassed.plist; sourceTree = "<group>"; };
 		A6271292193769A900196BD3 /* TilesAtlassed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TilesAtlassed.png; path = Resources/Testbed/TilesAtlassed.png; sourceTree = "<group>"; };
+		A66A4D1B1948C51A005FF794 /* cocos2d-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-ios.xcodeproj"; path = "Externals/cocos2d-ios.xcodeproj"; sourceTree = "<group>"; };
 		A66C5803193A0C17009D2BD4 /* spineNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spineNode.h; path = Classes/Tests/Spine/spineNode.h; sourceTree = "<group>"; };
 		A66C5804193A0C17009D2BD4 /* spineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineNode.m; path = Classes/Tests/Spine/spineNode.m; sourceTree = "<group>"; };
 		A66C5805193A0C17009D2BD4 /* spineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineTest.m; path = Classes/Tests/Spine/spineTest.m; sourceTree = "<group>"; };
@@ -222,7 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6270E78193757E400196BD3 /* libObjectiveChipmunk.a in Frameworks */,
+				A67317661948CB4D005D839D /* libcocos2d.a in Frameworks */,
 				A627126219375A2200196BD3 /* GLKit.framework in Frameworks */,
 				A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */,
 				A6270E6C193757E400196BD3 /* UIKit.framework in Frameworks */,
@@ -242,10 +249,10 @@
 		A6270E55193757E300196BD3 = {
 			isa = PBXGroup;
 			children = (
+				A6C357B31948CC8A00E4FD04 /* Cocos2D */,
 				A6270E60193757E400196BD3 /* Frameworks */,
 				A6270E5F193757E400196BD3 /* Products */,
 				A6271104193757E600196BD3 /* Supporting Files */,
-				A66A4D181948BEEE005FF794 /* Externals */,
 				A6270E7A193757E400196BD3 /* Resources */,
 				A6271108193757E600196BD3 /* Classes */,
 			);
@@ -255,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				A6270E5E193757E400196BD3 /* cocos2d-iphone-ext.app */,
-				A6270E75193757E400196BD3 /* libObjectiveChipmunk.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,11 +405,12 @@
 			name = TestBed;
 			sourceTree = "<group>";
 		};
-		A66A4D181948BEEE005FF794 /* Externals */ = {
+		A66A4D1C1948C51A005FF794 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				A66A4D221948C51A005FF794 /* libcocos2d.a */,
 			);
-			name = Externals;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A66C5801193A0BF0009D2BD4 /* Tests */ = {
@@ -494,6 +501,14 @@
 			path = Extensions/CCSpine/Animation;
 			sourceTree = SOURCE_ROOT;
 		};
+		A6C357B31948CC8A00E4FD04 /* Cocos2D */ = {
+			isa = PBXGroup;
+			children = (
+				A66A4D1B1948C51A005FF794 /* cocos2d-ios.xcodeproj */,
+			);
+			name = Cocos2D;
+			sourceTree = "<group>";
+		};
 		A6D883A5193C7B9200CE3922 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,27 +532,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				A6270E77193757E400196BD3 /* PBXTargetDependency */,
+				A6C97E5E1948C83700942713 /* PBXTargetDependency */,
 			);
 			name = "cocos2d-iphone-ext";
 			productName = "cocos2d-iphone-ext";
 			productReference = A6270E5E193757E400196BD3 /* cocos2d-iphone-ext.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A6270E74193757E400196BD3 /* ObjectiveChipmunk */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A6271114193757E600196BD3 /* Build configuration list for PBXNativeTarget "ObjectiveChipmunk" */;
-			buildPhases = (
-				A6270E73193757E400196BD3 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ObjectiveChipmunk;
-			productName = ObjectiveChipmunk;
-			productReference = A6270E75193757E400196BD3 /* libObjectiveChipmunk.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -558,13 +558,28 @@
 			mainGroup = A6270E55193757E300196BD3;
 			productRefGroup = A6270E5F193757E400196BD3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A66A4D1C1948C51A005FF794 /* Products */;
+					ProjectRef = A66A4D1B1948C51A005FF794 /* cocos2d-ios.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A6270E5D193757E300196BD3 /* cocos2d-iphone-ext */,
-				A6270E74193757E400196BD3 /* ObjectiveChipmunk */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A66A4D221948C51A005FF794 /* libcocos2d.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2d.a;
+			remoteRef = A66A4D211948C51A005FF794 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A6270E5C193757E300196BD3 /* Resources */ = {
@@ -659,20 +674,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6270E73193757E400196BD3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A6270E77193757E400196BD3 /* PBXTargetDependency */ = {
+		A6C97E5E1948C83700942713 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A6270E74193757E400196BD3 /* ObjectiveChipmunk */;
-			targetProxy = A6270E76193757E400196BD3 /* PBXContainerItemProxy */;
+			name = cocos2d;
+			targetProxy = A6C97E5D1948C83700942713 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -680,7 +688,7 @@
 		A6271112193757E600196BD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -693,7 +701,8 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -702,7 +711,7 @@
 		A6271113193757E600196BD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -713,43 +722,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A6271115193757E600196BD3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				EXECUTABLE_EXTENSION = a;
-				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A6271116193757E600196BD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				EXECUTABLE_EXTENSION = a;
-				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/chipmunk/include\"",
-					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -762,8 +738,10 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2d-iphone-ext/Supporting Files/Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "Externals/**";
 				INFOPLIST_FILE = "cocos2d-iphone-ext/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -783,8 +761,10 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2d-iphone-ext/Supporting Files/Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "Externals/**";
 				INFOPLIST_FILE = "cocos2d-iphone-ext/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -805,15 +785,6 @@
 			buildConfigurations = (
 				A6271112193757E600196BD3 /* Debug */,
 				A6271113193757E600196BD3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A6271114193757E600196BD3 /* Build configuration list for PBXNativeTarget "ObjectiveChipmunk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A6271115193757E600196BD3 /* Debug */,
-				A6271116193757E600196BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
