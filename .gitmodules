@@ -1,0 +1,3 @@
+[submodule "Externals"]
+	path = Externals
+	url = https://Birkemose@github.com/cocos2d/cocos2d-iphone.git
