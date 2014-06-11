@@ -26,6 +26,7 @@ CCSpine
 A set of classes, supporting Spine by Esoteric Software (http://esotericsoftware.com/)
 
 Uses extension : CCNodeTag, CCDictionary
+Animations and artwork from the game Desert Chase by Dynamic Dust s.r.o. (http://www.dynamicdust.com/games/desertchase/)
 
 CCNodeTag
 =========
