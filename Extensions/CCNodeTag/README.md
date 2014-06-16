@@ -1,6 +1,7 @@
 CCNodeTag
 =========
 
+Type of class  : Category to CCNode
 Uses extension : <NONE>
 
 Adds tags to CCNode.

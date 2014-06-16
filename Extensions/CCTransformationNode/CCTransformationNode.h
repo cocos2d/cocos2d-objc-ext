@@ -29,20 +29,16 @@
 
 //----------------------------------------------------------------------
 
-@interface CCNode (CCNodeTag)
+@interface CCTransformationNode : CCNode
 
 //----------------------------------------------------------------------
 
-@property (nonatomic, assign) NSInteger tag;
+@property (nonatomic, assign) float roll;
+@property (nonatomic, assign) float pitch;
+@property (nonatomic, assign) float perspective;                        // strength of the 3D perspective
 
-//----------------------------------------------------------------------
-
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup;
-- (CCNode *)getChildByTag:(NSInteger)tag;
+@property (nonatomic, readonly, getter = isBackFacing) BOOL backFacing; // node is backfacing
 
 //----------------------------------------------------------------------
 
 @end
-

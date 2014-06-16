@@ -27,22 +27,19 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-//----------------------------------------------------------------------
+// -----------------------------------------------------------------
 
-@interface CCNode (CCNodeTag)
+@interface cardNode : CCNode
 
-//----------------------------------------------------------------------
+// -----------------------------------------------------------------
 
-@property (nonatomic, assign) NSInteger tag;
+@property (nonatomic, assign) BOOL backFacing;
 
-//----------------------------------------------------------------------
+// -----------------------------------------------------------------
 
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup;
-- (CCNode *)getChildByTag:(NSInteger)tag;
++ (instancetype)cardWithName:(NSString *)name;
+- (instancetype)initWithName:(NSString *)name;
 
-//----------------------------------------------------------------------
+// -----------------------------------------------------------------
 
 @end
-

@@ -73,8 +73,6 @@
 		A62712B1193769A900196BD3 /* TilesAtlassed-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = A6271290193769A900196BD3 /* TilesAtlassed-ipadhd.png */; };
 		A62712B2193769A900196BD3 /* TilesAtlassed.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6271291193769A900196BD3 /* TilesAtlassed.plist */; };
 		A62712B3193769A900196BD3 /* TilesAtlassed.png in Resources */ = {isa = PBXBuildFile; fileRef = A6271292193769A900196BD3 /* TilesAtlassed.png */; };
-		A66C5806193A0C17009D2BD4 /* spineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5804193A0C17009D2BD4 /* spineNode.m */; };
-		A66C5807193A0C17009D2BD4 /* spineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5805193A0C17009D2BD4 /* spineTest.m */; };
 		A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C580D193A0C69009D2BD4 /* CCNodeTag.m */; };
 		A66C5811193A0C77009D2BD4 /* CCDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5810193A0C77009D2BD4 /* CCDictionary.m */; };
 		A66C582C193A0C87009D2BD4 /* chase_johnson.json in Resources */ = {isa = PBXBuildFile; fileRef = A66C5813193A0C87009D2BD4 /* chase_johnson.json */; };
@@ -91,6 +89,13 @@
 		A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */; };
 		A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */; };
 		A67317661948CB4D005D839D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A66A4D221948C51A005FF794 /* libcocos2d.a */; };
+		A68895AF1949A8B4002950DD /* CCTransformationNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A68895AE1949A8B4002950DD /* CCTransformationNode.m */; };
+		A6994F7C194A2D4F00B97481 /* CCCropNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6994F7B194A2D4F00B97481 /* CCCropNode.m */; };
+		A6994F81194A2F3D00B97481 /* CCCropNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6994F80194A2F3D00B97481 /* CCCropNodeTest.m */; };
+		A6994F84194A2FAC00B97481 /* CCSpineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6994F82194A2FAC00B97481 /* CCSpineTest.m */; };
+		A6994F85194A2FAC00B97481 /* CCTransformationNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6994F83194A2FAC00B97481 /* CCTransformationNodeTest.m */; };
+		A6994F8A194A2FBB00B97481 /* cardNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6994F87194A2FBB00B97481 /* cardNode.m */; };
+		A6994F8B194A2FBB00B97481 /* spineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6994F89194A2FBB00B97481 /* spineNode.m */; };
 		A6D883A8193C7BA500CE3922 /* cards.classic.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6D883A6193C7BA500CE3922 /* cards.classic.plist */; };
 		A6D883A9193C7BA500CE3922 /* cards.classic.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D883A7193C7BA500CE3922 /* cards.classic.png */; };
 /* End PBXBuildFile section */
@@ -189,9 +194,6 @@
 		A6271291193769A900196BD3 /* TilesAtlassed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TilesAtlassed.plist; path = Resources/Testbed/TilesAtlassed.plist; sourceTree = "<group>"; };
 		A6271292193769A900196BD3 /* TilesAtlassed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TilesAtlassed.png; path = Resources/Testbed/TilesAtlassed.png; sourceTree = "<group>"; };
 		A66A4D1B1948C51A005FF794 /* cocos2d-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-ios.xcodeproj"; path = "Externals/cocos2d-ios.xcodeproj"; sourceTree = "<group>"; };
-		A66C5803193A0C17009D2BD4 /* spineNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spineNode.h; path = Classes/Tests/Spine/spineNode.h; sourceTree = "<group>"; };
-		A66C5804193A0C17009D2BD4 /* spineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineNode.m; path = Classes/Tests/Spine/spineNode.m; sourceTree = "<group>"; };
-		A66C5805193A0C17009D2BD4 /* spineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineTest.m; path = Classes/Tests/Spine/spineTest.m; sourceTree = "<group>"; };
 		A66C580C193A0C69009D2BD4 /* CCNodeTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeTag.h; path = Extensions/CCNodeTag/CCNodeTag.h; sourceTree = SOURCE_ROOT; };
 		A66C580D193A0C69009D2BD4 /* CCNodeTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeTag.m; path = Extensions/CCNodeTag/CCNodeTag.m; sourceTree = SOURCE_ROOT; };
 		A66C580F193A0C77009D2BD4 /* CCDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDictionary.h; path = Extensions/CCDictionary/CCDictionary.h; sourceTree = SOURCE_ROOT; };
@@ -219,6 +221,19 @@
 		A66C5829193A0C87009D2BD4 /* CCSpineTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTexture.m; path = Extensions/CCSpine/CCSpineTexture.m; sourceTree = SOURCE_ROOT; };
 		A66C582A193A0C87009D2BD4 /* CCSpineTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineTimeline.h; path = Extensions/CCSpine/CCSpineTimeline.h; sourceTree = SOURCE_ROOT; };
 		A66C582B193A0C87009D2BD4 /* CCSpineTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTimeline.m; path = Extensions/CCSpine/CCSpineTimeline.m; sourceTree = SOURCE_ROOT; };
+		A68895AB1949A7DD002950DD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCTransformationNode/README.md; sourceTree = SOURCE_ROOT; };
+		A68895AD1949A8B4002950DD /* CCTransformationNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTransformationNode.h; path = Extensions/CCTransformationNode/CCTransformationNode.h; sourceTree = SOURCE_ROOT; };
+		A68895AE1949A8B4002950DD /* CCTransformationNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTransformationNode.m; path = Extensions/CCTransformationNode/CCTransformationNode.m; sourceTree = SOURCE_ROOT; };
+		A6994F78194A2CCF00B97481 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCCropNode/README.md; sourceTree = SOURCE_ROOT; };
+		A6994F7A194A2D4F00B97481 /* CCCropNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCropNode.h; path = Extensions/CCCropNode/CCCropNode.h; sourceTree = SOURCE_ROOT; };
+		A6994F7B194A2D4F00B97481 /* CCCropNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCropNode.m; path = Extensions/CCCropNode/CCCropNode.m; sourceTree = SOURCE_ROOT; };
+		A6994F80194A2F3D00B97481 /* CCCropNodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCropNodeTest.m; path = Classes/Tests/CCCropNodeTest.m; sourceTree = "<group>"; };
+		A6994F82194A2FAC00B97481 /* CCSpineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineTest.m; path = Classes/Tests/CCSpineTest.m; sourceTree = "<group>"; };
+		A6994F83194A2FAC00B97481 /* CCTransformationNodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTransformationNodeTest.m; path = Classes/Tests/CCTransformationNodeTest.m; sourceTree = "<group>"; };
+		A6994F86194A2FBB00B97481 /* cardNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cardNode.h; path = "Classes/Tests/Test helper classes/cardNode.h"; sourceTree = "<group>"; };
+		A6994F87194A2FBB00B97481 /* cardNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardNode.m; path = "Classes/Tests/Test helper classes/cardNode.m"; sourceTree = "<group>"; };
+		A6994F88194A2FBB00B97481 /* spineNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spineNode.h; path = "Classes/Tests/Test helper classes/spineNode.h"; sourceTree = "<group>"; };
+		A6994F89194A2FBB00B97481 /* spineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = spineNode.m; path = "Classes/Tests/Test helper classes/spineNode.m"; sourceTree = "<group>"; };
 		A6D883A6193C7BA500CE3922 /* cards.classic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = cards.classic.plist; path = Resources/Cards/cards.classic.plist; sourceTree = "<group>"; };
 		A6D883A7193C7BA500CE3922 /* cards.classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cards.classic.png; path = Resources/Cards/cards.classic.png; sourceTree = "<group>"; };
 		A6F460E0193A0FE200498203 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -416,24 +431,19 @@
 		A66C5801193A0BF0009D2BD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A66C5802193A0BF9009D2BD4 /* Spine */,
+				A6994F82194A2FAC00B97481 /* CCSpineTest.m */,
+				A6994F83194A2FAC00B97481 /* CCTransformationNodeTest.m */,
+				A6994F80194A2F3D00B97481 /* CCCropNodeTest.m */,
+				A6994F7E194A2E2800B97481 /* Test helper classes */,
 			);
 			name = Tests;
-			sourceTree = "<group>";
-		};
-		A66C5802193A0BF9009D2BD4 /* Spine */ = {
-			isa = PBXGroup;
-			children = (
-				A66C5803193A0C17009D2BD4 /* spineNode.h */,
-				A66C5804193A0C17009D2BD4 /* spineNode.m */,
-				A66C5805193A0C17009D2BD4 /* spineTest.m */,
-			);
-			name = Spine;
 			sourceTree = "<group>";
 		};
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A6994F76194A2C8000B97481 /* CCCropNode */,
+				A68895A91949A785002950DD /* CCTransformationNode */,
 				A66C5809193A0C3C009D2BD4 /* CCNodeTag */,
 				A66C580A193A0C44009D2BD4 /* CCDictionary */,
 				A66C580B193A0C4E009D2BD4 /* CCSpine */,
@@ -500,6 +510,37 @@
 			name = Animation;
 			path = Extensions/CCSpine/Animation;
 			sourceTree = SOURCE_ROOT;
+		};
+		A68895A91949A785002950DD /* CCTransformationNode */ = {
+			isa = PBXGroup;
+			children = (
+				A68895AB1949A7DD002950DD /* README.md */,
+				A68895AD1949A8B4002950DD /* CCTransformationNode.h */,
+				A68895AE1949A8B4002950DD /* CCTransformationNode.m */,
+			);
+			name = CCTransformationNode;
+			sourceTree = "<group>";
+		};
+		A6994F76194A2C8000B97481 /* CCCropNode */ = {
+			isa = PBXGroup;
+			children = (
+				A6994F78194A2CCF00B97481 /* README.md */,
+				A6994F7A194A2D4F00B97481 /* CCCropNode.h */,
+				A6994F7B194A2D4F00B97481 /* CCCropNode.m */,
+			);
+			name = CCCropNode;
+			sourceTree = "<group>";
+		};
+		A6994F7E194A2E2800B97481 /* Test helper classes */ = {
+			isa = PBXGroup;
+			children = (
+				A6994F86194A2FBB00B97481 /* cardNode.h */,
+				A6994F87194A2FBB00B97481 /* cardNode.m */,
+				A6994F88194A2FBB00B97481 /* spineNode.h */,
+				A6994F89194A2FBB00B97481 /* spineNode.m */,
+			);
+			name = "Test helper classes";
+			sourceTree = "<group>";
 		};
 		A6C357B31948CC8A00E4FD04 /* Cocos2D */ = {
 			isa = PBXGroup;
@@ -653,19 +694,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6994F85194A2FAC00B97481 /* CCTransformationNodeTest.m in Sources */,
 				A627126E19375F2700196BD3 /* TestBase.m in Sources */,
 				A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */,
+				A6994F8A194A2FBB00B97481 /* cardNode.m in Sources */,
+				A6994F81194A2F3D00B97481 /* CCCropNodeTest.m in Sources */,
 				A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */,
 				A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */,
-				A66C5807193A0C17009D2BD4 /* spineTest.m in Sources */,
+				A6994F7C194A2D4F00B97481 /* CCCropNode.m in Sources */,
+				A6994F84194A2FAC00B97481 /* CCSpineTest.m in Sources */,
 				A66C5833193A0C87009D2BD4 /* CCSpineBone.m in Sources */,
 				A66C5811193A0C77009D2BD4 /* CCDictionary.m in Sources */,
+				A6994F8B194A2FBB00B97481 /* spineNode.m in Sources */,
+				A68895AF1949A8B4002950DD /* CCTransformationNode.m in Sources */,
 				A627126D19375F2700196BD3 /* MainMenu.m in Sources */,
 				A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */,
 				A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
-				A66C5806193A0C17009D2BD4 /* spineNode.m in Sources */,
 				A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */,
 				A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */,
 				A66C5832193A0C87009D2BD4 /* CCSpineBezierCurve.m in Sources */,

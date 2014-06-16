@@ -24,25 +24,12 @@
  * THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "CCCropNode.h"
 
 //----------------------------------------------------------------------
 
-@interface CCNode (CCNodeTag)
-
-//----------------------------------------------------------------------
-
-@property (nonatomic, assign) NSInteger tag;
-
-//----------------------------------------------------------------------
-
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup;
-- (CCNode *)getChildByTag:(NSInteger)tag;
+@implementation CCCropNode
 
 //----------------------------------------------------------------------
 
 @end
-

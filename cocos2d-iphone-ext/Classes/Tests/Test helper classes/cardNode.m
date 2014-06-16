@@ -24,72 +24,52 @@
  * THE SOFTWARE.
  */
 
-#import "CCNodeTag.h"
+#import "cardNode.h"
 
 //----------------------------------------------------------------------
 
-static void *nodeTagKey = &nodeTagKey;
-
-//----------------------------------------------------------------------
-
-@implementation CCNode (CCNodeTag)
-
-//----------------------------------------------------------------------
-
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag
+@implementation cardNode
 {
-    self.tag = tag;
-    [self addChild:node z:z];
+    CCSprite *_front;
+    CCSprite *_back;
 }
 
 //----------------------------------------------------------------------
 
-- (void)removeChildByTag:(NSInteger)tag
++ (instancetype)cardWithName:(NSString *)name
 {
-    CCNode *node = [self getChildByTag:tag];
-    if (!node)
-        ;
-    else
-        [self removeChild:node];
+    return([[self alloc] initWithName:name]);
 }
 
 //----------------------------------------------------------------------
 
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup
+- (instancetype)initWithName:(NSString *)name
 {
-    CCNode *node = [self getChildByTag:tag];
-    if (!node)
-        ;
-    else
-        [self removeChild:node cleanup:cleanup];
+    self = [super init];
+    
+    // initialize front and backface
+    // OBS! Resources must previously have been loaded
+    _front = [CCSprite spriteWithImageNamed:name];
+    [self addChild:_front];
+    
+    _back = [CCSprite spriteWithImageNamed:@"back.red.png"];
+    _back.visible = NO;
+    [self addChild:_back];
+    
+    // finally, set content size to match the content
+    self.contentSize = _front.contentSize;
+    // done
+    return(self);
 }
 
 //----------------------------------------------------------------------
 
-- (CCNode *)getChildByTag:(NSInteger)tag
+- (void)visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
 {
-    for (CCNode *node in self.children)
-    {
-        if (node.tag == tag) return(node);
-    }
-    return(nil);
-}
-
-//----------------------------------------------------------------------
-// tag property implementation
-
-// OBS!
-// As long as tag hasn't been set, the associated object will be nil, and intergetValue will return 0 (zero), which is well defined behaviour
-
-- (NSInteger)tag
-{
-    NSNumber *number = objc_getAssociatedObject(self, nodeTagKey);
-    return([number integerValue]);
-}
-
-- (void)setTag:(NSInteger)tag
-{
-    objc_setAssociatedObject(self, nodeTagKey, [NSNumber numberWithInteger:tag], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    _front.visible = !_backFacing;
+    _back.visible = _backFacing;
+    // 
+    [super visit:renderer parentTransform:parentTransform];
 }
 
 //----------------------------------------------------------------------

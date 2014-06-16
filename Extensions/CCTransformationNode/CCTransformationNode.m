@@ -24,74 +24,91 @@
  * THE SOFTWARE.
  */
 
-#import "CCNodeTag.h"
+#import "CCTransformationNode.h"
 
 //----------------------------------------------------------------------
 
-static void *nodeTagKey = &nodeTagKey;
+#define FAR_PLANE           1000.0f
+#define NEAR_PLANE          0.5f
+
 
 //----------------------------------------------------------------------
 
-@implementation CCNode (CCNodeTag)
-
-//----------------------------------------------------------------------
-
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag
+@implementation CCTransformationNode
 {
-    self.tag = tag;
-    [self addChild:node z:z];
+    GLKMatrix4 _transformation;
+    GLKMatrix4 _finalTransformation;
+    BOOL _dirty;
 }
 
 //----------------------------------------------------------------------
 
-- (void)removeChildByTag:(NSInteger)tag
+- (instancetype)init
 {
-    CCNode *node = [self getChildByTag:tag];
-    if (!node)
-        ;
-    else
-        [self removeChild:node];
+    self = [super init];
+    // initialize
+    _roll = 0.0f;
+    _pitch = 0.0f;
+    _perspective = 1.0;
+    _dirty = YES;
+    // done
+    return(self);
 }
 
 //----------------------------------------------------------------------
 
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup
+- (void)visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
 {
-    CCNode *node = [self getChildByTag:tag];
-    if (!node)
-        ;
-    else
-        [self removeChild:node cleanup:cleanup];
-}
-
-//----------------------------------------------------------------------
-
-- (CCNode *)getChildByTag:(NSInteger)tag
-{
-    for (CCNode *node in self.children)
+    if (_dirty)
     {
-        if (node.tag == tag) return(node);
+       
+        // create rotation matrix
+        GLKMatrix4 matrixPitch = GLKMatrix4MakeXRotation(_pitch);
+        GLKMatrix4 matrixRoll = GLKMatrix4MakeYRotation(_roll);
+        _transformation = GLKMatrix4Multiply(matrixRoll, matrixPitch);
+
+        // apple perspective
+        _transformation.m03 = _perspective * sinf(_roll) * cosf(_pitch);
+        _transformation.m13 = _perspective * sinf(_pitch) * cosf(_roll);
+        
+        // transformation is up to date
+        _dirty = NO;
     }
-    return(nil);
+
+    // calculate final transformation (used for backface calculation)
+    _finalTransformation = GLKMatrix4Multiply(_transformation, *parentTransform);
+    
+    [super visit:renderer parentTransform:&_finalTransformation];
 }
 
 //----------------------------------------------------------------------
-// tag property implementation
 
-// OBS!
-// As long as tag hasn't been set, the associated object will be nil, and intergetValue will return 0 (zero), which is well defined behaviour
-
-- (NSInteger)tag
+- (BOOL)isBackFacing
 {
-    NSNumber *number = objc_getAssociatedObject(self, nodeTagKey);
-    return([number integerValue]);
+    // this can not be calculated uder _dirty, as parent transform might change
+    GLKVector3 vector = (GLKVector3){0,0,1};
+    vector = GLKMatrix4MultiplyVector3 (_finalTransformation, vector);
+    return(vector.z > 0);
 }
 
-- (void)setTag:(NSInteger)tag
+//----------------------------------------------------------------------
+
+- (void)setRoll:(float)roll
 {
-    objc_setAssociatedObject(self, nodeTagKey, [NSNumber numberWithInteger:tag], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    _dirty = YES;
+    _roll = roll;
+}
+
+- (void)setPitch:(float)pitch
+{
+    _dirty = YES;
+    _pitch = pitch;
 }
 
 //----------------------------------------------------------------------
 
 @end
+
+
+
+

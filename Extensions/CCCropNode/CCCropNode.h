@@ -29,20 +29,8 @@
 
 //----------------------------------------------------------------------
 
-@interface CCNode (CCNodeTag)
-
-//----------------------------------------------------------------------
-
-@property (nonatomic, assign) NSInteger tag;
-
-//----------------------------------------------------------------------
-
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup;
-- (CCNode *)getChildByTag:(NSInteger)tag;
+@interface CCCropNode : CCNode
 
 //----------------------------------------------------------------------
 
 @end
-

@@ -24,25 +24,55 @@
  * THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "TestBase.h"
 
 //----------------------------------------------------------------------
 
-@interface CCNode (CCNodeTag)
+@interface CCCropNodeTest : TestBase
+
+@end
 
 //----------------------------------------------------------------------
 
-@property (nonatomic, assign) NSInteger tag;
+@implementation CCCropNodeTest
 
-//----------------------------------------------------------------------
+// -----------------------------------------------------------------
 
-- (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag;
-- (void)removeChildByTag:(NSInteger)tag cleanup:(BOOL)cleanup;
-- (CCNode *)getChildByTag:(NSInteger)tag;
+// -----------------------------------------------------------------
 
-//----------------------------------------------------------------------
+- (NSArray *)testConstructors
+{
+    return [NSArray arrayWithObjects:
+            @"cropOutputTest",
+            @"cropInputTest",
+            nil];
+}
+
+// -----------------------------------------------------------------
+
+- (void)cropOutputTest
+{
+    self.subTitle = @"Crop render output";
+
+
+
+
+
+}
+
+// -----------------------------------------------------------------
+
+- (void)cropInputTest
+{
+    self.subTitle = @"Crop touch inputs";
+    
+    
+    
+    
+    
+}
+
+// -----------------------------------------------------------------
 
 @end
 

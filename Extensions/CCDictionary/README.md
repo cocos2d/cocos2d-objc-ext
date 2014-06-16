@@ -1,6 +1,7 @@
 CCDictionary
 ============
 
+Type of class  : Category to NSDictionary
 Uses extension : <NONE>
 
 An extension to NSDictionary, taking the hazzle out of loading and reading dictionaries.
