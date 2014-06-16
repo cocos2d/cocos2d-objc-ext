@@ -2,6 +2,7 @@ CCTransformationNode
 ====================
 
 Type of class  : Descendant of CCNode
+
 Uses extension : <NONE>
 
 A node, capable of adding 3D transformations to a scene.
