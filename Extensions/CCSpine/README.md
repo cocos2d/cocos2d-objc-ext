@@ -9,9 +9,9 @@ CCSpine is a complete library, supporting Spine from Esoteric Software (http://e
 
 Normally it takes 3 files to create an animated skeleton.
 
-1) A JSON file exported from Spine
-2) A PLIST file containing sprite sheet frames
-3) A PNG file containing images.
+1) A JSON file exported from Spine  
+2) A PLIST file containing sprite sheet frames  
+3) A PNG file containing images.  
 
 The basic node is a CCSpineSkeleton. The skeleton is based on a CCNode, so anything which works on a node, will work on the skeleton. 
 The tasks to go through, creating a skeleton
