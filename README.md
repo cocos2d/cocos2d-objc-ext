@@ -7,8 +7,7 @@ cocos2d-iphone-ext, will include various classes and libraries, not suitet for r
 
 Cocos2D Version
 ===============
-V3.1 beta. 
-This repo is currently in beta stage. Please be adviced, that there will be changes before first release.
+V3.1 release. 
 
 How To
 ======
@@ -17,22 +16,6 @@ If an extensions uses other extensions, this will be listed in the extension des
 
 If you download the entire repository, you will be able to find at least one test of each extension, showing the basics of how it is used. Please note, that as long as the repo is in beta stage, there might be changes to the extensions.
 
-
-Extensions
-==========
-
-CCSpine
-=======
-A set of classes, supporting Spine by Esoteric Software (http://esotericsoftware.com/)
-
-Uses extension : CCNodeTag, CCDictionary
-
-Animations and artwork from the game Desert Chase by Dynamic Dust s.r.o. (http://www.dynamicdust.com/games/desertchase/)
-
-CCNodeTag
-=========
-A category, adding tags to nodes. 
-
-CCDictionary
-============
-A category, adding ease of use, to NSDictionary
+Notes
+=====
+CCTransformationNode is still experimental
