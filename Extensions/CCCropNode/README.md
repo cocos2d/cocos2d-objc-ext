@@ -2,7 +2,7 @@ CCCropNode
 ==========
 
 Type of class  : Descendant of CCNode  
-Uses extension : <NONE>
+Uses extension : [NONE]
 
 A node, capable of cropping graphics and/or touches, on a rectangular section of the screen. CCCropNode will crop any children added to it.
 
