@@ -15,8 +15,8 @@ The cropping area can only be a square, and can not be rotated.
 
 Ex.
 
-CCCropNode *crop = [CCCropNode node];
-crop.mode = CCCropModeTouchesAndGraphics;
+CCCropNode *crop = [CCCropNode node];  
+crop.mode = CCCropModeTouchesAndGraphics;  
 [parent addChild:crop];
 
 Dialog *myDialog = [Dialog dialogWith....];
