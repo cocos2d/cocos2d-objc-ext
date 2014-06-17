@@ -20,7 +20,7 @@ Three properties have been implememnted.
 3) Perspective, which will define the amount of perspective added (0=no perspective)  
  
 OBS!  
-This compoenet is still exxperimental  
+**This component is still experimental**  
 The goal is to try to avoid to have the user to switch to a perspective projection, as this can cause artifacts for 2D games.
 
 
