@@ -37,6 +37,8 @@
 
 // -----------------------------------------------------------------
 
++ (NSString *)randomCardName;
+
 + (instancetype)cardWithName:(NSString *)name;
 - (instancetype)initWithName:(NSString *)name;
 

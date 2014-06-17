@@ -29,6 +29,108 @@
 //----------------------------------------------------------------------
 
 @implementation CCCropNode
+{
+    CCNode *_cropNode;
+}
+
+//----------------------------------------------------------------------
+
++ (instancetype)cropNode
+{
+    return([[self alloc] init]);
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    self.contentSize = [CCDirector sharedDirector].viewSize;
+    self.mode = CCCropModeGraphics;
+    _cropNode = nil;
+    // done
+    return(self);
+}
+
+//----------------------------------------------------------------------
+
+- (BOOL)hitTestWithWorldPos:(CGPoint)pos
+{
+    return(YES);
+}
+
+//----------------------------------------------------------------------
+
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // we only get here if cropping touches is enabled
+    CCNode *node = nil;
+    if (self.children.count) node = [self.children objectAtIndex:0];
+
+    // if there is a child node, and the touch is outsire, kill the touch
+    if (node && ![node hitTestWithWorldPos:touch.locationInWorld]) return;
+    [super touchBegan:touch withEvent:event];
+}
+
+//----------------------------------------------------------------------
+
+- (void)visit:(CCRenderer *)renderer parentTransform:(const GLKMatrix4 *)parentTransform
+{
+    // check if there is defined a node to crop
+    // otherwise get first child (if any)
+    CCNode *node = _cropNode;
+    if ((node == nil) && (self.children.count)) node = [self.children objectAtIndex:0];
+    
+    if (node && ((_mode == CCCropModeGraphics) || (_mode == CCCropModeGraphicsAndTouches)))
+    {
+        // enable scissors
+        CGPoint pos;
+        CGSize size;
+        float scale = [CCDirector sharedDirector].contentScaleFactor;
+        
+        size = node.contentSize;
+        pos = [node convertToWorldSpace:node.position];
+        
+        [renderer enqueueBlock:^{
+            glScissor(pos.x * scale, pos.y * scale, size.width * scale, size.height * scale);
+            glEnable(GL_SCISSOR_TEST);
+        } globalSortOrder:0 debugLabel:nil threadSafe:NO];
+    }
+    
+    // render children
+    [super visit:renderer parentTransform:parentTransform];
+
+    if (node && ((_mode == CCCropModeGraphics) || (_mode == CCCropModeGraphicsAndTouches)))
+    {
+        // disable scissors
+        [renderer enqueueBlock:^{
+            glDisable(GL_SCISSOR_TEST);
+        } globalSortOrder:0 debugLabel:nil threadSafe:NO];
+    }
+}
+
+//----------------------------------------------------------------------
+
+- (void)setMode:(CCCropMode)mode
+{
+    NSAssert(mode <= CCCropModeGraphicsAndTouches, @"Invalid crop mode");
+    self.userInteractionEnabled = ((mode == CCCropModeTouches) || (mode == CCCropModeGraphicsAndTouches));
+    _mode = mode;
+}
+
+//----------------------------------------------------------------------
+
+- (void)setCropNode:(CCNode *)node
+{
+    _cropNode = node;
+}
+
+//----------------------------------------------------------------------
+
+- (NSString *)debugString
+{
+    BOOL graphics = ((_mode == CCCropModeGraphics) || (_mode == CCCropModeGraphicsAndTouches));
+    BOOL touches = ((_mode == CCCropModeTouches) || (_mode == CCCropModeGraphicsAndTouches));
+    return([NSString stringWithFormat:@"Crop graphics:%@ touch:%@", graphics ? @"YES" : @" NO", touches ? @"YES" : @" NO"]);
+}
 
 //----------------------------------------------------------------------
 

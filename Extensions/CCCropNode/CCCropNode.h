@@ -29,7 +29,29 @@
 
 //----------------------------------------------------------------------
 
+typedef NS_ENUM(NSUInteger, CCCropMode) {
+    CCCropModeNone,
+	CCCropModeGraphics,
+	CCCropModeTouches,
+    CCCropModeGraphicsAndTouches,
+};
+
+//----------------------------------------------------------------------
+
 @interface CCCropNode : CCNode
+
+//----------------------------------------------------------------------
+
+@property (nonatomic, assign) CCCropMode mode;                          // controls cropping
+
+//----------------------------------------------------------------------
+
++ (instancetype)cropNode;
+- (instancetype)init;
+
+- (void)setCropNode:(CCNode *)node;
+
+- (NSString *)debugString;
 
 //----------------------------------------------------------------------
 

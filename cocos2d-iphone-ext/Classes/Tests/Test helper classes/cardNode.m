@@ -28,10 +28,24 @@
 
 //----------------------------------------------------------------------
 
+const NSString *CARD_NAME[] =
+{
+    @"hearts", @"diamonds", @"spades", @"clubs"
+};
+
+//----------------------------------------------------------------------
+
 @implementation cardNode
 {
     CCSprite *_front;
     CCSprite *_back;
+}
+
+//----------------------------------------------------------------------
+
++ (NSString *)randomCardName
+{
+    return([NSString stringWithFormat:@"%@.%d.png", CARD_NAME[arc4random() % 4], 1 + (arc4random() % 13)]);
 }
 
 //----------------------------------------------------------------------
@@ -56,8 +70,14 @@
     _back.visible = NO;
     [self addChild:_back];
     
-    // finally, set content size to match the content
+    // set content size to match the content
     self.contentSize = _front.contentSize;
+    self.anchorPoint = ccp(0.5, 0.5);
+    
+    // position faces
+    _front.position = ccp(self.contentSize.width * 0.5, self.contentSize.height * 0.5);
+    _back.position = ccp(self.contentSize.width * 0.5, self.contentSize.height * 0.5);
+
     // done
     return(self);
 }

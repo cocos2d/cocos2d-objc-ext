@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, animationMode)
     animationMode _animationMode;
 }
 
-//----------------------------------------------------------------------
+// -----------------------------------------------------------------
 
 - (instancetype)init
 {

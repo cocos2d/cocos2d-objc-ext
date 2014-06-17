@@ -30,11 +30,6 @@
 
 //----------------------------------------------------------------------
 
-const NSString *CARD_NAME[] =
-{
-    @"hearts", @"diamonds", @"spades", @"clubs"
-};
-
 typedef enum
 {
     CCFlipTypePitchRotation,
@@ -70,25 +65,22 @@ typedef enum
 
 // -----------------------------------------------------------------
 
-- (NSString *)randomCardName
-{
-    return([NSString stringWithFormat:@"%@.%d.png", CARD_NAME[arc4random() % 4], 1 + (arc4random() % 13)]);
-}
-
-// -----------------------------------------------------------------
-
 - (void)cardFlipTest
 {
     // Load card images
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"cards.classic.plist"];
     
     _transformation = [CCTransformationNode node];
+    
+    // defindes the amount of perspective, added to the transfomation
+    // 1.0 is default, and adds a "medium" sense of perspective
     _transformation.perspective = 1.0;
+    
     _transformation.positionType = CCPositionTypeNormalized;
     _transformation.position = ccp(0.5, 0.5);
     [self.contentNode addChild:_transformation];
     
-    _card = [cardNode cardWithName:[self randomCardName]];
+    _card = [cardNode cardWithName:[cardNode randomCardName]];
     _card.scale = 2;
     _card.name = @"card.0";
     [_transformation addChild:_card];
