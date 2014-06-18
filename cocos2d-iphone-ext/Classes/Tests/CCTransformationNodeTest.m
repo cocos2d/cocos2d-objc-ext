@@ -78,10 +78,11 @@ typedef enum
     
     _transformation.positionType = CCPositionTypeNormalized;
     _transformation.position = ccp(0.5, 0.5);
+    
     [self.contentNode addChild:_transformation];
     
     _card = [cardNode cardWithName:[cardNode randomCardName]];
-    _card.scale = 2;
+    // _card.scale = 2;
     _card.name = @"card.0";
     [_transformation addChild:_card];
 }
@@ -90,22 +91,21 @@ typedef enum
 
 - (void)cardFlipTestA
 {
-    self.subTitle = @"(pitch + rotation) works";
+    self.subTitle = @"Pitch + Rotation";
     _flipType = CCFlipTypePitchRotation;
     [self cardFlipTest];
 }
 
 - (void)cardFlipTestB
 {
-    self.subTitle = @"(roll + rotation) works";
+    self.subTitle = @"Roll + Rotation";
     _flipType = CCFlipTypeRollRotation;
     [self cardFlipTest];
 }
 
-
 - (void)cardFlipTestC
 {
-    self.subTitle = @"(pitch + roll) BROKEN (wrong aspect 50% of the time)";
+    self.subTitle = @"Pitch + Roll";
     _flipType = CCFlipTypePitchRoll;
     [self cardFlipTest];
 }
@@ -117,7 +117,6 @@ typedef enum
     delta *= 0.125;
     
     CCNode *card = [self getChildByName:@"card.0" recursively:YES];
-    // card.rotation += 0.2;
     
     if ([card isKindOfClass:[cardNode class]])
     {
@@ -132,12 +131,14 @@ typedef enum
             
         case CCFlipTypePitchRotation:
             _transformation.pitch += 11.0 * delta;
-            _transformation.rotation += 100 * delta;
+            // _transformation.rotation += 100 * delta;
+            _transformation.yaw += delta;
             break;
             
         case CCFlipTypeRollRotation:
             _transformation.roll += 11.0 * delta;
-            _transformation.rotation += 100 * delta;
+            // _transformation.rotation += 100 * delta;
+            _transformation.yaw += delta;
             break;
     }
 }

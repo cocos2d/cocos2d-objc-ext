@@ -2,8 +2,7 @@ CCTransformationNode
 ====================
 
 Type of class  : Descendant of CCNode
-
-Uses extension : <NONE>
+Uses extension : [NONE]
 
 A node, capable of adding 3D transformations to a scene.
 
@@ -17,10 +16,11 @@ It requires no other setup, or that you switch to 3D. You can either add this no
 Three properties have been implememnted.  
 1) Roll, which will roll the sprite around its Y axis  
 2) Pitch, which will roll the sprite around its X axis  
+3) Yaw, which will roll the sprite around its Z axis
 3) Perspective, which will define the amount of perspective added (0=no perspective)  
  
 OBS!  
-**This component is still experimental**  
+There is still a slight problem with aspect ratio
 The goal is to try to avoid to have the user to switch to a perspective projection, as this can cause artifacts for 2D games.
 
 

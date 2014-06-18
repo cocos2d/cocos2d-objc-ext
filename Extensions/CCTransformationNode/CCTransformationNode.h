@@ -35,6 +35,7 @@
 
 @property (nonatomic, assign) float roll;
 @property (nonatomic, assign) float pitch;
+@property (nonatomic, assign) float yaw;
 @property (nonatomic, assign) float perspective;                        // strength of the 3D perspective
 
 @property (nonatomic, readonly, getter = isBackFacing) BOOL backFacing; // node is backfacing
