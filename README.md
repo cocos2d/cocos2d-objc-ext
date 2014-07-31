@@ -19,3 +19,24 @@ If you download the entire repository, you will be able to find at least one tes
 Notes
 =====
 CCTransformationNode is still experimental
+
+Work in progress
+================
+The following extensions are currently being worked on. If you have additional ideas, please contact @Birkemose in the forum.
+
+CCSpine  
+Adding vertex animations. Requires rewrite of the render part.  
+
+CCSpriteGrid  
+In development  
+
+CCLineDrawer  
+Review of existing code, and rewrite for cocos2d  
+ 
+CCDrawNode  
+Adding immediate mode drawing of primitives in node space  
+
+CCSpriteMultiTouch
+First version just added  
+
+
