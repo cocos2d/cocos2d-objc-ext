@@ -1,8 +1,8 @@
 CCSpriteMultiTouch
 ==================
 
-Type of class  : Descendant of CCSprite
-Uses extension : [NONE]
+Type of class  : Descendant of CCSprite  
+Uses extension : [NONE]  
 
 A sprite, capable of handling multitouch. The sprite can calculate movement, rotation and scale.
 
