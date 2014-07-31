@@ -36,7 +36,7 @@ Review of existing code, and rewrite for cocos2d
 CCDrawNode  
 Adding immediate mode drawing of primitives in node space  
 
-CCSpriteMultiTouch
+CCSpriteMultiTouch  
 First version just added  
 
 
