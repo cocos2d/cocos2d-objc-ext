@@ -72,6 +72,12 @@
     temp.rotation = 10;
     [self.contentNode addChild:temp];
     
+    CCButton *button = [CCButton buttonWithTitle:@"" spriteFrame:[CCSpriteFrame frameWithImageNamed:[cardNode randomCardName]]];
+    button.positionType = CCPositionTypeNormalized;
+    button.position = ccp(0.25, 0.25);
+    [self.contentNode addChild:button];
+    
+    button.color = [CCColor colorWithRed:1 green:0 blue:0 alpha:0.25];
     
     _cropNode = [CCCropNode cropNode];
     [temp addChild:_cropNode];
@@ -95,6 +101,11 @@
     _card = [cardNode cardWithName:[cardNode randomCardName]];
     _card.scale = 2;
     [_transformation addChild:_card];
+    
+    
+    
+    
+    
 }
 
 // -----------------------------------------------------------------
