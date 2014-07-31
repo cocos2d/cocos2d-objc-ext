@@ -55,19 +55,24 @@
     
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"cards.classic.plist"];
 
-    // load a multi touch sprite
-    CCSpriteMultiTouch *card = [CCSpriteMultiTouch spriteWithImageNamed:[cardNode randomCardName]];
-    card.position = ccp([CCDirector sharedDirector].viewSize.width * 0.5, [CCDirector sharedDirector].viewSize.height * 0.5);
-    card.scale = 2.5;
-    [self.contentNode addChild:card];
-    
-    // enable dragging, scaling etc
-    card.touchCountForDrag = 2;         // zwei fingers to drag
-    card.touchCountForRotate = 2;       // dos fingers to rotate
-    card.touchCountForScale = 2;        // two fingers to scale
-    
-    card.userInteractionEnabled = YES;
-    card.multipleTouchEnabled = YES;
+    for (int index = 1; index <= 3; index ++)
+    {
+        // load a multi touch sprite
+        CCSpriteMultiTouch *card = [CCSpriteMultiTouch spriteWithImageNamed:[cardNode randomCardName]];
+        card.position = ccp(
+                            [CCDirector sharedDirector].viewSize.width * 0.25 * index,
+                            [CCDirector sharedDirector].viewSize.height * 0.5);
+        card.scale = 2.5;
+        [self.contentNode addChild:card];
+        
+        // enable dragging, scaling etc
+        card.touchCountForDrag = 2;         // zwei fingers to drag
+        card.touchCountForRotate = 2;       // dos fingers to rotate
+        card.touchCountForScale = 2;        // two fingers to scale
+        
+        card.userInteractionEnabled = YES;
+        card.multipleTouchEnabled = YES;
+    }
 }
 
 //----------------------------------------------------------------------
