@@ -195,8 +195,12 @@
 {
     _rotationCentre = [self centre];
     float rotation = [self rotation:_rotationCentre];
-    self.rotation = self.rotation - 180.0f / M_PI * (rotation - _rotationLast);
+    float delta = rotation - _rotationLast;
     _rotationLast = rotation;
+    // make sure the rotation is smooth
+    if (delta < -M_PI_2) delta = M_PI + delta;
+    if (delta > M_PI_2) delta = M_PI - delta;
+    self.rotation = self.rotation - (180.0f / M_PI * delta);
 }
 
 //----------------------------------------------------------------------
