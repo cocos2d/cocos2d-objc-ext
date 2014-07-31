@@ -30,6 +30,7 @@
 
 #define CCSpriteMultiTouchMaxTouches 3
 #define CCSpriteMultiTouchFuntionDisable 0
+#define CCSpriteMinTouchCountForScaleAndRotate 2
 
 //----------------------------------------------------------------------
 
@@ -145,11 +146,15 @@
     // check for dragging
     if (_touchCount == _touchCountForDrag) [self touchDrag];
     
-    // check for scaling
-    if (_touchCount == _touchCountForScale) [self touchScale];
+    if (_touchCount >= CCSpriteMinTouchCountForScaleAndRotate)
+    {
+        // check for scaling
+        if (_touchCount == _touchCountForScale) [self touchScale];
+        
+        // check for rotation
+        if (_touchCount == _touchCountForRotate) [self touchRotate];
+    }
     
-    // check for rotation
-    if (_touchCount == _touchCountForRotate) [self touchRotate];
 }
 
 //----------------------------------------------------------------------
