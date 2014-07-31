@@ -39,4 +39,8 @@ Adding immediate mode drawing of primitives in node space
 CCSpriteMultiTouch  
 First version just added  
 
+CCTransformationNode   
+Still needs to be improved on the matrix handling  
+
+
 
