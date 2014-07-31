@@ -31,7 +31,7 @@ CCSpriteGrid
 In development  
 
 CCLineDrawer  
-Review of existing code, and rewrite for cocos2d  
+Review of existing code, and possible cocos2d'ification  
  
 CCDrawNode  
 Adding immediate mode drawing of primitives in node space  
