@@ -42,5 +42,7 @@ First version just added
 CCTransformationNode   
 Still needs to be improved on the matrix handling  
 
+CCJoystick  
+In development  
 
 
