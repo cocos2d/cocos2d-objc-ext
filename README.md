@@ -26,6 +26,9 @@ The following extensions are currently being worked on. If you have additional i
 
 CCSpine  
 Adding vertex animations. Requires rewrite of the render part.  
+Please note!  
+Esoteric has just released their 3.1 runtime.  
+
 
 CCSpriteGrid  
 In development  
