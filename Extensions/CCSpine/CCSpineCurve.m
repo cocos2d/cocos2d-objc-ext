@@ -131,16 +131,25 @@
             return(0);
         case CCSpineInterpolationBezier:
         {
-            float t2 = value * value;
-            float t3 = t2 * value;
-            float result = (_coefficient[0].y * t3) + (_coefficient[1].y * t2) + (_coefficient[2].y * value);
-            
-            
-            
-            
-            // TODO
-            // convert according to bezier curve
-            return(result);
+            float step = 0.25f;
+            float progress = 0.50f;
+            float t2, t3;
+            do
+            {
+                t2 = progress * progress;
+                t3 = t2 * progress;
+                float xPos = (_coefficient[0].x * t3) + (_coefficient[1].x * t2) + (_coefficient[2].x * progress);
+                // check if result is accurate enough
+                if (fabs(xPos - value) <= CCSpineCurveBezierAccuracy) break;
+                // else step again
+                if (xPos > value)
+                    progress -= step;
+                else
+                    progress += step;
+                step *= 0.5f;
+            } while (1);
+            // calculate y position
+            return((_coefficient[0].y * t3) + (_coefficient[1].y * t2) + (_coefficient[2].y * progress));
         }
     }
     NSAssert(NO, @"[CCSpineCurve translate] Invalid interpolation");

@@ -27,6 +27,7 @@
 #import <Foundation/Foundation.h>
 #import "CCDictionary.h"
 
+#define CCSpineCurveBezierAccuracy (0.005)
 // ----------------------------------------------------------------------------------------------
 
 typedef NS_ENUM(NSInteger, CCSpineInterpolation)
