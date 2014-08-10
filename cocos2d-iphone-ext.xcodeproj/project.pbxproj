@@ -10,6 +10,7 @@
 		0E21D306198A47A400E84AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E21D305198A47A400E84AB1 /* README.md */; };
 		0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */; };
 		0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */; };
+		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
 		A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E65193757E400196BD3 /* OpenAL.framework */; };
@@ -83,7 +84,6 @@
 		A66C582E193A0C87009D2BD4 /* chase_johnson.png in Resources */ = {isa = PBXBuildFile; fileRef = A66C5815193A0C87009D2BD4 /* chase_johnson.png */; };
 		A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5819193A0C87009D2BD4 /* CCSpineAnimation.m */; };
 		A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C581B193A0C87009D2BD4 /* CCSpineAnimationControl.m */; };
-		A66C5832193A0C87009D2BD4 /* CCSpineBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C581D193A0C87009D2BD4 /* CCSpineBezierCurve.m */; };
 		A66C5833193A0C87009D2BD4 /* CCSpineBone.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C581F193A0C87009D2BD4 /* CCSpineBone.m */; };
 		A66C5834193A0C87009D2BD4 /* CCSpineSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5821193A0C87009D2BD4 /* CCSpineSample.m */; };
 		A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */ = {isa = PBXBuildFile; fileRef = A66C5823193A0C87009D2BD4 /* CCSpineSkeleton.m */; };
@@ -125,6 +125,8 @@
 		0E21D30A198A484600E84AB1 /* CCSpriteMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteMultiTouch.h; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.h; sourceTree = SOURCE_ROOT; };
 		0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouch.m; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.m; sourceTree = SOURCE_ROOT; };
 		0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouchTest.m; path = Classes/Tests/CCSpriteMultiTouchTest.m; sourceTree = "<group>"; };
+		0ED73BB31997951A00C83507 /* CCSpineCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineCurve.h; path = Extensions/CCSpine/CCSpineCurve.h; sourceTree = SOURCE_ROOT; };
+		0ED73BB41997951A00C83507 /* CCSpineCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineCurve.m; path = Extensions/CCSpine/CCSpineCurve.m; sourceTree = SOURCE_ROOT; };
 		A6254BAF193A1438006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCNodeTag/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB1193A144A006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCDictionary/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB3193A145D006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCSpine/README.md; sourceTree = SOURCE_ROOT; };
@@ -212,8 +214,6 @@
 		A66C5819193A0C87009D2BD4 /* CCSpineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineAnimation.m; path = Extensions/CCSpine/CCSpineAnimation.m; sourceTree = SOURCE_ROOT; };
 		A66C581A193A0C87009D2BD4 /* CCSpineAnimationControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineAnimationControl.h; path = Extensions/CCSpine/CCSpineAnimationControl.h; sourceTree = SOURCE_ROOT; };
 		A66C581B193A0C87009D2BD4 /* CCSpineAnimationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineAnimationControl.m; path = Extensions/CCSpine/CCSpineAnimationControl.m; sourceTree = SOURCE_ROOT; };
-		A66C581C193A0C87009D2BD4 /* CCSpineBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineBezierCurve.h; path = Extensions/CCSpine/CCSpineBezierCurve.h; sourceTree = SOURCE_ROOT; };
-		A66C581D193A0C87009D2BD4 /* CCSpineBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineBezierCurve.m; path = Extensions/CCSpine/CCSpineBezierCurve.m; sourceTree = SOURCE_ROOT; };
 		A66C581E193A0C87009D2BD4 /* CCSpineBone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineBone.h; path = Extensions/CCSpine/CCSpineBone.h; sourceTree = SOURCE_ROOT; };
 		A66C581F193A0C87009D2BD4 /* CCSpineBone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineBone.m; path = Extensions/CCSpine/CCSpineBone.m; sourceTree = SOURCE_ROOT; };
 		A66C5820193A0C87009D2BD4 /* CCSpineSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineSample.h; path = Extensions/CCSpine/CCSpineSample.h; sourceTree = SOURCE_ROOT; };
@@ -498,8 +498,8 @@
 				A66C5819193A0C87009D2BD4 /* CCSpineAnimation.m */,
 				A66C581A193A0C87009D2BD4 /* CCSpineAnimationControl.h */,
 				A66C581B193A0C87009D2BD4 /* CCSpineAnimationControl.m */,
-				A66C581C193A0C87009D2BD4 /* CCSpineBezierCurve.h */,
-				A66C581D193A0C87009D2BD4 /* CCSpineBezierCurve.m */,
+				0ED73BB31997951A00C83507 /* CCSpineCurve.h */,
+				0ED73BB41997951A00C83507 /* CCSpineCurve.m */,
 				A66C581E193A0C87009D2BD4 /* CCSpineBone.h */,
 				A66C581F193A0C87009D2BD4 /* CCSpineBone.m */,
 				A66C5820193A0C87009D2BD4 /* CCSpineSample.h */,
@@ -715,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */,
+				0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */,
 				A6994F85194A2FAC00B97481 /* CCTransformationNodeTest.m in Sources */,
 				A627126E19375F2700196BD3 /* TestBase.m in Sources */,
 				A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */,
@@ -736,7 +737,6 @@
 				0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */,
 				A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */,
 				A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */,
-				A66C5832193A0C87009D2BD4 /* CCSpineBezierCurve.m in Sources */,
 				A627110B193757E600196BD3 /* AppDelegate.m in Sources */,
 				A66C5834193A0C87009D2BD4 /* CCSpineSample.m in Sources */,
 			);

@@ -26,7 +26,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CCDictionary.h"
-#import "CCSpineBezierCurve.h"
+#import "CCSpineCurve.h"
 
 // ----------------------------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ typedef struct
 @property (nonatomic, readonly) float time;
 @property (nonatomic, readonly) CCSpineSampleType type;
 @property (nonatomic, readonly) CCSpineBoneData data;
-@property (nonatomic, readonly) CCSpineBezierCurve *curve;
+@property (nonatomic, readonly) CCSpineCurve *curve;
 
 // TODO add color
 

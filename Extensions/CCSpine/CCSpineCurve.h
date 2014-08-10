@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, CCSpineInterpolation)
 
 // ----------------------------------------------------------------------------------------------
 
-@interface CCSpineBezierCurve : NSObject
+@interface CCSpineCurve : NSObject
 
 // ----------------------------------------------------------------------------------------------
 

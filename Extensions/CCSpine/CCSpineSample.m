@@ -73,7 +73,7 @@
     }
     
     // load curve
-    _curve = [CCSpineBezierCurve bezierCurveWithDictionary:dict];
+    _curve = [CCSpineCurve bezierCurveWithDictionary:dict];
     
     // done
     return(self);

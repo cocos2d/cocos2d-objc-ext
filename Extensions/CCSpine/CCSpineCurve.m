@@ -24,22 +24,23 @@
  * THE SOFTWARE.
  */
 
-#import "CCSpineBezierCurve.h"
+#import "CCSpineCurve.h"
 
 // ----------------------------------------------------------------------------------------------
 
-@implementation CCSpineBezierCurve
+@implementation CCSpineCurve
 {
     CCSpineInterpolation _interpolation;
     NSInteger _count;
     CGPoint *_bezier;
+    CGPoint *_coefficient;
 }
 
 // ----------------------------------------------------------------------------------------------
 
 + (instancetype)bezierCurveWithDictionary:(NSDictionary *)dict
 {
-    return([[CCSpineBezierCurve alloc] initWithDictionary:dict]);
+    return([[CCSpineCurve alloc] initWithDictionary:dict]);
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -53,6 +54,7 @@
     _interpolation = CCSpineInterpolationLinear;
     _count = 0;
     _bezier = NULL;
+    _coefficient = NULL;
     // load values from dictionary
     id object = [dict objectForKey:@"curve"];
     if ([object isKindOfClass:[NSString class]])
@@ -71,9 +73,9 @@
     }
     else if ([object isKindOfClass:[NSArray class]])
     {
-        // curve defined as an array
-        // this must be an array of floats
-        // add 0 at the begining and 1 at the end, to make later interpolation easier
+        // curve defined as two points
+        // start point is 0,0
+        // end point is 1,1
         NSArray* array = object;
         if (array.count > 0)
         {
@@ -84,9 +86,21 @@
             for (NSNumber* value in array)
             {
                 // read alternating values as x, y
-                if ((index & 1) == 0) _bezier[index / 2].x = [value floatValue]; else _bezier[index / 2].y = [value floatValue];
+                if ((index & 1) == 0)
+                {
+                    _bezier[index / 2].x = [value floatValue];
+                }
+                else
+                {
+                    _bezier[index / 2].y = [value floatValue];
+                }
                 index ++;
             }
+            // calculate coefficients
+            _coefficient = malloc(3 * sizeof(CGPoint));
+            _coefficient[2] = ccpMult(_bezier[0], 3);
+            _coefficient[1] = ccpSub(ccpMult(ccpSub(_bezier[1], _bezier[0]), 3), _coefficient[2]);
+            _coefficient[0] = ccpSub(ccpSub(ccp(1,1), _coefficient[2]), _coefficient[1]);
         }
     }
     
@@ -100,6 +114,7 @@
 {
     // clean up
     if (_bezier != NULL) free(_bezier);
+    if (_coefficient != NULL) free(_coefficient);
     
 }
 
@@ -115,13 +130,20 @@
         case CCSpineInterpolationStepped:
             return(0);
         case CCSpineInterpolationBezier:
+        {
+            float t2 = value * value;
+            float t3 = t2 * value;
+            float result = (_coefficient[0].y * t3) + (_coefficient[1].y * t2) + (_coefficient[2].y * value);
+            
+            
+            
             
             // TODO
             // convert according to bezier curve
-            return(value);
-            
+            return(result);
+        }
     }
-    NSAssert(NO, @"[CCSpineBezierCurve translate] Invalid interpolation");
+    NSAssert(NO, @"[CCSpineCurve translate] Invalid interpolation");
     return(0);
 }
 
