@@ -10,7 +10,10 @@
 		0E21D306198A47A400E84AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E21D305198A47A400E84AB1 /* README.md */; };
 		0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */; };
 		0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */; };
+		0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */; };
 		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
+		0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */; };
+		0EF602FF199CDD8F007AEBD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0EF602FE199CDD8F007AEBD9 /* README.md */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
 		A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E65193757E400196BD3 /* OpenAL.framework */; };
@@ -125,8 +128,12 @@
 		0E21D30A198A484600E84AB1 /* CCSpriteMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteMultiTouch.h; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.h; sourceTree = SOURCE_ROOT; };
 		0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouch.m; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.m; sourceTree = SOURCE_ROOT; };
 		0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouchTest.m; path = Classes/Tests/CCSpriteMultiTouchTest.m; sourceTree = "<group>"; };
+		0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLineTest.m; path = Classes/Tests/CCLayerSmoothLineTest.m; sourceTree = "<group>"; };
 		0ED73BB31997951A00C83507 /* CCSpineCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineCurve.h; path = Extensions/CCSpine/CCSpineCurve.h; sourceTree = SOURCE_ROOT; };
 		0ED73BB41997951A00C83507 /* CCSpineCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineCurve.m; path = Extensions/CCSpine/CCSpineCurve.m; sourceTree = SOURCE_ROOT; };
+		0EF602FB199CDC8F007AEBD9 /* CCLayerSmoothLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLayerSmoothLine.h; path = Extensions/CCLayerSmoothLine/CCLayerSmoothLine.h; sourceTree = SOURCE_ROOT; };
+		0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLine.m; path = Extensions/CCLayerSmoothLine/CCLayerSmoothLine.m; sourceTree = SOURCE_ROOT; };
+		0EF602FE199CDD8F007AEBD9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCLayerSmoothLine/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BAF193A1438006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCNodeTag/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB1193A144A006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCDictionary/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB3193A145D006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCSpine/README.md; sourceTree = SOURCE_ROOT; };
@@ -276,6 +283,16 @@
 				0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */,
 			);
 			name = CCSpriteMultiTouch;
+			sourceTree = "<group>";
+		};
+		0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */ = {
+			isa = PBXGroup;
+			children = (
+				0EF602FE199CDD8F007AEBD9 /* README.md */,
+				0EF602FB199CDC8F007AEBD9 /* CCLayerSmoothLine.h */,
+				0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */,
+			);
+			name = CCLayerSmoothLine;
 			sourceTree = "<group>";
 		};
 		A6270E55193757E300196BD3 = {
@@ -452,6 +469,7 @@
 				A6994F83194A2FAC00B97481 /* CCTransformationNodeTest.m */,
 				A6994F80194A2F3D00B97481 /* CCCropNodeTest.m */,
 				0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */,
+				0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */,
 				A6994F7E194A2E2800B97481 /* Test helper classes */,
 			);
 			name = Tests;
@@ -460,6 +478,7 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */,
 				0E21D303198A45F800E84AB1 /* CCSpriteMultiTouch */,
 				A6994F76194A2C8000B97481 /* CCCropNode */,
 				A68895A91949A785002950DD /* CCTransformationNode */,
@@ -670,6 +689,7 @@
 				A6271295193769A900196BD3 /* din-ipad.fnt in Resources */,
 				A6270E82193757E400196BD3 /* Default-Landscape~ipad.png in Resources */,
 				A6270E97193757E400196BD3 /* Icon-Small.png in Resources */,
+				0EF602FF199CDD8F007AEBD9 /* README.md in Resources */,
 				A6270E95193757E400196BD3 /* Icon-Small-50.png in Resources */,
 				A62712AA193769A900196BD3 /* Sprites.plist in Resources */,
 				A62712AB193769A900196BD3 /* Sprites.png in Resources */,
@@ -731,8 +751,10 @@
 				A68895AF1949A8B4002950DD /* CCTransformationNode.m in Sources */,
 				A627126D19375F2700196BD3 /* MainMenu.m in Sources */,
 				A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */,
+				0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */,
 				A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
+				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
 				0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */,
 				A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */,
