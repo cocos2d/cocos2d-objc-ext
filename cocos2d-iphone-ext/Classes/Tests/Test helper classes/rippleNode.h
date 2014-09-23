@@ -1,8 +1,9 @@
 /*
- * Smooth drawing: http://merowing.info
+ * cocos2d for iPhone: http://www.cocos2d-swift.org
  *
- * Copyright (c) 2012 Krzysztof Zabłocki
- * Copyright (c) 2014 Richard Groves
+ * Copyright (c) 2008-2010 Ricardo Quesada
+ * Copyright (c) 2011 Zynga Inc.
+ * Copyright (c) 2013-2014 Cocos2D Authors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,39 +22,32 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- *
  */
 
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-typedef struct
-{
-    CGPoint pos;
-    float z;
-    ccColor4F color;
-} CCSmoothLineVertex;
+// -----------------------------------------------------------------------
+
+@interface rippleNode : CCNode
 
 // -----------------------------------------------------------------------
 
-@interface CCSmoothLinePoint : NSObject
+@property (nonatomic, assign) float life;                       // total life span
+@property (nonatomic, assign) float normalizedSpeed;            // normalized speed compared to parent width
+@property (nonatomic, assign) float ripples;                    // number of ripples
+@property (nonatomic, assign) float periodTime;                 // ripple period time
+@property (nonatomic, assign) float normalizedRippleStrength;   // normalized strength of ripple
+@property (nonatomic, assign) BOOL modifyEdges;                 // modify image edges
+@property (nonatomic, assign) BOOL modifyTexture;               // modify texture in stead of vertex
 
-@property(nonatomic, assign) CGPoint pos;
-@property(nonatomic, assign) float width;
-
-@end
+@property (nonatomic, readonly) CGPoint centre;                 // centre of ripple
+@property (nonatomic, readonly) float size;                     // current size
+@property (nonatomic, readonly) float age;                      // current age
 
 // -----------------------------------------------------------------------
 
-@interface CCLayerSmoothLine : CCNode
-
-// -----------------------------------------------------------------------
-
-+ (instancetype)layer;
-- (instancetype)init;
-
-- (void)startNewLineFrom:(CGPoint)newPoint withSize:(CGFloat)aSize;
-- (void)endLineAt:(CGPoint)aEndPoint withSize:(CGFloat)aSize;
-- (void)addPoint:(CGPoint)newPoint withSize:(CGFloat)size;
++ (instancetype)rippleNodeAt:(CGPoint)pos;
 
 // -----------------------------------------------------------------------
 

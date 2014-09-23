@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E21D306198A47A400E84AB1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E21D305198A47A400E84AB1 /* README.md */; };
 		0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */; };
 		0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */; };
+		0E57EA3B19C6CF9B008CBC9E /* CCSpriteGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */; };
+		0E57EA3E19C6D272008CBC9E /* CCSpriteGridTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */; };
+		0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E57EA4019C6D5D4008CBC9E /* pebbles.png */; };
+		0E99598B19C73B0500A02D2B /* rippleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99598A19C73B0500A02D2B /* rippleNode.m */; };
 		0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */; };
 		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
 		0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */; };
-		0EF602FF199CDD8F007AEBD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0EF602FE199CDD8F007AEBD9 /* README.md */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
 		A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E65193757E400196BD3 /* OpenAL.framework */; };
@@ -128,6 +130,13 @@
 		0E21D30A198A484600E84AB1 /* CCSpriteMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteMultiTouch.h; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.h; sourceTree = SOURCE_ROOT; };
 		0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouch.m; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.m; sourceTree = SOURCE_ROOT; };
 		0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouchTest.m; path = Classes/Tests/CCSpriteMultiTouchTest.m; sourceTree = "<group>"; };
+		0E57EA3719C6CF83008CBC9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteGrid.h; path = ../Extensions/CCSpriteGrid/CCSpriteGrid.h; sourceTree = "<group>"; };
+		0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteGrid.m; sourceTree = "<group>"; };
+		0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteGridTest.m; path = Classes/Tests/CCSpriteGridTest.m; sourceTree = "<group>"; };
+		0E57EA4019C6D5D4008CBC9E /* pebbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pebbles.png; sourceTree = "<group>"; };
+		0E99598919C73B0500A02D2B /* rippleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rippleNode.h; path = "Classes/Tests/Test helper classes/rippleNode.h"; sourceTree = "<group>"; };
+		0E99598A19C73B0500A02D2B /* rippleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = rippleNode.m; path = "Classes/Tests/Test helper classes/rippleNode.m"; sourceTree = "<group>"; };
 		0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLineTest.m; path = Classes/Tests/CCLayerSmoothLineTest.m; sourceTree = "<group>"; };
 		0ED73BB31997951A00C83507 /* CCSpineCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineCurve.h; path = Extensions/CCSpine/CCSpineCurve.h; sourceTree = SOURCE_ROOT; };
 		0ED73BB41997951A00C83507 /* CCSpineCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineCurve.m; path = Extensions/CCSpine/CCSpineCurve.m; sourceTree = SOURCE_ROOT; };
@@ -285,6 +294,25 @@
 			name = CCSpriteMultiTouch;
 			sourceTree = "<group>";
 		};
+		0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */ = {
+			isa = PBXGroup;
+			children = (
+				0E57EA3719C6CF83008CBC9E /* README.md */,
+				0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */,
+			);
+			name = CCSpriteGrid;
+			path = Extensions/CCSpriteGrid;
+			sourceTree = SOURCE_ROOT;
+		};
+		0E57EA3F19C6D5D4008CBC9E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0E57EA4019C6D5D4008CBC9E /* pebbles.png */,
+			);
+			name = Tests;
+			path = Resources/Tests;
+			sourceTree = "<group>";
+		};
 		0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +363,7 @@
 		A6270E7A193757E400196BD3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0E57EA3F19C6D5D4008CBC9E /* Tests */,
 				A6D883A5193C7B9200CE3922 /* Cards */,
 				A627111A193759B300196BD3 /* Stock */,
 				A6270E83193757E400196BD3 /* Icons */,
@@ -470,6 +499,7 @@
 				A6994F80194A2F3D00B97481 /* CCCropNodeTest.m */,
 				0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */,
 				0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */,
+				0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */,
 				A6994F7E194A2E2800B97481 /* Test helper classes */,
 			);
 			name = Tests;
@@ -478,6 +508,8 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */,
+				0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */,
 				0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */,
 				0E21D303198A45F800E84AB1 /* CCSpriteMultiTouch */,
 				A6994F76194A2C8000B97481 /* CCCropNode */,
@@ -576,6 +608,8 @@
 				A6994F87194A2FBB00B97481 /* cardNode.m */,
 				A6994F88194A2FBB00B97481 /* spineNode.h */,
 				A6994F89194A2FBB00B97481 /* spineNode.m */,
+				0E99598919C73B0500A02D2B /* rippleNode.h */,
+				0E99598A19C73B0500A02D2B /* rippleNode.m */,
 			);
 			name = "Test helper classes";
 			sourceTree = "<group>";
@@ -624,7 +658,7 @@
 		A6270E56193757E300196BD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Cocos2D-iphone";
 			};
 			buildConfigurationList = A6270E59193757E300196BD3 /* Build configuration list for PBXProject "cocos2d-iphone-ext" */;
@@ -674,6 +708,7 @@
 				A62712A5193769A900196BD3 /* Sprites-hd.png in Resources */,
 				A6271297193769A900196BD3 /* din-ipadhd.fnt in Resources */,
 				A62712B0193769A900196BD3 /* TilesAtlassed-ipadhd.plist in Resources */,
+				0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */,
 				A6270E87193757E400196BD3 /* Icon@2x.png in Resources */,
 				A6271293193769A900196BD3 /* din-hd.fnt in Resources */,
 				A6270E99193757E400196BD3 /* Icon-Small@2x.png in Resources */,
@@ -689,7 +724,6 @@
 				A6271295193769A900196BD3 /* din-ipad.fnt in Resources */,
 				A6270E82193757E400196BD3 /* Default-Landscape~ipad.png in Resources */,
 				A6270E97193757E400196BD3 /* Icon-Small.png in Resources */,
-				0EF602FF199CDD8F007AEBD9 /* README.md in Resources */,
 				A6270E95193757E400196BD3 /* Icon-Small-50.png in Resources */,
 				A62712AA193769A900196BD3 /* Sprites.plist in Resources */,
 				A62712AB193769A900196BD3 /* Sprites.png in Resources */,
@@ -708,7 +742,6 @@
 				A62712AD193769A900196BD3 /* TilesAtlassed-hd.png in Resources */,
 				A6270E80193757E400196BD3 /* Default-568h@2x.png in Resources */,
 				A627129B193769A900196BD3 /* Interface-hd.plist in Resources */,
-				0E21D306198A47A400E84AB1 /* README.md in Resources */,
 				A6270EA0193757E400196BD3 /* iTunesArtwork in Resources */,
 				A6270E9B193757E400196BD3 /* Icon-Spotlight-iOS7.png in Resources */,
 				A6270E8F193757E400196BD3 /* Icon-76@2x.png in Resources */,
@@ -743,9 +776,12 @@
 				A6994F81194A2F3D00B97481 /* CCCropNodeTest.m in Sources */,
 				A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */,
 				A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */,
+				0E99598B19C73B0500A02D2B /* rippleNode.m in Sources */,
 				A6994F7C194A2D4F00B97481 /* CCCropNode.m in Sources */,
 				A6994F84194A2FAC00B97481 /* CCSpineTest.m in Sources */,
+				0E57EA3E19C6D272008CBC9E /* CCSpriteGridTest.m in Sources */,
 				A66C5833193A0C87009D2BD4 /* CCSpineBone.m in Sources */,
+				0E57EA3B19C6CF9B008CBC9E /* CCSpriteGrid.m in Sources */,
 				A66C5811193A0C77009D2BD4 /* CCDictionary.m in Sources */,
 				A6994F8B194A2FBB00B97481 /* spineNode.m in Sources */,
 				A68895AF1949A8B4002950DD /* CCTransformationNode.m in Sources */,
@@ -778,9 +814,16 @@
 		A6271112193757E600196BD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -789,7 +832,11 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -801,16 +848,27 @@
 		A6271113193757E600196BD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -823,7 +881,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -847,7 +904,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2d-iphone-ext/Supporting Files/Prefix.pch";

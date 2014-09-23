@@ -65,7 +65,7 @@
     if (_dirty)
     {
         CGSize size = [CCDirector sharedDirector].viewSize;
-        float aspect = size.width / size.height;
+        // float aspect = size.width / size.height;
 
         // create rotation matrix
         GLKMatrix4 matrixPitch = GLKMatrix4MakeXRotation(_pitch);

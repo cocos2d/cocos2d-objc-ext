@@ -1,8 +1,9 @@
 /*
- * Smooth drawing: http://merowing.info
+ * cocos2d for iPhone: http://www.cocos2d-swift.org
  *
- * Copyright (c) 2012 Krzysztof Zabłocki
- * Copyright (c) 2014 Richard Groves
+ * Copyright (c) 2008-2010 Ricardo Quesada
+ * Copyright (c) 2011 Zynga Inc.
+ * Copyright (c) 2013-2014 Cocos2D Authors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,40 +22,41 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- *
  */
 
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-typedef struct
-{
-    CGPoint pos;
-    float z;
-    ccColor4F color;
-} CCSmoothLineVertex;
+// -----------------------------------------------------------------------
+
+@interface CCSpriteGrid : CCSprite
 
 // -----------------------------------------------------------------------
 
-@interface CCSmoothLinePoint : NSObject
+@property (nonatomic, readonly) CCVertex *vertex;
+@property (nonatomic, readonly) NSUInteger vertexCount;
+@property (nonatomic, readonly) BOOL dirty;
 
-@property(nonatomic, assign) CGPoint pos;
-@property(nonatomic, assign) float width;
+// -----------------------------------------------------------------------
+
+- (void)setGridWidth:(NSUInteger)width andHeight:(NSUInteger)height;
+- (void)resetGrid;
+
+- (BOOL)isEdge:(NSUInteger)index;
+
+- (CGPoint)vertexPosition:(NSUInteger)index;
+- (CGPoint)textureCoordinate:(NSUInteger)index;
+- (CCColor *)color:(NSUInteger)index;
+
+- (void)adjustVertex:(NSUInteger)index adjustment:(CGPoint)adjustment;
+- (void)adjustTextureCoordinate:(NSUInteger)index adjustment:(CGPoint)adjustment;
+- (void)adjustColor:(NSUInteger)index adjustment:(CCColor *)adjustment;
+
+- (void)resetVertex:(NSUInteger)index;
+- (void)resetTextureCoordinate:(NSUInteger)index;
+- (void)resetColor:(NSUInteger)index;
+
+// -----------------------------------------------------------------------
 
 @end
 
-// -----------------------------------------------------------------------
-
-@interface CCLayerSmoothLine : CCNode
-
-// -----------------------------------------------------------------------
-
-+ (instancetype)layer;
-- (instancetype)init;
-
-- (void)startNewLineFrom:(CGPoint)newPoint withSize:(CGFloat)aSize;
-- (void)endLineAt:(CGPoint)aEndPoint withSize:(CGFloat)aSize;
-- (void)addPoint:(CGPoint)newPoint withSize:(CGFloat)size;
-
-// -----------------------------------------------------------------------
-
-@end

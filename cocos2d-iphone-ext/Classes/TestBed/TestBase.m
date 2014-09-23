@@ -110,6 +110,9 @@
     
     [self setupTestWithIndex:0];
     
+    // makes it possible to override touchBegan in the test classes
+    self.userInteractionEnabled = YES;
+    
     return self;
 }
 
