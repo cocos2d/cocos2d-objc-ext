@@ -127,7 +127,7 @@
 
 // -----------------------------------------------------------------
 
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     _cropNode.mode = (_cropNode.mode + 1) % 4;
     CCLOG(@"%@", [_cropNode debugString]);

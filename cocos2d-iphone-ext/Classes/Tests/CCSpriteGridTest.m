@@ -134,13 +134,13 @@ typedef enum
 
 // -----------------------------------------------------------------------
 
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     _lastTouch = ccp(-GridTouchInterval, -GridTouchInterval);
     [self touchMoved:touch withEvent:event];
 }
 
-- (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     CGPoint pos = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[CCDirector sharedDirector].view]];
 

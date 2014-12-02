@@ -37,7 +37,7 @@
 @implementation CCSpriteMultiTouch
 {
     // must be weak, to avoid retaining touches
-    __weak UITouch *_touch[CCSpriteMultiTouchMaxTouches];
+    __weak CCTouch *_touch[CCSpriteMultiTouchMaxTouches];
     // variables used internally to
     CGPoint _dragCentre;
     CGPoint _scaleCentre;
@@ -106,7 +106,7 @@
 
 //----------------------------------------------------------------------
 
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     // if max touches exceeded, drop the touch
     if (_touchCount == CCSpriteMultiTouchMaxTouches)
@@ -141,7 +141,7 @@
 
 //----------------------------------------------------------------------
 
-- (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     // check for dragging
     if (_touchCount == _touchCountForDrag) [self touchDrag];
@@ -159,7 +159,7 @@
 
 //----------------------------------------------------------------------
 
-- (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     // remove the touch from the list
     for (int index = 0; index < _touchCount; index ++)
