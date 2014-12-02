@@ -29,42 +29,29 @@
 
 // -----------------------------------------------------------------------
 
-@interface CCSpriteGrid : CCSprite
+typedef enum
+{
+    clothAnchorTop,
+    clothAnchorLeft,
+    clothAnchorRight,
+} clothAnchor;
 
 // -----------------------------------------------------------------------
 
-@property (nonatomic, readonly) CCVertex *vertex;
-@property (nonatomic, readonly) NSUInteger gridWidth;
-@property (nonatomic, readonly) NSUInteger gridHeight;
-@property (nonatomic, readonly) NSUInteger vertexCount;
-@property (nonatomic, readonly) BOOL dirty;
+@interface clothNode : CCNode
 
 // -----------------------------------------------------------------------
 
-- (void)setGridWidth:(NSUInteger)width andHeight:(NSUInteger)height;
-- (void)resetGrid;
+@property (nonatomic, assign) clothAnchor clothAnchor;
+@property (nonatomic, assign) NSUInteger iterations;
+@property (nonatomic, assign) float elasticity;
+@property (nonatomic, assign) float stiffness;
+@property (nonatomic, assign) CGPoint gravity;
 
-- (BOOL)isEdge:(NSUInteger)index;
+// -----------------------------------------------------------------------
 
-- (CGPoint)vertexPosition:(NSUInteger)index;
-- (CGPoint)textureCoordinate:(NSUInteger)index;
-- (CCColor *)color:(NSUInteger)index;
-
-- (void)adjustVertex:(NSUInteger)index adjustment:(CGPoint)adjustment;
-- (void)adjustTextureCoordinate:(NSUInteger)index adjustment:(CGPoint)adjustment;
-- (void)adjustColor:(NSUInteger)index adjustment:(CCColor *)adjustment;
-
-- (void)resetVertex:(NSUInteger)index;
-- (void)resetTextureCoordinate:(NSUInteger)index;
-- (void)resetColor:(NSUInteger)index;
-
-- (float)vertexDistance:(NSUInteger)indexA indexB:(NSUInteger)indexB;
-
-- (void)lock:(NSUInteger)index;
-- (void)unLock:(NSUInteger)index;
-- (BOOL)isLocked:(NSUInteger)index;
+- (void)updateCloth:(CCTime)delta;
 
 // -----------------------------------------------------------------------
 
 @end
-

@@ -34,6 +34,7 @@
     float _absoluteSpeed;
     float _absoluteRippleStrength;
     float _absoluteRippleWidth;
+    float _absoluteMaxSize;
 }
 
 // -----------------------------------------------------------------------
@@ -53,6 +54,7 @@
     _ripples = 5;
     _periodTime = 1.0;
     _normalizedRippleStrength = 1.0;
+    _normalizedMaxSize = 1.0;
     _modifyEdges = NO;
     _modifyTexture = NO;
     
@@ -83,6 +85,7 @@
         _absoluteSpeed = grid.contentSize.width * _normalizedSpeed;
         _absoluteRippleStrength = grid.contentSize.width * _normalizedRippleStrength * 0.01f;
         _absoluteRippleWidth = grid.contentSize.width * _periodTime;
+        _absoluteMaxSize = grid.contentSize.width * _normalizedMaxSize;
     }
     
     // update data
@@ -100,6 +103,7 @@
             {
                 float progress = clampf((_size - distance) / (_absoluteRippleWidth * _ripples), 0, 1);
                 progress = (1 - progress) * (1 - progress);
+                progress *= clampf((_absoluteMaxSize - distance) / _absoluteMaxSize, 0, 1);
                 
                 // calculate movement of vertex
                 float sin = sinf((_size - distance) / _absoluteRippleWidth * 2 * M_PI);

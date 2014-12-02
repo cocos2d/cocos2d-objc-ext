@@ -34,10 +34,9 @@
 
 @implementation CCSpriteGrid
 {
-    NSUInteger _gridWidth;
-    NSUInteger _gridHeight;
     CCVertex *_originalVertex;
     BOOL *_vertexIsEdge;
+    BOOL *_vertexIsLocked;
     CGPoint _textureOffset;
     CGSize _textureSize;
 }
@@ -56,6 +55,7 @@
     _vertex = NULL;
     _originalVertex = NULL;
     _vertexIsEdge = NULL;
+    _vertexIsLocked = NULL;
     _dirty = NO;
     
     // done
@@ -87,9 +87,13 @@
                                            andVertexes:vertexCount
                                              withState:self.renderState
                                        globalSortOrder:0];
+    
     // transform vertices
     for (NSUInteger index = 0; index < vertexCount; index ++)
+    {
+        _vertex[index].color.a = self.opacity;
         CCRenderBufferSetVertex(buffer, (int)index, CCVertexApplyTransform(_vertex[index], transform));
+    }
     
     // set up triangles
     NSUInteger triangleIndex = 0;
@@ -115,6 +119,7 @@
     free(_vertex);
     free(_originalVertex);
     free(_vertexIsEdge);
+    free(_vertexIsLocked);
     _vertex = NULL;
     _originalVertex = NULL;
     _vertexIsEdge = NULL;
@@ -144,6 +149,7 @@
         _vertex = malloc(_vertexCount * sizeof(CCVertex));
         _originalVertex = malloc(_vertexCount * sizeof(CCVertex));
         _vertexIsEdge = malloc(_vertexCount * sizeof(BOOL));
+        _vertexIsLocked = malloc(_vertexCount * sizeof(BOOL));
         [self createGrid];
         [self resetGrid];
     }
@@ -170,7 +176,7 @@
         for (NSUInteger width = 0; width <= _gridWidth; width ++)
         {
             float progressWidth = (float)width / (float)_gridWidth;
-            float progressHeight = (float)height / (float)_gridHeight;
+            float progressHeight = 1.0f - ((float)height / (float)_gridHeight);
             
             _originalVertex[vertexIndex].position = (GLKVector4)
             {
@@ -189,6 +195,8 @@
             };
             
             _vertexIsEdge[vertexIndex] = (height == 0) || (height == _gridHeight) || (width == 0) || (width == _gridWidth);
+            
+            _vertexIsLocked[vertexIndex] = NO;
             
             vertexIndex ++;
         }
@@ -242,6 +250,7 @@
 - (void)adjustVertex:(NSUInteger)index adjustment:(CGPoint)adjustment
 {
     NSAssert(index < _vertexCount, @"Invalid vertex index");
+    if (_vertexIsLocked[index]) return;
     _vertex[index].position.x = _vertex[index].position.x + adjustment.x;
     _vertex[index].position.y = _vertex[index].position.y + adjustment.y;
     _dirty = YES;
@@ -250,6 +259,7 @@
 - (void)adjustTextureCoordinate:(NSUInteger)index adjustment:(CGPoint)adjustment
 {
     NSAssert(index < _vertexCount, @"Invalid vertex index");
+    if (_vertexIsLocked[index]) return;
     _vertex[index].texCoord1.v[0] = _vertex[index].texCoord1.v[0] + (adjustment.x / _textureSize.width);
     _vertex[index].texCoord1.v[1] = _vertex[index].texCoord1.v[1] + (adjustment.y / _textureSize.height);
     _dirty = YES;
@@ -257,7 +267,12 @@
 
 - (void)adjustColor:(NSUInteger)index adjustment:(CCColor *)adjustment
 {
-
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    if (_vertexIsLocked[index]) return;
+    _vertex[index].color.r += adjustment.red;
+    _vertex[index].color.g += adjustment.green;
+    _vertex[index].color.b += adjustment.blue;
+    _dirty = YES;
 }
 
 // -----------------------------------------------------------------------
@@ -279,6 +294,40 @@
 {
     NSAssert(index < _vertexCount, @"Invalid vertex index");
     _vertex[index].color = _originalVertex[index].color;
+}
+
+// -----------------------------------------------------------------------
+
+- (float)vertexDistance:(NSUInteger)indexA indexB:(NSUInteger)indexB
+{
+    NSAssert(indexA < _vertexCount, @"Invalid vertex index");
+    NSAssert(indexB < _vertexCount, @"Invalid vertex index");
+    return ccpDistance((CGPoint){_vertex[indexA].position.x, _vertex[indexA].position.y},
+                       (CGPoint){_vertex[indexB].position.x, _vertex[indexB].position.y});
+}
+
+// -----------------------------------------------------------------------
+
+- (void)lock:(NSUInteger)index
+{
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    _vertexIsLocked[index] = YES;
+}
+
+// -----------------------------------------------------------------------
+
+- (void)unLock:(NSUInteger)index
+{
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    _vertexIsLocked[index] = NO;
+}
+
+// -----------------------------------------------------------------------
+
+- (BOOL)isLocked:(NSUInteger)index
+{
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    return _vertexIsLocked[index];
 }
 
 // -----------------------------------------------------------------------

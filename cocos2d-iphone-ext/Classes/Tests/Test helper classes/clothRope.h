@@ -29,42 +29,23 @@
 
 // -----------------------------------------------------------------------
 
-@interface CCSpriteGrid : CCSprite
+@interface clothRope : NSObject
 
 // -----------------------------------------------------------------------
 
-@property (nonatomic, readonly) CCVertex *vertex;
-@property (nonatomic, readonly) NSUInteger gridWidth;
-@property (nonatomic, readonly) NSUInteger gridHeight;
-@property (nonatomic, readonly) NSUInteger vertexCount;
-@property (nonatomic, readonly) BOOL dirty;
+@property (nonatomic, assign) NSUInteger gridIndex;
+@property (nonatomic, readonly) NSUInteger segmentCount;
+@property (nonatomic, readonly) float segmentLength;
+@property (nonatomic, assign) CGPoint position;
 
 // -----------------------------------------------------------------------
 
-- (void)setGridWidth:(NSUInteger)width andHeight:(NSUInteger)height;
-- (void)resetGrid;
++ (instancetype)clothRopeWithLength:(float)length andSegments:(NSUInteger)segments;
+- (instancetype)initWithLength:(float)length andSegments:(NSUInteger)segments;
 
-- (BOOL)isEdge:(NSUInteger)index;
-
-- (CGPoint)vertexPosition:(NSUInteger)index;
-- (CGPoint)textureCoordinate:(NSUInteger)index;
-- (CCColor *)color:(NSUInteger)index;
-
-- (void)adjustVertex:(NSUInteger)index adjustment:(CGPoint)adjustment;
-- (void)adjustTextureCoordinate:(NSUInteger)index adjustment:(CGPoint)adjustment;
-- (void)adjustColor:(NSUInteger)index adjustment:(CCColor *)adjustment;
-
-- (void)resetVertex:(NSUInteger)index;
-- (void)resetTextureCoordinate:(NSUInteger)index;
-- (void)resetColor:(NSUInteger)index;
-
-- (float)vertexDistance:(NSUInteger)indexA indexB:(NSUInteger)indexB;
-
-- (void)lock:(NSUInteger)index;
-- (void)unLock:(NSUInteger)index;
-- (BOOL)isLocked:(NSUInteger)index;
+- (void)update:(CCTime)delta angle:(float)angle;
+- (CGPoint)ropePos:(NSUInteger)index;
 
 // -----------------------------------------------------------------------
 
 @end
-

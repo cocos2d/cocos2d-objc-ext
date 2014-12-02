@@ -9,9 +9,16 @@
 #import "TestBase.h"
 #import "CCSpriteGrid.h"
 #import "rippleNode.h"
+#import "clothNode.h"
 
-#define GridCount 48
+#define GridCountDefault 48
+#define GridCountCloth 16
+#define GridCountStream 16
+
 #define GridTouchInterval 20
+
+#define GridClothWobbleAngle 10
+#define GridClothWobbleTime 1.5
 
 //----------------------------------------------------------------------
 
@@ -20,6 +27,7 @@ typedef enum
     SpriteGridTestTypeNervousPebbles,
     SpriteGridTestTypeRubberThing,
     SpriteGridTestTypeWaterRipples,
+    SpriteGridTestTypeCloth,
 
 } SpriteGridTestType;
 
@@ -30,8 +38,8 @@ typedef enum
     CCSpriteGrid *_grid;
     SpriteGridTestType _testType;
     CGPoint _lastTouch;
+    float _timing;
 }
-
 
 @end
 
@@ -42,18 +50,20 @@ typedef enum
 - (NSArray *)testConstructors
 {
     return [NSArray arrayWithObjects:
+            @"cloth",
             @"waterRipples",
             @"rubberThing",
             @"nervousPebbles",
             nil];
 }
 
-- (CCSpriteGrid *)createGrid
+- (CCSpriteGrid *)createGrid:(NSUInteger)count
 {
     CCSpriteGrid *grid = [CCSpriteGrid spriteWithImageNamed:@"pebbles.png"];
     grid.positionType = CCPositionTypeNormalized;
     grid.position = ccp(0.5, 0.5);
-    [grid setGridWidth:GridCount andHeight:GridCount];
+    grid.colorRGBA = [CCColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.25];
+    [grid setGridWidth:count andHeight:count];
     return grid;
 }
 
@@ -65,7 +75,7 @@ typedef enum
     _testType = SpriteGridTestTypeNervousPebbles;
     
     // load pebbles
-    _grid = [self createGrid];
+    _grid = [self createGrid:GridCountStream];
     [self.contentNode addChild:_grid];
 }
 
@@ -78,7 +88,7 @@ typedef enum
     self.userInteractionEnabled = YES;
     
     // load pebbles
-    _grid = [self createGrid];
+    _grid = [self createGrid:GridCountDefault];
     [self.contentNode addChild:_grid];
 }
 
@@ -91,18 +101,38 @@ typedef enum
     self.userInteractionEnabled = YES;
     
     // load pebbles
-    _grid = [self createGrid];
+    _grid = [self createGrid:GridCountDefault];
     [self.contentNode addChild:_grid];
-    
-    
-    
-    CCPhysicsNode *physics = [CCPhysicsNode node];
-    [self.contentNode addChild:physics];
-    
-    [CCDirector sharedDirector].fixedUpdateInterval = 1.0 / 120.0;
-    
-    
 }
+
+// -----------------------------------------------------------------------
+
+- (void)cloth
+{
+    self.subTitle = @"Cloth Simulation";
+    _testType = SpriteGridTestTypeCloth;
+    self.userInteractionEnabled = YES;
+    
+    // load pebbles
+    _grid = [self createGrid:GridCountCloth];
+    [self.contentNode addChild:_grid];
+
+    // let the cloth rotate back and forth
+    [_grid runAction:
+     [CCActionRepeatForever actionWithAction:
+      [CCActionSequence actions:
+       [CCActionEaseSineInOut actionWithAction:
+        [CCActionRotateTo actionWithDuration:GridClothWobbleTime angle:-GridClothWobbleAngle]],
+       [CCActionEaseSineInOut actionWithAction:
+        [CCActionRotateTo actionWithDuration:GridClothWobbleTime angle:+GridClothWobbleAngle]],
+       nil]]];
+
+    // load cloth simulation
+    clothNode *cloth = [clothNode node];
+    [_grid addChild:cloth];
+}
+
+// -----------------------------------------------------------------------
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
@@ -148,13 +178,18 @@ typedef enum
             ripple.ripples = 2.0;
             ripple.life = 2.00;
             ripple.normalizedSpeed = 0.75;
-            ripple.normalizedRippleStrength = 0.50;
+            ripple.normalizedRippleStrength = 0.75;
+            ripple.normalizedMaxSize = 0.50;
             ripple.periodTime = 0.15;
             ripple.modifyTexture = YES;
             
             [_grid addChild:ripple];
             break;
         }
+            
+        // affect cloth
+        case SpriteGridTestTypeCloth:
+            break;
     }
 }
 
@@ -164,26 +199,40 @@ typedef enum
 
 - (void)update:(CCTime)delta
 {
-    [_grid resetGrid];
     
     switch (_testType)
     {
         case SpriteGridTestTypeNervousPebbles:
+            [_grid resetGrid];
+
+            _timing += delta;
             for (NSUInteger index = 0; index < _grid.vertexCount; index ++)
             {
                 if (![_grid isEdge:index])
                 {
-                    [_grid adjustVertex:index adjustment:ccp(CCRANDOM_MINUS1_1() * 3, CCRANDOM_MINUS1_1() * 3)];
+                    [_grid adjustTextureCoordinate:index adjustment:ccp(CCRANDOM_MINUS1_1() * 0.0075,
+                                                                        CCRANDOM_MINUS1_1() * 0.0075)];
+                    float color = CCRANDOM_0_1() * -0.2;
+                    [_grid adjustColor:index adjustment:[CCColor colorWithRed:color green:color blue:color]];
                 }
             }
             break;
 
         case SpriteGridTestTypeRubberThing:
+            [_grid resetGrid];
             break;
             
         case SpriteGridTestTypeWaterRipples:
+            [_grid resetGrid];
             break;
-            
+
+        case SpriteGridTestTypeCloth:
+        {
+            [_grid resetGrid];
+            clothNode *cloth = (clothNode *)[_grid.children objectAtIndex:0];
+            [cloth updateCloth:delta];
+            break;
+        }
     }
 }
 

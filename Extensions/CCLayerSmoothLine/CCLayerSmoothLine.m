@@ -394,6 +394,7 @@
             finalPoint.width = (cur.width + prev1.width) * 0.5f;
             [smoothedPoints addObject:finalPoint];
         }
+        
         //! we need to leave last 2 points for next draw
         [_points removeObjectsInRange:NSMakeRange(0, [_points count] - 2)];
         return smoothedPoints;

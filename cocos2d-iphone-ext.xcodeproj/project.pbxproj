@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */; };
 		0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */; };
+		0E2A746719D311230054F5B6 /* clothRope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A746619D311230054F5B6 /* clothRope.m */; };
 		0E57EA3B19C6CF9B008CBC9E /* CCSpriteGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */; };
 		0E57EA3E19C6D272008CBC9E /* CCSpriteGridTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */; };
 		0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E57EA4019C6D5D4008CBC9E /* pebbles.png */; };
 		0E99598B19C73B0500A02D2B /* rippleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99598A19C73B0500A02D2B /* rippleNode.m */; };
 		0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */; };
+		0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEB48719D29EB100BDBB9E /* clothNode.m */; };
 		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
 		0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
@@ -130,14 +132,18 @@
 		0E21D30A198A484600E84AB1 /* CCSpriteMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteMultiTouch.h; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.h; sourceTree = SOURCE_ROOT; };
 		0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouch.m; path = Extensions/CCSpriteMultiTouch/CCSpriteMultiTouch.m; sourceTree = SOURCE_ROOT; };
 		0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouchTest.m; path = Classes/Tests/CCSpriteMultiTouchTest.m; sourceTree = "<group>"; };
+		0E2A746519D311230054F5B6 /* clothRope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clothRope.h; path = "Classes/Tests/Test helper classes/clothRope.h"; sourceTree = "<group>"; };
+		0E2A746619D311230054F5B6 /* clothRope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clothRope.m; path = "Classes/Tests/Test helper classes/clothRope.m"; sourceTree = "<group>"; };
 		0E57EA3719C6CF83008CBC9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteGrid.h; path = ../Extensions/CCSpriteGrid/CCSpriteGrid.h; sourceTree = "<group>"; };
+		0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteGrid.h; sourceTree = "<group>"; };
 		0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteGrid.m; sourceTree = "<group>"; };
 		0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteGridTest.m; path = Classes/Tests/CCSpriteGridTest.m; sourceTree = "<group>"; };
 		0E57EA4019C6D5D4008CBC9E /* pebbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pebbles.png; sourceTree = "<group>"; };
 		0E99598919C73B0500A02D2B /* rippleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rippleNode.h; path = "Classes/Tests/Test helper classes/rippleNode.h"; sourceTree = "<group>"; };
 		0E99598A19C73B0500A02D2B /* rippleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = rippleNode.m; path = "Classes/Tests/Test helper classes/rippleNode.m"; sourceTree = "<group>"; };
 		0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLineTest.m; path = Classes/Tests/CCLayerSmoothLineTest.m; sourceTree = "<group>"; };
+		0ECEB48619D29EB100BDBB9E /* clothNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clothNode.h; path = "Classes/Tests/Test helper classes/clothNode.h"; sourceTree = "<group>"; };
+		0ECEB48719D29EB100BDBB9E /* clothNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clothNode.m; path = "Classes/Tests/Test helper classes/clothNode.m"; sourceTree = "<group>"; };
 		0ED73BB31997951A00C83507 /* CCSpineCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpineCurve.h; path = Extensions/CCSpine/CCSpineCurve.h; sourceTree = SOURCE_ROOT; };
 		0ED73BB41997951A00C83507 /* CCSpineCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpineCurve.m; path = Extensions/CCSpine/CCSpineCurve.m; sourceTree = SOURCE_ROOT; };
 		0EF602FB199CDC8F007AEBD9 /* CCLayerSmoothLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLayerSmoothLine.h; path = Extensions/CCLayerSmoothLine/CCLayerSmoothLine.h; sourceTree = SOURCE_ROOT; };
@@ -298,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				0E57EA3719C6CF83008CBC9E /* README.md */,
+				0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */,
 				0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */,
 			);
 			name = CCSpriteGrid;
@@ -508,7 +515,6 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */,
 				0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */,
 				0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */,
 				0E21D303198A45F800E84AB1 /* CCSpriteMultiTouch */,
@@ -610,6 +616,10 @@
 				A6994F89194A2FBB00B97481 /* spineNode.m */,
 				0E99598919C73B0500A02D2B /* rippleNode.h */,
 				0E99598A19C73B0500A02D2B /* rippleNode.m */,
+				0ECEB48619D29EB100BDBB9E /* clothNode.h */,
+				0ECEB48719D29EB100BDBB9E /* clothNode.m */,
+				0E2A746519D311230054F5B6 /* clothRope.h */,
+				0E2A746619D311230054F5B6 /* clothRope.m */,
 			);
 			name = "Test helper classes";
 			sourceTree = "<group>";
@@ -789,8 +799,10 @@
 				A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */,
 				0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */,
 				A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */,
+				0E2A746719D311230054F5B6 /* clothRope.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
 				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
+				0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
 				0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */,
 				A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */,

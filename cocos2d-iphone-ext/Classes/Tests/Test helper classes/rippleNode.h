@@ -38,6 +38,7 @@
 @property (nonatomic, assign) float ripples;                    // number of ripples
 @property (nonatomic, assign) float periodTime;                 // ripple period time
 @property (nonatomic, assign) float normalizedRippleStrength;   // normalized strength of ripple
+@property (nonatomic, assign) float normalizedMaxSize;          // normalized max size
 @property (nonatomic, assign) BOOL modifyEdges;                 // modify image edges
 @property (nonatomic, assign) BOOL modifyTexture;               // modify texture in stead of vertex
 

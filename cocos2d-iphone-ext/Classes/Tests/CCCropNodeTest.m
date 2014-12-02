@@ -102,8 +102,14 @@
     _card.scale = 2;
     [_transformation addChild:_card];
     
-    
-    
+    CCButton *toggle = [CCButton buttonWithTitle:@""
+                                     spriteFrame:[CCSpriteFrame frameWithImageNamed:[cardNode randomCardName]]
+                          highlightedSpriteFrame:[CCSpriteFrame frameWithImageNamed:[cardNode randomCardName]]
+                             disabledSpriteFrame:[CCSpriteFrame frameWithImageNamed:[cardNode randomCardName]]];
+    toggle.positionType = CCPositionTypeNormalized;
+    toggle.position = ccp(0.2, 0.75);
+    toggle.togglesSelectedState = YES;
+    [self.contentNode addChild:toggle];
     
     
 }
