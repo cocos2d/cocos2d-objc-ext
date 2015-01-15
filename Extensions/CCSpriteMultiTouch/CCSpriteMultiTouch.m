@@ -71,7 +71,7 @@
     
     for (int index = 0; index < _touchCount; index ++)
     {
-        CGPoint pos = [_touch[index] locationInView:[CCDirector sharedDirector].view];
+        CGPoint pos = [_touch[index] locationInView:(CCGLView *)[CCDirector sharedDirector].view];
         pos = [[CCDirector sharedDirector] convertToGL:pos];
         sum = ccpAdd(sum, pos);
     }
@@ -84,7 +84,7 @@
     float sum = 0;
     for (int index = 0; index < _touchCount; index ++)
     {
-        CGPoint pos = [_touch[index] locationInView:[CCDirector sharedDirector].view];
+        CGPoint pos = [_touch[index] locationInView:(CCGLView *)[CCDirector sharedDirector].view];
         pos = [[CCDirector sharedDirector] convertToGL:pos];
         sum = sum + ccpDistance(centre, pos);
     }
@@ -97,7 +97,7 @@
     float sum = 0;
     for (int index = 0; index < _touchCount; index ++)
     {
-        CGPoint pos = [_touch[index] locationInView:[CCDirector sharedDirector].view];
+        CGPoint pos = [_touch[index] locationInView:(CCGLView *)[CCDirector sharedDirector].view];
         pos = [[CCDirector sharedDirector] convertToGL:pos];
         sum = sum + ccpToAngle(ccpSub(pos, centre));
     }

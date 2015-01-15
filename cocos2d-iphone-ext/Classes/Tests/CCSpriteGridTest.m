@@ -142,7 +142,7 @@ typedef enum
 
 - (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    CGPoint pos = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[CCDirector sharedDirector].view]];
+    CGPoint pos = [[CCDirector sharedDirector] convertToGL:[touch locationInView:(CCGLView *)[CCDirector sharedDirector].view]];
 
     // check for valid touch
     if (![_grid hitTestWithWorldPos:pos]) return;
