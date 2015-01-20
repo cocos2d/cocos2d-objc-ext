@@ -15,6 +15,14 @@
 		0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E57EA4019C6D5D4008CBC9E /* pebbles.png */; };
 		0E99598B19C73B0500A02D2B /* rippleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99598A19C73B0500A02D2B /* rippleNode.m */; };
 		0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */; };
+		0EB2EE2B1A6E992B00700971 /* CCEffectLine.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0EB2EE211A6E992A00700971 /* CCEffectLine.frag */; };
+		0EB2EE2C1A6E992B00700971 /* CCEffectLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2EE231A6E992B00700971 /* CCEffectLine.m */; };
+		0EB2EE2D1A6E992B00700971 /* CCEffectLine.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0EB2EE241A6E992B00700971 /* CCEffectLine.vert */; };
+		0EB2EE2E1A6E992B00700971 /* CCEffectLineFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2EE261A6E992B00700971 /* CCEffectLineFactory.m */; };
+		0EB2EE2F1A6E992B00700971 /* CCEffectLineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2EE281A6E992B00700971 /* CCEffectLineSegment.m */; };
+		0EB2EE301A6E992B00700971 /* effects.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EB2EE291A6E992B00700971 /* effects.png */; };
+		0EB2EE391A6E997400700971 /* CCEffectLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2EE381A6E997400700971 /* CCEffectLineTest.m */; };
+		0EB2EE3C1A6E9A2600700971 /* effectLineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2EE3B1A6E9A2600700971 /* effectLineNode.m */; };
 		0EBBCFB21A2E1FF600493FA4 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBBCFAB1A2E1F6A00493FA4 /* libcocos2d.a */; };
 		0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEB48719D29EB100BDBB9E /* clothNode.m */; };
 		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
@@ -156,6 +164,19 @@
 		0E99598919C73B0500A02D2B /* rippleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rippleNode.h; path = "Classes/Tests/Test helper classes/rippleNode.h"; sourceTree = "<group>"; };
 		0E99598A19C73B0500A02D2B /* rippleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = rippleNode.m; path = "Classes/Tests/Test helper classes/rippleNode.m"; sourceTree = "<group>"; };
 		0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLineTest.m; path = Classes/Tests/CCLayerSmoothLineTest.m; sourceTree = "<group>"; };
+		0EB2EE211A6E992A00700971 /* CCEffectLine.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = CCEffectLine.frag; path = Extensions/CCEffectLine/CCEffectLine.frag; sourceTree = SOURCE_ROOT; };
+		0EB2EE221A6E992B00700971 /* CCEffectLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEffectLine.h; path = Extensions/CCEffectLine/CCEffectLine.h; sourceTree = SOURCE_ROOT; };
+		0EB2EE231A6E992B00700971 /* CCEffectLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEffectLine.m; path = Extensions/CCEffectLine/CCEffectLine.m; sourceTree = SOURCE_ROOT; };
+		0EB2EE241A6E992B00700971 /* CCEffectLine.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = CCEffectLine.vert; path = Extensions/CCEffectLine/CCEffectLine.vert; sourceTree = SOURCE_ROOT; };
+		0EB2EE251A6E992B00700971 /* CCEffectLineFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEffectLineFactory.h; path = Extensions/CCEffectLine/CCEffectLineFactory.h; sourceTree = SOURCE_ROOT; };
+		0EB2EE261A6E992B00700971 /* CCEffectLineFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEffectLineFactory.m; path = Extensions/CCEffectLine/CCEffectLineFactory.m; sourceTree = SOURCE_ROOT; };
+		0EB2EE271A6E992B00700971 /* CCEffectLineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEffectLineSegment.h; path = Extensions/CCEffectLine/CCEffectLineSegment.h; sourceTree = SOURCE_ROOT; };
+		0EB2EE281A6E992B00700971 /* CCEffectLineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEffectLineSegment.m; path = Extensions/CCEffectLine/CCEffectLineSegment.m; sourceTree = SOURCE_ROOT; };
+		0EB2EE291A6E992B00700971 /* effects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = effects.png; path = Extensions/CCEffectLine/effects.png; sourceTree = SOURCE_ROOT; };
+		0EB2EE2A1A6E992B00700971 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCEffectLine/README.md; sourceTree = SOURCE_ROOT; };
+		0EB2EE381A6E997400700971 /* CCEffectLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCEffectLineTest.m; path = Classes/Tests/CCEffectLineTest.m; sourceTree = "<group>"; };
+		0EB2EE3A1A6E9A2600700971 /* effectLineNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = effectLineNode.h; path = "Classes/Tests/Test helper classes/effectLineNode.h"; sourceTree = "<group>"; };
+		0EB2EE3B1A6E9A2600700971 /* effectLineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = effectLineNode.m; path = "Classes/Tests/Test helper classes/effectLineNode.m"; sourceTree = "<group>"; };
 		0EBBCF9D1A2E1F6900493FA4 /* cocos2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d.xcodeproj; path = Externals/cocos2d.xcodeproj; sourceTree = "<group>"; };
 		0ECEB48619D29EB100BDBB9E /* clothNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clothNode.h; path = "Classes/Tests/Test helper classes/clothNode.h"; sourceTree = "<group>"; };
 		0ECEB48719D29EB100BDBB9E /* clothNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clothNode.m; path = "Classes/Tests/Test helper classes/clothNode.m"; sourceTree = "<group>"; };
@@ -332,6 +353,23 @@
 			);
 			name = Tests;
 			path = Resources/Tests;
+			sourceTree = "<group>";
+		};
+		0EB2EE151A6E8DFC00700971 /* CCEffectLine */ = {
+			isa = PBXGroup;
+			children = (
+				0EB2EE2A1A6E992B00700971 /* README.md */,
+				0EB2EE271A6E992B00700971 /* CCEffectLineSegment.h */,
+				0EB2EE281A6E992B00700971 /* CCEffectLineSegment.m */,
+				0EB2EE221A6E992B00700971 /* CCEffectLine.h */,
+				0EB2EE231A6E992B00700971 /* CCEffectLine.m */,
+				0EB2EE241A6E992B00700971 /* CCEffectLine.vert */,
+				0EB2EE211A6E992A00700971 /* CCEffectLine.frag */,
+				0EB2EE251A6E992B00700971 /* CCEffectLineFactory.h */,
+				0EB2EE261A6E992B00700971 /* CCEffectLineFactory.m */,
+				0EB2EE291A6E992B00700971 /* effects.png */,
+			);
+			name = CCEffectLine;
 			sourceTree = "<group>";
 		};
 		0EBBCF9E1A2E1F6900493FA4 /* Products */ = {
@@ -518,6 +556,7 @@
 		A66C5801193A0BF0009D2BD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0EB2EE381A6E997400700971 /* CCEffectLineTest.m */,
 				A6994F82194A2FAC00B97481 /* CCSpineTest.m */,
 				A6994F83194A2FAC00B97481 /* CCTransformationNodeTest.m */,
 				A6994F80194A2F3D00B97481 /* CCCropNodeTest.m */,
@@ -532,6 +571,7 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0EB2EE151A6E8DFC00700971 /* CCEffectLine */,
 				0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */,
 				0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */,
 				0E21D303198A45F800E84AB1 /* CCSpriteMultiTouch */,
@@ -627,6 +667,8 @@
 		A6994F7E194A2E2800B97481 /* Test helper classes */ = {
 			isa = PBXGroup;
 			children = (
+				0EB2EE3A1A6E9A2600700971 /* effectLineNode.h */,
+				0EB2EE3B1A6E9A2600700971 /* effectLineNode.m */,
 				A6994F86194A2FBB00B97481 /* cardNode.h */,
 				A6994F87194A2FBB00B97481 /* cardNode.m */,
 				A6994F88194A2FBB00B97481 /* spineNode.h */,
@@ -748,6 +790,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6270E7E193757E400196BD3 /* Default@2x.png in Resources */,
+				0EB2EE301A6E992B00700971 /* effects.png in Resources */,
 				A6270E91193757E400196BD3 /* Icon-120.png in Resources */,
 				A62712A3193769A900196BD3 /* sound.caf in Resources */,
 				A627129C193769A900196BD3 /* Interface-hd.png in Resources */,
@@ -776,6 +819,7 @@
 				A62712AA193769A900196BD3 /* Sprites.plist in Resources */,
 				A62712AB193769A900196BD3 /* Sprites.png in Resources */,
 				A62712AF193769A900196BD3 /* TilesAtlassed-ipad.png in Resources */,
+				0EB2EE2B1A6E992B00700971 /* CCEffectLine.frag in Resources */,
 				A62712A6193769A900196BD3 /* Sprites-ipad.plist in Resources */,
 				A627129A193769A900196BD3 /* din.png in Resources */,
 				A62712A4193769A900196BD3 /* Sprites-hd.plist in Resources */,
@@ -793,6 +837,7 @@
 				A6270EA0193757E400196BD3 /* iTunesArtwork in Resources */,
 				A6270E9B193757E400196BD3 /* Icon-Spotlight-iOS7.png in Resources */,
 				A6270E8F193757E400196BD3 /* Icon-76@2x.png in Resources */,
+				0EB2EE2D1A6E992B00700971 /* CCEffectLine.vert in Resources */,
 				A62712A8193769A900196BD3 /* Sprites-ipadhd.plist in Resources */,
 				A627129D193769A900196BD3 /* Interface-ipad.plist in Resources */,
 				A6270E9D193757E400196BD3 /* Icon-Spotlight-iOS7@2x.png in Resources */,
@@ -815,6 +860,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB2EE2C1A6E992B00700971 /* CCEffectLine.m in Sources */,
+				0EB2EE2E1A6E992B00700971 /* CCEffectLineFactory.m in Sources */,
 				0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */,
 				0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */,
 				A6994F85194A2FAC00B97481 /* CCTransformationNodeTest.m in Sources */,
@@ -841,9 +888,12 @@
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
 				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
 				0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */,
+				0EB2EE391A6E997400700971 /* CCEffectLineTest.m in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
 				0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */,
+				0EB2EE3C1A6E9A2600700971 /* effectLineNode.m in Sources */,
 				A66C5837193A0C87009D2BD4 /* CCSpineSprite.m in Sources */,
+				0EB2EE2F1A6E992B00700971 /* CCEffectLineSegment.m in Sources */,
 				A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */,
 				A627110B193757E600196BD3 /* AppDelegate.m in Sources */,
 				A66C5834193A0C87009D2BD4 /* CCSpineSample.m in Sources */,
