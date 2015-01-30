@@ -27,6 +27,9 @@
 		0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECEB48719D29EB100BDBB9E /* clothNode.m */; };
 		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
 		0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */; };
+		0EFA56991A7BBD2F001C503B /* CCBusyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA56971A7BBD2F001C503B /* CCBusyNode.m */; };
+		0EFA569A1A7BBD2F001C503B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA56981A7BBD2F001C503B /* README.md */; };
+		0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
 		A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E65193757E400196BD3 /* OpenAL.framework */; };
@@ -185,6 +188,10 @@
 		0EF602FB199CDC8F007AEBD9 /* CCLayerSmoothLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLayerSmoothLine.h; path = Extensions/CCLayerSmoothLine/CCLayerSmoothLine.h; sourceTree = SOURCE_ROOT; };
 		0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLine.m; path = Extensions/CCLayerSmoothLine/CCLayerSmoothLine.m; sourceTree = SOURCE_ROOT; };
 		0EF602FE199CDD8F007AEBD9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCLayerSmoothLine/README.md; sourceTree = SOURCE_ROOT; };
+		0EFA56961A7BBD2F001C503B /* CCBusyNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBusyNode.h; path = Extensions/CCBusyNode/CCBusyNode.h; sourceTree = SOURCE_ROOT; };
+		0EFA56971A7BBD2F001C503B /* CCBusyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBusyNode.m; path = Extensions/CCBusyNode/CCBusyNode.m; sourceTree = SOURCE_ROOT; };
+		0EFA56981A7BBD2F001C503B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCBusyNode/README.md; sourceTree = SOURCE_ROOT; };
+		0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBusyNodeTest.m; path = Classes/Tests/CCBusyNodeTest.m; sourceTree = "<group>"; };
 		A6254BAF193A1438006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCNodeTag/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB1193A144A006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCDictionary/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB3193A145D006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCSpine/README.md; sourceTree = SOURCE_ROOT; };
@@ -393,6 +400,16 @@
 			name = CCLayerSmoothLine;
 			sourceTree = "<group>";
 		};
+		0EFA56901A7BBCE2001C503B /* CCBusyNode */ = {
+			isa = PBXGroup;
+			children = (
+				0EFA56981A7BBD2F001C503B /* README.md */,
+				0EFA56961A7BBD2F001C503B /* CCBusyNode.h */,
+				0EFA56971A7BBD2F001C503B /* CCBusyNode.m */,
+			);
+			name = CCBusyNode;
+			sourceTree = "<group>";
+		};
 		A6270E55193757E300196BD3 = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +573,7 @@
 		A66C5801193A0BF0009D2BD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */,
 				0EB2EE381A6E997400700971 /* CCEffectLineTest.m */,
 				A6994F82194A2FAC00B97481 /* CCSpineTest.m */,
 				A6994F83194A2FAC00B97481 /* CCTransformationNodeTest.m */,
@@ -571,6 +589,7 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0EFA56901A7BBCE2001C503B /* CCBusyNode */,
 				0EB2EE151A6E8DFC00700971 /* CCEffectLine */,
 				0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */,
 				0EF602F9199CDC4A007AEBD9 /* CCLayerSmoothLine */,
@@ -882,13 +901,16 @@
 				A68895AF1949A8B4002950DD /* CCTransformationNode.m in Sources */,
 				A627126D19375F2700196BD3 /* MainMenu.m in Sources */,
 				A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */,
+				0EFA56991A7BBD2F001C503B /* CCBusyNode.m in Sources */,
 				0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */,
 				A66C5835193A0C87009D2BD4 /* CCSpineSkeleton.m in Sources */,
 				0E2A746719D311230054F5B6 /* clothRope.m in Sources */,
+				0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
 				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
 				0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */,
 				0EB2EE391A6E997400700971 /* CCEffectLineTest.m in Sources */,
+				0EFA569A1A7BBD2F001C503B /* README.md in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
 				0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */,
 				0EB2EE3C1A6E9A2600700971 /* effectLineNode.m in Sources */,
