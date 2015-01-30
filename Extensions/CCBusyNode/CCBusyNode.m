@@ -102,9 +102,7 @@
 
 - (void)draw:(CCRenderer *)renderer transform:(const GLKMatrix4 *)transform
 {
-    // convert position to openGL coordinates and position indicator
-    CGPoint pos = [self positionInPoints];
-    pos = [[CCDirector sharedDirector] convertToGL:pos];
+    CGPoint pos = [self convertToWindowSpace:pos];
     _indicator.frame = CGRectMake(pos.x, pos.y, 0, 0);
     //
     [super draw:renderer transform:transform];
