@@ -179,7 +179,7 @@ typedef void (*animationCallback)(id, SEL, id);
     if (textureList.count == 1)
     {
         current = [textureList objectAtIndex:0];
-        if (time < current.time) return(current);
+        if (time >= current.time) return(current);
         return(nil);
     }
     //
