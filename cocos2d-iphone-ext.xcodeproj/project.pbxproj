@@ -13,6 +13,13 @@
 		0E57EA3B19C6CF9B008CBC9E /* CCSpriteGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */; };
 		0E57EA3E19C6D272008CBC9E /* CCSpriteGridTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */; };
 		0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E57EA4019C6D5D4008CBC9E /* pebbles.png */; };
+		0E8E48051AA4943C00D95169 /* CCTransitionCurlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48041AA4943C00D95169 /* CCTransitionCurlTest.m */; };
+		0E8E48191AA495EE00D95169 /* bookPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48161AA495EE00D95169 /* bookPage.m */; };
+		0E8E48211AA4964D00D95169 /* CCCurlCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E481D1AA4964D00D95169 /* CCCurlCylinder.m */; };
+		0E8E48221AA4964D00D95169 /* CCPageCurlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E481F1AA4964D00D95169 /* CCPageCurlNode.m */; };
+		0E8E48291AA4966800D95169 /* CCTransitionCurlIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48251AA4966800D95169 /* CCTransitionCurlIn.m */; };
+		0E8E482A1AA4966800D95169 /* CCTransitionCurlOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48271AA4966800D95169 /* CCTransitionCurlOut.m */; };
+		0E8E48441AA49F5800D95169 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E48431AA49F5800D95169 /* moon.png */; };
 		0E99598B19C73B0500A02D2B /* rippleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99598A19C73B0500A02D2B /* rippleNode.m */; };
 		0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */; };
 		0EB2EE2B1A6E992B00700971 /* CCEffectLine.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0EB2EE211A6E992A00700971 /* CCEffectLine.frag */; };
@@ -28,7 +35,6 @@
 		0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED73BB41997951A00C83507 /* CCSpineCurve.m */; };
 		0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */; };
 		0EFA56991A7BBD2F001C503B /* CCBusyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA56971A7BBD2F001C503B /* CCBusyNode.m */; };
-		0EFA569A1A7BBD2F001C503B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA56981A7BBD2F001C503B /* README.md */; };
 		0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
@@ -136,13 +142,6 @@
 			remoteGlobalIDString = D2FEB74F194F6C9E00FC0574;
 			remoteInfo = cocos2dAndroid;
 		};
-		0EBBCFAE1A2E1F6A00493FA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0EBBCF9D1A2E1F6900493FA4 /* cocos2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BF3267A195F8D8800D9A51A;
-			remoteInfo = cocos2dJava;
-		};
 		0EBBCFB01A2E1F6A00493FA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0EBBCF9D1A2E1F6900493FA4 /* cocos2d.xcodeproj */;
@@ -164,6 +163,20 @@
 		0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteGrid.m; sourceTree = "<group>"; };
 		0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteGridTest.m; path = Classes/Tests/CCSpriteGridTest.m; sourceTree = "<group>"; };
 		0E57EA4019C6D5D4008CBC9E /* pebbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pebbles.png; sourceTree = "<group>"; };
+		0E8E48041AA4943C00D95169 /* CCTransitionCurlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTransitionCurlTest.m; path = Classes/Tests/CCTransitionCurlTest.m; sourceTree = "<group>"; };
+		0E8E48151AA495EE00D95169 /* bookPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bookPage.h; path = "Classes/Tests/Test helper classes/bookPage.h"; sourceTree = "<group>"; };
+		0E8E48161AA495EE00D95169 /* bookPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bookPage.m; path = "Classes/Tests/Test helper classes/bookPage.m"; sourceTree = "<group>"; };
+		0E8E481C1AA4964D00D95169 /* CCCurlCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCurlCylinder.h; path = Extensions/CCPageCurlNode/CCCurlCylinder.h; sourceTree = SOURCE_ROOT; };
+		0E8E481D1AA4964D00D95169 /* CCCurlCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCurlCylinder.m; path = Extensions/CCPageCurlNode/CCCurlCylinder.m; sourceTree = SOURCE_ROOT; };
+		0E8E481E1AA4964D00D95169 /* CCPageCurlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPageCurlNode.h; path = Extensions/CCPageCurlNode/CCPageCurlNode.h; sourceTree = SOURCE_ROOT; };
+		0E8E481F1AA4964D00D95169 /* CCPageCurlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPageCurlNode.m; path = Extensions/CCPageCurlNode/CCPageCurlNode.m; sourceTree = SOURCE_ROOT; };
+		0E8E48201AA4964D00D95169 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCPageCurlNode/README.md; sourceTree = SOURCE_ROOT; };
+		0E8E48241AA4966800D95169 /* CCTransitionCurlIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTransitionCurlIn.h; path = Extensions/CCTransitionCurl/CCTransitionCurlIn.h; sourceTree = SOURCE_ROOT; };
+		0E8E48251AA4966800D95169 /* CCTransitionCurlIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTransitionCurlIn.m; path = Extensions/CCTransitionCurl/CCTransitionCurlIn.m; sourceTree = SOURCE_ROOT; };
+		0E8E48261AA4966800D95169 /* CCTransitionCurlOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTransitionCurlOut.h; path = Extensions/CCTransitionCurl/CCTransitionCurlOut.h; sourceTree = SOURCE_ROOT; };
+		0E8E48271AA4966800D95169 /* CCTransitionCurlOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTransitionCurlOut.m; path = Extensions/CCTransitionCurl/CCTransitionCurlOut.m; sourceTree = SOURCE_ROOT; };
+		0E8E48281AA4966800D95169 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCTransitionCurl/README.md; sourceTree = SOURCE_ROOT; };
+		0E8E48431AA49F5800D95169 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
 		0E99598919C73B0500A02D2B /* rippleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rippleNode.h; path = "Classes/Tests/Test helper classes/rippleNode.h"; sourceTree = "<group>"; };
 		0E99598A19C73B0500A02D2B /* rippleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = rippleNode.m; path = "Classes/Tests/Test helper classes/rippleNode.m"; sourceTree = "<group>"; };
 		0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCLayerSmoothLineTest.m; path = Classes/Tests/CCLayerSmoothLineTest.m; sourceTree = "<group>"; };
@@ -342,6 +355,18 @@
 			name = CCSpriteMultiTouch;
 			sourceTree = "<group>";
 		};
+		0E2C779F1AA48F5F00596345 /* CCTransitionCurl */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E48281AA4966800D95169 /* README.md */,
+				0E8E48241AA4966800D95169 /* CCTransitionCurlIn.h */,
+				0E8E48251AA4966800D95169 /* CCTransitionCurlIn.m */,
+				0E8E48261AA4966800D95169 /* CCTransitionCurlOut.h */,
+				0E8E48271AA4966800D95169 /* CCTransitionCurlOut.m */,
+			);
+			name = CCTransitionCurl;
+			sourceTree = "<group>";
+		};
 		0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,10 +381,23 @@
 		0E57EA3F19C6D5D4008CBC9E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0E8E48431AA49F5800D95169 /* moon.png */,
 				0E57EA4019C6D5D4008CBC9E /* pebbles.png */,
 			);
 			name = Tests;
 			path = Resources/Tests;
+			sourceTree = "<group>";
+		};
+		0E8E481B1AA4963B00D95169 /* CCPageCurlNode */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E48201AA4964D00D95169 /* README.md */,
+				0E8E481C1AA4964D00D95169 /* CCCurlCylinder.h */,
+				0E8E481D1AA4964D00D95169 /* CCCurlCylinder.m */,
+				0E8E481E1AA4964D00D95169 /* CCPageCurlNode.h */,
+				0E8E481F1AA4964D00D95169 /* CCPageCurlNode.m */,
+			);
+			name = CCPageCurlNode;
 			sourceTree = "<group>";
 		};
 		0EB2EE151A6E8DFC00700971 /* CCEffectLine */ = {
@@ -384,7 +422,6 @@
 			children = (
 				0EBBCFAB1A2E1F6A00493FA4 /* libcocos2d.a */,
 				0EBBCFAD1A2E1F6A00493FA4 /* libcocos2dAndroid.a */,
-				0EBBCFAF1A2E1F6A00493FA4 /* cocos2dJava.jar */,
 				0EBBCFB11A2E1F6A00493FA4 /* libcocos2d-mac.a */,
 			);
 			name = Products;
@@ -581,6 +618,7 @@
 				0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */,
 				0E9A0929199CDDD10049E409 /* CCLayerSmoothLineTest.m */,
 				0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */,
+				0E8E48041AA4943C00D95169 /* CCTransitionCurlTest.m */,
 				A6994F7E194A2E2800B97481 /* Test helper classes */,
 			);
 			name = Tests;
@@ -589,6 +627,8 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0E8E481B1AA4963B00D95169 /* CCPageCurlNode */,
+				0E2C779F1AA48F5F00596345 /* CCTransitionCurl */,
 				0EFA56901A7BBCE2001C503B /* CCBusyNode */,
 				0EB2EE151A6E8DFC00700971 /* CCEffectLine */,
 				0E57EA3619C6CF83008CBC9E /* CCSpriteGrid */,
@@ -686,6 +726,8 @@
 		A6994F7E194A2E2800B97481 /* Test helper classes */ = {
 			isa = PBXGroup;
 			children = (
+				0E8E48151AA495EE00D95169 /* bookPage.h */,
+				0E8E48161AA495EE00D95169 /* bookPage.m */,
 				0EB2EE3A1A6E9A2600700971 /* effectLineNode.h */,
 				0EB2EE3B1A6E9A2600700971 /* effectLineNode.m */,
 				A6994F86194A2FBB00B97481 /* cardNode.h */,
@@ -787,13 +829,6 @@
 			remoteRef = 0EBBCFAC1A2E1F6A00493FA4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0EBBCFAF1A2E1F6A00493FA4 /* cocos2dJava.jar */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.jar;
-			path = cocos2dJava.jar;
-			remoteRef = 0EBBCFAE1A2E1F6A00493FA4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		0EBBCFB11A2E1F6A00493FA4 /* libcocos2d-mac.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -828,6 +863,7 @@
 				A6270E7C193757E400196BD3 /* Default.png in Resources */,
 				A627129E193769A900196BD3 /* Interface-ipad.png in Resources */,
 				A6D883A9193C7BA500CE3922 /* cards.classic.png in Resources */,
+				0E8E48441AA49F5800D95169 /* moon.png in Resources */,
 				A6270E85193757E400196BD3 /* Icon.png in Resources */,
 				A6270E93193757E400196BD3 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				A62712A9193769A900196BD3 /* Sprites-ipadhd.png in Resources */,
@@ -880,16 +916,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB2EE2C1A6E992B00700971 /* CCEffectLine.m in Sources */,
+				0E8E48051AA4943C00D95169 /* CCTransitionCurlTest.m in Sources */,
 				0EB2EE2E1A6E992B00700971 /* CCEffectLineFactory.m in Sources */,
 				0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */,
 				0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */,
 				A6994F85194A2FAC00B97481 /* CCTransformationNodeTest.m in Sources */,
 				A627126E19375F2700196BD3 /* TestBase.m in Sources */,
+				0E8E48191AA495EE00D95169 /* bookPage.m in Sources */,
 				A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */,
 				A6994F8A194A2FBB00B97481 /* cardNode.m in Sources */,
 				A6994F81194A2F3D00B97481 /* CCCropNodeTest.m in Sources */,
 				A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */,
 				A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */,
+				0E8E48211AA4964D00D95169 /* CCCurlCylinder.m in Sources */,
 				0E99598B19C73B0500A02D2B /* rippleNode.m in Sources */,
 				A6994F7C194A2D4F00B97481 /* CCCropNode.m in Sources */,
 				A6994F84194A2FAC00B97481 /* CCSpineTest.m in Sources */,
@@ -899,6 +938,7 @@
 				A66C5811193A0C77009D2BD4 /* CCDictionary.m in Sources */,
 				A6994F8B194A2FBB00B97481 /* spineNode.m in Sources */,
 				A68895AF1949A8B4002950DD /* CCTransformationNode.m in Sources */,
+				0E8E48291AA4966800D95169 /* CCTransitionCurlIn.m in Sources */,
 				A627126D19375F2700196BD3 /* MainMenu.m in Sources */,
 				A66C5830193A0C87009D2BD4 /* CCSpineAnimation.m in Sources */,
 				0EFA56991A7BBD2F001C503B /* CCBusyNode.m in Sources */,
@@ -907,10 +947,10 @@
 				0E2A746719D311230054F5B6 /* clothRope.m in Sources */,
 				0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
+				0E8E48221AA4964D00D95169 /* CCPageCurlNode.m in Sources */,
 				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
 				0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */,
 				0EB2EE391A6E997400700971 /* CCEffectLineTest.m in Sources */,
-				0EFA569A1A7BBD2F001C503B /* README.md in Sources */,
 				A6271107193757E600196BD3 /* main.m in Sources */,
 				0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */,
 				0EB2EE3C1A6E9A2600700971 /* effectLineNode.m in Sources */,
@@ -919,6 +959,7 @@
 				A66C580E193A0C69009D2BD4 /* CCNodeTag.m in Sources */,
 				A627110B193757E600196BD3 /* AppDelegate.m in Sources */,
 				A66C5834193A0C87009D2BD4 /* CCSpineSample.m in Sources */,
+				0E8E482A1AA4966800D95169 /* CCTransitionCurlOut.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
