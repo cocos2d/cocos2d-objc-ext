@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, CCPageMode)
 
 // -----------------------------------------------------------------------
 
-@interface CCPageCurlNode : CCSpriteGrid
+@interface CCSpriteCurl : CCSpriteGrid
 
 // -----------------------------------------------------------------------
 

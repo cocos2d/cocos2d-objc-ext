@@ -23,7 +23,7 @@
  */
 
 #import "CCTransitionCurlIn.h"
-#import "CCPageCurlNode.h"
+#import "CCSpriteCurl.h"
 
 // NOTE!
 //
@@ -33,7 +33,7 @@
 
 @implementation CCTransitionCurlIn
 {
-    CCPageCurlNode *_curl;
+    CCSpriteCurl *_curl;
     CGSize _curlSize;
     CCTransitionDirection _direction;
 }
@@ -67,7 +67,7 @@
     // If the compiler fails with "Property incomingTexture not found ..." you can solve it two ways
     // 1) Download latest V3.4 version of Cocos2D and replace it
     // 2) Add the line "@property (nonatomic, readonly) CCRenderTexture *incomingTexture;" (without quotes) to CCTransition.h along with the other properties
-    _curl = [[CCPageCurlNode alloc] initWithTexture:self.incomingTexture.texture
+    _curl = [[CCSpriteCurl alloc] initWithTexture:self.incomingTexture.texture
                                                rect:(CGRect){CGPointZero, [CCDirector sharedDirector].viewSize}
                                             rotated:NO];
     

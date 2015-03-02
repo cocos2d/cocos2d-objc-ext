@@ -16,7 +16,7 @@
 		0E8E48051AA4943C00D95169 /* CCTransitionCurlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48041AA4943C00D95169 /* CCTransitionCurlTest.m */; };
 		0E8E48191AA495EE00D95169 /* bookPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48161AA495EE00D95169 /* bookPage.m */; };
 		0E8E48211AA4964D00D95169 /* CCCurlCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E481D1AA4964D00D95169 /* CCCurlCylinder.m */; };
-		0E8E48221AA4964D00D95169 /* CCPageCurlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E481F1AA4964D00D95169 /* CCPageCurlNode.m */; };
+		0E8E48221AA4964D00D95169 /* CCSpriteCurl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E481F1AA4964D00D95169 /* CCSpriteCurl.m */; };
 		0E8E48291AA4966800D95169 /* CCTransitionCurlIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48251AA4966800D95169 /* CCTransitionCurlIn.m */; };
 		0E8E482A1AA4966800D95169 /* CCTransitionCurlOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E48271AA4966800D95169 /* CCTransitionCurlOut.m */; };
 		0E8E48441AA49F5800D95169 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E48431AA49F5800D95169 /* moon.png */; };
@@ -168,8 +168,8 @@
 		0E8E48161AA495EE00D95169 /* bookPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bookPage.m; path = "Classes/Tests/Test helper classes/bookPage.m"; sourceTree = "<group>"; };
 		0E8E481C1AA4964D00D95169 /* CCCurlCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCurlCylinder.h; path = Extensions/CCPageCurlNode/CCCurlCylinder.h; sourceTree = SOURCE_ROOT; };
 		0E8E481D1AA4964D00D95169 /* CCCurlCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCCurlCylinder.m; path = Extensions/CCPageCurlNode/CCCurlCylinder.m; sourceTree = SOURCE_ROOT; };
-		0E8E481E1AA4964D00D95169 /* CCPageCurlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPageCurlNode.h; path = Extensions/CCPageCurlNode/CCPageCurlNode.h; sourceTree = SOURCE_ROOT; };
-		0E8E481F1AA4964D00D95169 /* CCPageCurlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPageCurlNode.m; path = Extensions/CCPageCurlNode/CCPageCurlNode.m; sourceTree = SOURCE_ROOT; };
+		0E8E481E1AA4964D00D95169 /* CCSpriteCurl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteCurl.h; path = Extensions/CCPageCurlNode/CCSpriteCurl.h; sourceTree = SOURCE_ROOT; };
+		0E8E481F1AA4964D00D95169 /* CCSpriteCurl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteCurl.m; path = Extensions/CCPageCurlNode/CCSpriteCurl.m; sourceTree = SOURCE_ROOT; };
 		0E8E48201AA4964D00D95169 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCPageCurlNode/README.md; sourceTree = SOURCE_ROOT; };
 		0E8E48241AA4966800D95169 /* CCTransitionCurlIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTransitionCurlIn.h; path = Extensions/CCTransitionCurl/CCTransitionCurlIn.h; sourceTree = SOURCE_ROOT; };
 		0E8E48251AA4966800D95169 /* CCTransitionCurlIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTransitionCurlIn.m; path = Extensions/CCTransitionCurl/CCTransitionCurlIn.m; sourceTree = SOURCE_ROOT; };
@@ -388,16 +388,16 @@
 			path = Resources/Tests;
 			sourceTree = "<group>";
 		};
-		0E8E481B1AA4963B00D95169 /* CCPageCurlNode */ = {
+		0E8E481B1AA4963B00D95169 /* CCCurlNode */ = {
 			isa = PBXGroup;
 			children = (
 				0E8E48201AA4964D00D95169 /* README.md */,
 				0E8E481C1AA4964D00D95169 /* CCCurlCylinder.h */,
 				0E8E481D1AA4964D00D95169 /* CCCurlCylinder.m */,
-				0E8E481E1AA4964D00D95169 /* CCPageCurlNode.h */,
-				0E8E481F1AA4964D00D95169 /* CCPageCurlNode.m */,
+				0E8E481E1AA4964D00D95169 /* CCSpriteCurl.h */,
+				0E8E481F1AA4964D00D95169 /* CCSpriteCurl.m */,
 			);
-			name = CCPageCurlNode;
+			name = CCCurlNode;
 			sourceTree = "<group>";
 		};
 		0EB2EE151A6E8DFC00700971 /* CCEffectLine */ = {
@@ -627,7 +627,7 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0E8E481B1AA4963B00D95169 /* CCPageCurlNode */,
+				0E8E481B1AA4963B00D95169 /* CCCurlNode */,
 				0E2C779F1AA48F5F00596345 /* CCTransitionCurl */,
 				0EFA56901A7BBCE2001C503B /* CCBusyNode */,
 				0EB2EE151A6E8DFC00700971 /* CCEffectLine */,
@@ -947,7 +947,7 @@
 				0E2A746719D311230054F5B6 /* clothRope.m in Sources */,
 				0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
-				0E8E48221AA4964D00D95169 /* CCPageCurlNode.m in Sources */,
+				0E8E48221AA4964D00D95169 /* CCSpriteCurl.m in Sources */,
 				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
 				0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */,
 				0EB2EE391A6E997400700971 /* CCEffectLineTest.m in Sources */,

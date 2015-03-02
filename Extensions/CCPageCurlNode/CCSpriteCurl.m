@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-#import "CCPageCurlNode.h"
+#import "CCSpriteCurl.h"
 #import "CCCurlCylinder.h"
 
 // -----------------------------------------------------------------------
@@ -34,7 +34,7 @@
 
 // -----------------------------------------------------------------------
 
-@implementation CCPageCurlNode
+@implementation CCSpriteCurl
 {
     CCCurlCylinder *_curl;
     CGPoint _curlStart;

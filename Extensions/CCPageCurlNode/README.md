@@ -1,4 +1,4 @@
-CCPageCurlNode
+CCSpriteCurl
 ==============
 
 Type of class  : Descendant of CCNode  
