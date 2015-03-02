@@ -43,6 +43,7 @@
 
 - (void)setGridWidth:(NSUInteger)width andHeight:(NSUInteger)height;
 - (void)resetGrid;
+- (void)markAsDirty;
 
 - (BOOL)isEdge:(NSUInteger)index;
 
@@ -53,6 +54,10 @@
 - (void)adjustVertex:(NSUInteger)index adjustment:(CGPoint)adjustment;
 - (void)adjustTextureCoordinate:(NSUInteger)index adjustment:(CGPoint)adjustment;
 - (void)adjustColor:(NSUInteger)index adjustment:(CCColor *)adjustment;
+
+- (void)setVertex:(NSUInteger)index position:(CGPoint)position;
+- (void)setTextureCoordinate:(NSUInteger)index coordinate:(CGPoint)coordinate;
+- (void)setColor:(NSUInteger)index color:(CCColor *)color;
 
 - (void)resetVertex:(NSUInteger)index;
 - (void)resetTextureCoordinate:(NSUInteger)index;

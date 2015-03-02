@@ -43,9 +43,9 @@
 
 // -----------------------------------------------------------------------
 
-- (instancetype)init
+- (id)initWithTexture:(CCTexture *)texture rect:(CGRect)rect rotated:(BOOL)rotated
 {
-    self = [super init];
+    self = [super initWithTexture:texture rect:rect rotated:rotated];
     NSAssert(self, @"Unable to create class CCSpriteGrid");
     // initialize
     
@@ -206,6 +206,13 @@
 
 // -----------------------------------------------------------------------
 
+- (void)markAsDirty
+{
+    _dirty = YES;
+}
+
+// -----------------------------------------------------------------------
+
 - (void)resetGrid
 {
     if (!_dirty) return;
@@ -272,6 +279,37 @@
     _vertex[index].color.r += adjustment.red;
     _vertex[index].color.g += adjustment.green;
     _vertex[index].color.b += adjustment.blue;
+    _dirty = YES;
+}
+
+// -----------------------------------------------------------------------
+// more setters
+
+- (void)setVertex:(NSUInteger)index position:(CGPoint)position
+{
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    if (_vertexIsLocked[index]) return;
+    _vertex[index].position.x = position.x;
+    _vertex[index].position.y = position.y;
+    _dirty = YES;
+}
+
+- (void)setTextureCoordinate:(NSUInteger)index coordinate:(CGPoint)coordinate
+{
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    if (_vertexIsLocked[index]) return;
+    _vertex[index].texCoord1.v[0] = (coordinate.x / _textureSize.width);
+    _vertex[index].texCoord1.v[1] = (coordinate.y / _textureSize.height);
+    _dirty = YES;
+}
+
+- (void)setColor:(NSUInteger)index color:(CCColor *)color
+{
+    NSAssert(index < _vertexCount, @"Invalid vertex index");
+    if (_vertexIsLocked[index]) return;
+    _vertex[index].color.r = color.red;
+    _vertex[index].color.g = color.green;
+    _vertex[index].color.b = color.blue;
     _dirty = YES;
 }
 
