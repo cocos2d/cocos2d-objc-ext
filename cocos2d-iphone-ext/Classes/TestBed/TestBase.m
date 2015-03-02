@@ -38,33 +38,35 @@
     
     // Create test content
     self.contentNode = [CCNode node];
-    self.contentNode.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitInsetPoints);
+    self.contentNode.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitInsetUIPoints);
     self.contentNode.contentSize = CGSizeMake(1, 44);
-		self.contentNode.name = @"TestBase Content Node";
+    self.contentNode.name = @"TestBase Content Node";
 	
     [self addChild:self.contentNode];
     
     // Create interface
     
     // Header background
-    CCSprite9Slice* headerBg = [CCSprite9Slice spriteWithImageNamed:@"Interface/header.png"];
-    headerBg.positionType = CCPositionTypeMake(CCPositionUnitPoints, CCPositionUnitPoints, CCPositionReferenceCornerTopLeft);
-    headerBg.position = ccp(0,0);
-    headerBg.anchorPoint = ccp(0,1);
-    headerBg.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitPoints);
-    headerBg.contentSize = CGSizeMake(1, 44);
+    _headerBg = [CCSprite9Slice spriteWithImageNamed:@"Interface/header.png"];
+    _headerBg.positionType = CCPositionTypeMake(CCPositionUnitUIPoints, CCPositionUnitUIPoints, CCPositionReferenceCornerTopLeft);
+    _headerBg.position = ccp(0,0);
+    _headerBg.anchorPoint = ccp(0,1);
+    _headerBg.contentSizeType = CCSizeTypeMake(CCSizeUnitNormalized, CCSizeUnitUIPoints);
+    _headerBg.contentSize = CGSizeMake(1, 44);
     
-    [self addChild:headerBg];
+    [self addChild:_headerBg];
     
     // Header label
-    _lblTitle = [CCLabelTTF labelWithString:NSStringFromClass([self class]) fontName:@"HelveticaNeue-Medium" fontSize:17];
+    _lblTitle = [CCLabelTTF labelWithString:NSStringFromClass([self class]) fontName:@"HelveticaNeue-Medium" fontSize:17 * [CCDirector sharedDirector].UIScaleFactor];
     _lblTitle.positionType = CCPositionTypeNormalized;
     _lblTitle.position = ccp(0.5f,0.5f);
     
-    [headerBg addChild:_lblTitle];
+    [_headerBg addChild:_lblTitle];
     
-    _lblSubTitle = [CCLabelTTF labelWithString:@"" fontName:@"HelveticaNeue-Light" fontSize:14];
-    _lblSubTitle.positionType = CCPositionTypeMake(CCPositionUnitNormalized, CCPositionUnitPoints, CCPositionReferenceCornerTopLeft);
+    _lblSubTitle = [CCLabelTTF labelWithString:@"" fontName:@"HelveticaNeue-Light" fontSize:14 * [CCDirector sharedDirector].UIScaleFactor];
+		_lblSubTitle.shadowColor = [CCColor blackColor];
+		_lblSubTitle.shadowBlurRadius = 2.5;
+    _lblSubTitle.positionType = CCPositionTypeMake(CCPositionUnitNormalized, CCPositionUnitUIPoints, CCPositionReferenceCornerTopLeft);
     _lblSubTitle.position = ccp(0.5, 64);
     _lblSubTitle.horizontalAlignment = CCTextAlignmentCenter;
     
@@ -74,7 +76,7 @@
     CCSpriteFrame* frame = [[CCSpriteFrameCache sharedSpriteFrameCache]spriteFrameByName:@"Interface/btn-back.png"];
     
     _btnBack = [CCButton buttonWithTitle:NULL spriteFrame:frame];
-    _btnBack.positionType = CCPositionTypeMake(CCPositionUnitPoints, CCPositionUnitPoints, CCPositionReferenceCornerTopLeft);
+    _btnBack.positionType = CCPositionTypeMake(CCPositionUnitUIPoints, CCPositionUnitUIPoints, CCPositionReferenceCornerTopLeft);
     _btnBack.position = ccp(22, 22);
     _btnBack.background.opacity = 0;
     
@@ -83,7 +85,7 @@
     
     // Prev button
     _btnPrev = [CCButton buttonWithTitle:NULL spriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache]spriteFrameByName:@"Interface/btn-prev.png"]];
-    _btnPrev.positionType = CCPositionTypeMake(CCPositionUnitPoints, CCPositionUnitPoints, CCPositionReferenceCornerBottomLeft);
+    _btnPrev.positionType = CCPositionTypeMake(CCPositionUnitUIPoints, CCPositionUnitUIPoints, CCPositionReferenceCornerBottomLeft);
     _btnPrev.position = ccp(22, 22);
     _btnPrev.background.opacity = 0;
     
@@ -92,7 +94,7 @@
     
     // Next button
     _btnNext = [CCButton buttonWithTitle:NULL spriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache]spriteFrameByName:@"Interface/btn-next.png"]];
-    _btnNext.positionType = CCPositionTypeMake(CCPositionUnitPoints, CCPositionUnitPoints, CCPositionReferenceCornerBottomRight);
+    _btnNext.positionType = CCPositionTypeMake(CCPositionUnitUIPoints, CCPositionUnitUIPoints, CCPositionReferenceCornerBottomRight);
     _btnNext.position = ccp(22, 22);
     _btnNext.background.opacity = 0;
     
@@ -101,7 +103,7 @@
     
     // Reload button
     _btnReload = [CCButton buttonWithTitle:NULL spriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache]spriteFrameByName:@"Interface/btn-reload.png"]];
-    _btnReload.positionType = CCPositionTypeMake(CCPositionUnitNormalized, CCPositionUnitPoints, CCPositionReferenceCornerBottomLeft);
+    _btnReload.positionType = CCPositionTypeMake(CCPositionUnitNormalized, CCPositionUnitUIPoints, CCPositionReferenceCornerBottomLeft);
     _btnReload.position = ccp(0.5, 22);
     _btnReload.background.opacity = 0;
     
@@ -109,9 +111,6 @@
     [self addChild:_btnReload];
     
     [self setupTestWithIndex:0];
-    
-    // makes it possible to override touchBegan in the test classes
-    self.userInteractionEnabled = YES;
     
     return self;
 }
