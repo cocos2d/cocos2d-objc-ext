@@ -10,6 +10,11 @@
 		0E21D30C198A484600E84AB1 /* CCSpriteMultiTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30B198A484600E84AB1 /* CCSpriteMultiTouch.m */; };
 		0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */; };
 		0E2A746719D311230054F5B6 /* clothRope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A746619D311230054F5B6 /* clothRope.m */; };
+		0E537E8A1B26C5670086FB02 /* CCSpriteVideoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E537E891B26C5670086FB02 /* CCSpriteVideoTest.m */; };
+		0E537E901B26C6120086FB02 /* stranded.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 0E537E8F1B26C6120086FB02 /* stranded.m4v */; };
+		0E537E921B26E5E50086FB02 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E537E911B26E5E50086FB02 /* CoreMedia.framework */; };
+		0E537E931B26E5FB0086FB02 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E69193757E400196BD3 /* AVFoundation.framework */; };
+		0E537E951B26E60D0086FB02 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E537E941B26E60D0086FB02 /* CoreVideo.framework */; };
 		0E57EA3B19C6CF9B008CBC9E /* CCSpriteGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */; };
 		0E57EA3E19C6D272008CBC9E /* CCSpriteGridTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57EA3D19C6D272008CBC9E /* CCSpriteGridTest.m */; };
 		0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E57EA4019C6D5D4008CBC9E /* pebbles.png */; };
@@ -36,11 +41,12 @@
 		0EF602FD199CDC8F007AEBD9 /* CCLayerSmoothLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF602FC199CDC8F007AEBD9 /* CCLayerSmoothLine.m */; };
 		0EFA56991A7BBD2F001C503B /* CCBusyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA56971A7BBD2F001C503B /* CCBusyNode.m */; };
 		0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */; };
+		0EFC7DC21B25C68E00D19768 /* CCSpriteVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC7DC11B25C68E00D19768 /* CCSpriteVideo.m */; };
+		0EFC7DC41B25C69C00D19768 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC7DC31B25C69C00D19768 /* README.md */; };
 		A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E61193757E400196BD3 /* QuartzCore.framework */; };
 		A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E63193757E400196BD3 /* OpenGLES.framework */; };
 		A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E65193757E400196BD3 /* OpenAL.framework */; };
 		A6270E68193757E400196BD3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E67193757E400196BD3 /* AudioToolbox.framework */; };
-		A6270E6A193757E400196BD3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E69193757E400196BD3 /* AVFoundation.framework */; };
 		A6270E6C193757E400196BD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E6B193757E400196BD3 /* UIKit.framework */; };
 		A6270E6E193757E400196BD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E6D193757E400196BD3 /* Foundation.framework */; };
 		A6270E70193757E400196BD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6270E6F193757E400196BD3 /* CoreGraphics.framework */; };
@@ -158,6 +164,10 @@
 		0E21D30E198A637900E84AB1 /* CCSpriteMultiTouchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteMultiTouchTest.m; path = Classes/Tests/CCSpriteMultiTouchTest.m; sourceTree = "<group>"; };
 		0E2A746519D311230054F5B6 /* clothRope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clothRope.h; path = "Classes/Tests/Test helper classes/clothRope.h"; sourceTree = "<group>"; };
 		0E2A746619D311230054F5B6 /* clothRope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = clothRope.m; path = "Classes/Tests/Test helper classes/clothRope.m"; sourceTree = "<group>"; };
+		0E537E891B26C5670086FB02 /* CCSpriteVideoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteVideoTest.m; path = Classes/Tests/CCSpriteVideoTest.m; sourceTree = "<group>"; };
+		0E537E8F1B26C6120086FB02 /* stranded.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = stranded.m4v; sourceTree = "<group>"; };
+		0E537E911B26E5E50086FB02 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0E537E941B26E60D0086FB02 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		0E57EA3719C6CF83008CBC9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0E57EA3919C6CF9B008CBC9E /* CCSpriteGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteGrid.h; sourceTree = "<group>"; };
 		0E57EA3A19C6CF9B008CBC9E /* CCSpriteGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteGrid.m; sourceTree = "<group>"; };
@@ -205,6 +215,9 @@
 		0EFA56971A7BBD2F001C503B /* CCBusyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBusyNode.m; path = Extensions/CCBusyNode/CCBusyNode.m; sourceTree = SOURCE_ROOT; };
 		0EFA56981A7BBD2F001C503B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCBusyNode/README.md; sourceTree = SOURCE_ROOT; };
 		0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBusyNodeTest.m; path = Classes/Tests/CCBusyNodeTest.m; sourceTree = "<group>"; };
+		0EFC7DC01B25C68E00D19768 /* CCSpriteVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSpriteVideo.h; path = Extensions/CCSpriteVideo/CCSpriteVideo.h; sourceTree = SOURCE_ROOT; };
+		0EFC7DC11B25C68E00D19768 /* CCSpriteVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSpriteVideo.m; path = Extensions/CCSpriteVideo/CCSpriteVideo.m; sourceTree = SOURCE_ROOT; };
+		0EFC7DC31B25C69C00D19768 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Extensions/CCSpriteVideo/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BAF193A1438006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCNodeTag/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB1193A144A006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCDictionary/README.md; sourceTree = SOURCE_ROOT; };
 		A6254BB3193A145D006BD09E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Extensions/CCSpine/README.md; sourceTree = SOURCE_ROOT; };
@@ -328,12 +341,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E537E951B26E60D0086FB02 /* CoreVideo.framework in Frameworks */,
+				0E537E931B26E5FB0086FB02 /* AVFoundation.framework in Frameworks */,
+				0E537E921B26E5E50086FB02 /* CoreMedia.framework in Frameworks */,
 				0EBBCFB21A2E1FF600493FA4 /* libcocos2d.a in Frameworks */,
 				A627126219375A2200196BD3 /* GLKit.framework in Frameworks */,
 				A6270E66193757E400196BD3 /* OpenAL.framework in Frameworks */,
 				A6270E6C193757E400196BD3 /* UIKit.framework in Frameworks */,
 				A6270E62193757E400196BD3 /* QuartzCore.framework in Frameworks */,
-				A6270E6A193757E400196BD3 /* AVFoundation.framework in Frameworks */,
 				A6270E70193757E400196BD3 /* CoreGraphics.framework in Frameworks */,
 				A6270E72193757E400196BD3 /* CoreText.framework in Frameworks */,
 				A6270E64193757E400196BD3 /* OpenGLES.framework in Frameworks */,
@@ -381,6 +396,7 @@
 		0E57EA3F19C6D5D4008CBC9E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0E537E8F1B26C6120086FB02 /* stranded.m4v */,
 				0E8E48431AA49F5800D95169 /* moon.png */,
 				0E57EA4019C6D5D4008CBC9E /* pebbles.png */,
 			);
@@ -447,6 +463,16 @@
 			name = CCBusyNode;
 			sourceTree = "<group>";
 		};
+		0EFC7DBB1B25C5B000D19768 /* CCSpriteVideo */ = {
+			isa = PBXGroup;
+			children = (
+				0EFC7DC31B25C69C00D19768 /* README.md */,
+				0EFC7DC01B25C68E00D19768 /* CCSpriteVideo.h */,
+				0EFC7DC11B25C68E00D19768 /* CCSpriteVideo.m */,
+			);
+			name = CCSpriteVideo;
+			sourceTree = "<group>";
+		};
 		A6270E55193757E300196BD3 = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +496,8 @@
 		A6270E60193757E400196BD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E537E941B26E60D0086FB02 /* CoreVideo.framework */,
+				0E537E911B26E5E50086FB02 /* CoreMedia.framework */,
 				A627126119375A2200196BD3 /* GLKit.framework */,
 				A6270E61193757E400196BD3 /* QuartzCore.framework */,
 				A6270E63193757E400196BD3 /* OpenGLES.framework */,
@@ -610,6 +638,7 @@
 		A66C5801193A0BF0009D2BD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0E537E891B26C5670086FB02 /* CCSpriteVideoTest.m */,
 				0EFA569C1A7BBE3B001C503B /* CCBusyNodeTest.m */,
 				0EB2EE381A6E997400700971 /* CCEffectLineTest.m */,
 				A6994F82194A2FAC00B97481 /* CCSpineTest.m */,
@@ -627,6 +656,7 @@
 		A66C5808193A0C24009D2BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0EFC7DBB1B25C5B000D19768 /* CCSpriteVideo */,
 				0E8E481B1AA4963B00D95169 /* CCCurlNode */,
 				0E2C779F1AA48F5F00596345 /* CCTransitionCurl */,
 				0EFA56901A7BBCE2001C503B /* CCBusyNode */,
@@ -855,6 +885,7 @@
 				A62712B0193769A900196BD3 /* TilesAtlassed-ipadhd.plist in Resources */,
 				0E57EA4119C6D5D4008CBC9E /* pebbles.png in Resources */,
 				A6270E87193757E400196BD3 /* Icon@2x.png in Resources */,
+				0E537E901B26C6120086FB02 /* stranded.m4v in Resources */,
 				A6271293193769A900196BD3 /* din-hd.fnt in Resources */,
 				A6270E99193757E400196BD3 /* Icon-Small@2x.png in Resources */,
 				A6271298193769A900196BD3 /* din-ipadhd.png in Resources */,
@@ -919,12 +950,14 @@
 				0E8E48051AA4943C00D95169 /* CCTransitionCurlTest.m in Sources */,
 				0EB2EE2E1A6E992B00700971 /* CCEffectLineFactory.m in Sources */,
 				0E21D30F198A637900E84AB1 /* CCSpriteMultiTouchTest.m in Sources */,
+				0EFC7DC21B25C68E00D19768 /* CCSpriteVideo.m in Sources */,
 				0ED73BB51997951A00C83507 /* CCSpineCurve.m in Sources */,
 				A6994F85194A2FAC00B97481 /* CCTransformationNodeTest.m in Sources */,
 				A627126E19375F2700196BD3 /* TestBase.m in Sources */,
 				0E8E48191AA495EE00D95169 /* bookPage.m in Sources */,
 				A66C5838193A0C87009D2BD4 /* CCSpineTexture.m in Sources */,
 				A6994F8A194A2FBB00B97481 /* cardNode.m in Sources */,
+				0EFC7DC41B25C69C00D19768 /* README.md in Sources */,
 				A6994F81194A2F3D00B97481 /* CCCropNodeTest.m in Sources */,
 				A66C5831193A0C87009D2BD4 /* CCSpineAnimationControl.m in Sources */,
 				A66C5839193A0C87009D2BD4 /* CCSpineTimeline.m in Sources */,
@@ -947,6 +980,7 @@
 				0E2A746719D311230054F5B6 /* clothRope.m in Sources */,
 				0EFA569D1A7BBE3B001C503B /* CCBusyNodeTest.m in Sources */,
 				A66C5836193A0C87009D2BD4 /* CCSpineSkin.m in Sources */,
+				0E537E8A1B26C5670086FB02 /* CCSpriteVideoTest.m in Sources */,
 				0E8E48221AA4964D00D95169 /* CCSpriteCurl.m in Sources */,
 				0E9A092A199CDDD10049E409 /* CCLayerSmoothLineTest.m in Sources */,
 				0ECEB48819D29EB100BDBB9E /* clothNode.m in Sources */,
