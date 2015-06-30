@@ -10,9 +10,14 @@ Example
 =======
 
 ```
-emDialog *dialog = [[emDialog alloc] initWithTitle:@"Cocos2D-ObjC" message:@"Hello World" buttons:@"Cancel", @"Ok", nil];
-[dialog onDialogClosing:self selector:@selector(dialogClose:)];
-[dialog showModal];
+    // In some other function
+    
+    CCDialog *dialog = [[CCDialog alloc] initWithTitle:@"Cocos2D-ObjC" 
+                                               message:@"Hello World" 
+                                               buttons:@"Cancel", @"Ok", nil];
+    [dialog onDialogClosing:self selector:@selector(dialogClose:)];
+    [dialog showModal];
+}
 
 - (void)dialogClose:(id)sender
 {
