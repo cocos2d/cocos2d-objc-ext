@@ -2,7 +2,8 @@ CCDialog
 ========
 
 Type of class  : Descendant of NSObject  
-Uses extension : [NONE]
+Uses extension : [NONE]  
+Requirements   : iOS8
 
 A class, capable of showing a default UI-Kit dialog box.
 
