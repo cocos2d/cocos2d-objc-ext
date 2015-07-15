@@ -86,9 +86,9 @@
         CGSize size;
         float scale = [CCDirector sharedDirector].contentScaleFactor;
         
-        size = node.contentSize;
-        pos = [node convertToWorldSpace:node.position];
-        
+        size = node.contentSizeInPoints;
+        pos = [node convertToWorldSpace:CGPointZero];
+
         [renderer enqueueBlock:^{
             glScissor(pos.x * scale, pos.y * scale, size.width * scale, size.height * scale);
             glEnable(GL_SCISSOR_TEST);
