@@ -38,7 +38,7 @@ static void *nodeTagKey = &nodeTagKey;
 
 - (void)addChild:(CCNode *)node z:(NSInteger)z tag:(NSInteger)tag
 {
-    self.tag = tag;
+    node.tag = tag;
     [self addChild:node z:z];
 }
 
