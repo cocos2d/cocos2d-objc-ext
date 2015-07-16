@@ -61,6 +61,7 @@
 // assigns a complete skin to skeleton
 - (void)assignSkin:(CCSpineSkin *)skin;
 - (void)assignSkinByName:(NSString *)skinName;
+- (void)assignSubSkin:(CCSpineSkin *)skin;
 - (void)replaceTexture:(NSString *)oldTextureName newTextureName:(NSString *)newTextureName;
 - (void)clearSkin;
 
