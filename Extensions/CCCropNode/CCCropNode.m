@@ -62,10 +62,10 @@
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     // we only get here if cropping touches is enabled
-    CCNode *node = nil;
-    if (self.children.count) node = [self.children objectAtIndex:0];
-
-    // if there is a child node, and the touch is outsire, kill the touch
+    CCNode *node = _cropNode;
+    if ((node == nil) && (self.children.count)) node = [self.children objectAtIndex:0];
+    
+    // if there is a child node, and the touch is outside, kill the touch
     if (node && ![node hitTestWithWorldPos:touch.locationInWorld]) return;
     [super touchBegan:touch withEvent:event];
 }
