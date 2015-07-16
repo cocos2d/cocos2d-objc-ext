@@ -79,6 +79,11 @@
     CCNode *node = _cropNode;
     if ((node == nil) && (self.children.count)) node = [self.children objectAtIndex:0];
     
+    // store previous scissors info
+    GLint rect[4];
+    BOOL scissorsExist = glIsEnabled(GL_SCISSOR_TEST);
+    glGetIntegerv(GL_SCISSOR_BOX, rect);
+
     if (node && ((_mode == CCCropModeGraphics) || (_mode == CCCropModeGraphicsAndTouches)))
     {
         // enable scissors
@@ -98,7 +103,12 @@
     // render children
     [super visit:renderer parentTransform:parentTransform];
 
-    if (node && ((_mode == CCCropModeGraphics) || (_mode == CCCropModeGraphicsAndTouches)))
+    // restore previous scissors info
+    if ( scissorsExist == YES )
+    {
+        glScissor(rect[0], rect[1], rect[2], rect[3]);
+    }
+    else if (node && ((_mode == CCCropModeGraphics) || (_mode == CCCropModeGraphicsAndTouches)))
     {
         // disable scissors
         [renderer enqueueBlock:^{
