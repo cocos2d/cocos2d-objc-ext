@@ -414,7 +414,8 @@ const NSInteger CCSpineSkeletonBoneZInterval = 10;
     // clear old skin
     [self clearSkin];
     // load default section
-    [self assignSubSkin:_defaultSkin];
+    if (_defaultSkin != skin)
+        [self assignSubSkin:_defaultSkin];
     // load main skin
     [self assignSubSkin:skin];
 }
