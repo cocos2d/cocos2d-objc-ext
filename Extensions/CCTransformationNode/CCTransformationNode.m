@@ -163,6 +163,12 @@
     _yaw = yaw;
 }
 
+- (void)setPosition:(CGPoint)position
+{
+	[super setPosition:position];
+	_dirty = YES;
+}
+
 //----------------------------------------------------------------------
 
 @end
